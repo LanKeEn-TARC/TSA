@@ -1,0 +1,32 @@
+body {
+    background-image: url(Pictures/ps4background.png);
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+  }
+nav ul{
+    display: flex;margin: auto;
+}
+
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li a{
+    color: #746767;
+    text-decoration: none;
+    display: inline-block;
+    padding: 14px 16px;
+}
+
+nav a:hover {
+    background-color: #5d5a86;
+    color: white;
+  }
+  
