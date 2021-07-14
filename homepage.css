@@ -1,30 +1,36 @@
 body {
-    background-image: url(Pictures/ps4background.png);
-    background-size: 100% ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #f0e8e8;
 }
 
-/* Navbar */
+/* Navigation */
 nav {
-    width: 50%;
+    width: 40%;
     margin: auto;
 }
 
 nav ul{
     display: flex;
+    margin: auto;
 }
 
 nav ul li {
     list-style-type: none;
     text-align: center;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 3px;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 nav ul li a{
-    color: #746767;
+    color: #000000;
     text-decoration: none;
-    display: block;
-    padding: 14px 16px;
+    text-align: center;
+    padding: 10px 16px;
+
 }
 
 nav a:hover {
@@ -32,3 +38,30 @@ nav a:hover {
     color: white;
 }
   
+hr{
+    border: none;
+    height: 3px;
+    background-color: #0751DF;
+    padding-bottom:0 ;
+    margin-bottom: 0;
+}
+
+#startpic img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200;
+    height: 700px;
+}
+
+#startpic p{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: rgb(161, 147, 147);
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
