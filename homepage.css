@@ -52,8 +52,8 @@ hr{
     border-radius: 5px;
     box-shadow: 0 0 5px red;
     padding: 0;
-    animation: glow 1.5s ease-in-out infinite;
-    -webkit-animation: glow 1.5s ease-in-out infinite;
+    animation: glow 1s ease-in-out infinite;
+    -webkit-animation: glow 1s ease-in-out infinite;
 }
 
 hr::before {
@@ -65,7 +65,7 @@ hr::before {
     border-radius: 2px;
     box-shadow: 0 0 3px black;
     animation: glowMinr 1s ease-in-out;
-    -webkit-animation: glowMinor 1s ease-in-out infinite 
+    -webkit-animation: glowMinor 0.5s ease-in-out infinite 
   }
 
 @keyframes glow {
@@ -106,7 +106,7 @@ hr::before {
     background-repeat: no-repeat;
 }
 
-/*#start_wrapper p{
+#start_wrapper p{
     margin-top: 500px;
     display: block;
     text-align: center;
@@ -114,7 +114,7 @@ hr::before {
     font-size: 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
-}*/
+}
 /* put in the pic*/
 
 .main_wrapper{
