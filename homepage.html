@@ -23,7 +23,12 @@
     </header>
 
     <div id="start_wrapper">
-        <p>Click any button to start</p>
+        <!-- screen reader will not read the aria-hidden words -->
+        <p>
+            <span aria-hidden ="true" >Click any button to start</span>
+            Click any button to start 
+            <span aria-hidden ="true">Click any button to start</span>
+        </p>
     </div>
     <div class="main_wrapper">
         <div id = "intro_card">
