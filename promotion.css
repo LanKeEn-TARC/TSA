@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+/*sticky navbar, grid, slideshows, vidoes*/
+body{
+    background: #040B10;
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    width: 600px;
+    margin: auto;
+	top: 0;
+    padding-bottom: 10px ;
+}
+
+nav ul{
+    display: flex;
+    margin: auto;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li a{
+    color: #fafafa;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 16px;
+}
+
+nav a:hover {
+   text-decoration: underline;
+    color: white;
+}
+
+hr{
+    width: 700px;
+    margin: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #cc0f0f;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red;
+    padding: 0;
+    animation: glow 1s ease-in-out infinite;
+    -webkit-animation: glow 1s ease-in-out infinite;
+}
+
+hr::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #222;
+    width: 600px;
+    margin: -2px 50px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px black;
+    animation: glowMinr 1s ease-in-out;
+    -webkit-animation: glowMinor 0.5s ease-in-out infinite 
+  }
+
+@keyframes glow {
+    0%{box-shadow: 0 0 2px red;}
+    50%{box-shadow: 0 0 8px red;}
+    100%{box-shadow: 0 0 2px red;}
+  }
+  
+  @-webkit-keyframes glow {
+    0%{box-shadow: 0 0 2px red;}
+    50%{box-shadow: 0 0 8px red;}
+    100%{box-shadow: 0 0 2px red;}
+  }
+  
+  @keyframes glowMinor {
+    0%{box-shadow: 0 0 2px black;}
+    50%{box-shadow: 0 0 8px black;}
+    100%{box-shadow: 0 0 2px black;}
+  }
+  
+  @-webkit-keyframes glowMinor {
+    0%{box-shadow: 0 0 2px black;}
+    50%{box-shadow: 0 0 8px black;}
+    100%{box-shadow: 0 0 2px black;}
+  }
