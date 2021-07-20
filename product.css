@@ -93,7 +93,7 @@ hr::before {
   }
 
 .vertical-menu{
-    width: 200px;
+    width: 10%;
     font-family: 'Roboto', sans-serif;
     position: fixed;
 }
@@ -112,4 +112,19 @@ hr::before {
 
 .vertical-menu a:active{
     background-color: red;
+}
+
+.product_menu_image{
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product_image{
+    max-height: 30%;
+}
+
+.product_image.potrait{
+    height: auto;
+    width: auto;
 }
