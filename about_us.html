@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get to Know Us!</title>
+    <link rel="stylesheet" href="about_us.css">
+
+</head>
+<body>
+    <header>
+        <div class="sticky">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">Cart</a></li>
+                 </ul>
+            </nav>
+        </div>
+        <hr width="1000em">
+    </header>
+    <div style="width: 1320px; height: 800px; margin: auto; display:block; ">
+        <div class="grid" id="locations" >
+            <button id="loBtn">Location</button>
+            <div id="loModal" class="button">
+                <div class="button-content">
+                  <span class="close">&times;</span>
+                  <p>find us at : ur mom's house</p>
+                </div>
+            </div>
+        </div>
+        <div class="grid" id="promises" >
+            <button id="promiseBtn" >Our Promises</button>
+        </div>
+        <div class="grid" id="tnC" >
+            <button id="tncBtn" >Terms and Conditions</button>
+        </div>
+        <div class="grid" id="introduction">
+            <button id="introBtn" >Introduction</button>
+        </div>
+        <div class="grid" id="products" >
+            <button id="productBtn" >Our Products</button>
+        </div>
+        <div class="grid"id="social" >
+            <button id="soBtn" >Socials</button>
+        </div>
+    </div>
+    
+    <footer>
+      <div>
+
+      </div>
+    </footer>
+
+</body>
+<script>
+    var modal = document.getElementById("loModal");
+    var btn = document.getElementById("loBtn");
+    var span = document.getElementsByClassName("close")[0];
+    
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+</html>
