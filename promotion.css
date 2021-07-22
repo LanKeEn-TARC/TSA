@@ -91,3 +91,8 @@ hr::before {
     50%{box-shadow: 0 0 8px black;}
     100%{box-shadow: 0 0 2px black;}
   }
+
+  div#promotion{
+    width: 500px;
+    background-color: azure;
+  }
