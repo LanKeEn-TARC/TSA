@@ -2,8 +2,7 @@
 
 /*sticky navbar, grid, slideshows, vidoes*/
 body{
-    background-image: url(Pictures/circuits_board-wallpaper-1920x1200.jpg);
-    background-attachment: fixed;
+  background: #040B10;
 }
 
 /* Navigation */

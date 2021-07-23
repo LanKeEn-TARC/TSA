@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('http://fonts.cdnfonts.com/css/games');
 
+                
 /*sticky navbar, grid, slideshows, vidoes*/
 body{
     background: #040B10;
@@ -92,7 +94,106 @@ hr::before {
     100%{box-shadow: 0 0 2px black;}
   }
 
-  div#promotion{
-    width: 500px;
-    background-color: azure;
+  div#promotion_1{
+    display: flex;
+    margin-left: 250px;
+    height: 500px;
+    width: 300px;
+    background-color: rgb(143, 6, 6);
+  }
+
+  div#promotion_1con{
+    display: inline-block;
+  }
+
+  p#header_promo{
+    margin: 2%;
+    font-family: 'Games', sans-serif;
+    color: white;
+    font-size: 80px;
+  }
+  
+  div#promotion_1sub{
+    width: 1000px;
+    height: 500px;
+  }
+
+  div#promotion_2{
+    display: flex;
+    margin: auto;
+    height: 200px;
+    width: 150px;
+    background-color: rgb(34, 53, 105);
+  }
+
+  div#promotion_2con1{
+    position: relative;
+    top: -100px;
+    display: block;
+  }
+
+  div#promotion_2con1 h2{
+    padding: 5px;
+    background-color: white;
+    float: left;
+  }
+
+  div#promotion_2con2{
+    position: relative;
+    top: -100px;
+    display:block;
+  }
+
+  div#promotion_2con2 h2{
+    padding: 5px;
+    background-color: white;
+    float: right;
+  }
+
+
+  div#promotion_3{
+    margin: auto;
+    height: 500px;
+    width: 100%;
+    background-color: rgb(41, 40, 40);
+  }
+
+  div#promotion_3sub{
+    clip-path: polygon(0 0, 75% 0, 50% 100%, 0% 100%);
+    height: 500px;
+    width: 90%;
+    background-color: rgb(128, 120, 120);
+  }
+
+  div#promo_banner{
+    margin: auto;
+    height: 100px;
+    width: 70%;
+    background-color: yellowgreen;
+  }
+
+  div#tnc{
+    border-radius: 25px 25px 0px 0px ;
+    margin: auto;
+    height: 400px;
+    width: 80%;
+    background-color: rgb(226, 222, 222);
+  }
+
+  #tnc h3{
+    padding: 20px;
+  }
+
+  #tnc li{
+    font-size: 15px;
+    color: gray;
+    font-family: monospace;
+    font-weight: lighter;
+  }
+
+  #tnc img{
+    display: block;
+    width: 350px;
+    height: 200px;
+    margin: auto;
   }
