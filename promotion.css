@@ -119,37 +119,58 @@ hr::before {
   }
 
   div#promotion_2{
-    display: flex;
+    text-align: center;
     margin: auto;
     height: 200px;
     width: 150px;
     background-color: rgb(34, 53, 105);
   }
 
-  div#promotion_2con1{
-    position: relative;
-    top: -100px;
-    display: block;
+  div#promotion_2con{
+    display: flex; 
+    position: absolute; 
+    top:600px;
   }
 
-  div#promotion_2con1 h2{
-    padding: 5px;
+#promotion_2con1 {
+  display: block;
+  }
+
+#promotion_2con1 h2 {
+    left: 0;
+    z-index: 1;
+    padding: 10px;
     background-color: white;
     float: left;
   }
 
-  div#promotion_2con2{
-    position: relative;
-    top: -100px;
-    display:block;
-  }
+#promotion_2con1 p{
+  text-align: left;
+  font-size: 18px;
+  margin: 0;
+  color:white;
+  width: 600px;
+  float: left;
+  padding-left: 30px;
+}
 
-  div#promotion_2con2 h2{
-    padding: 5px;
-    background-color: white;
+#promotion_2con2 h2{
+    right: 0;
+    z-index: 1;
     float: right;
+    padding: 10px;
+    background-color: white;
   }
 
+  #promotion_2con2 p{
+    text-align: right;
+    font-size: 18px;
+    margin: 0;
+    color:white;
+    width: 600px;
+    float: right;
+    padding-right: 30px;
+  }
 
   div#promotion_3{
     margin: auto;
@@ -167,7 +188,7 @@ hr::before {
 
   div#promo_banner{
     margin: auto;
-    height: 100px;
+    height: 70px;
     width: 70%;
     background-color: yellowgreen;
   }
@@ -191,9 +212,61 @@ hr::before {
     font-weight: lighter;
   }
 
-  #tnc img{
+ #meme{
     display: block;
     width: 350px;
     height: 200px;
     margin: auto;
   }
+  
+div.card{
+  padding: 20px;
+  position: absolute;
+  right: 190px;
+  clip-path: circle(5% at 95% 11%);
+  transition: all ease-in-out .3s;
+  background-color:#ffffff;
+}
+    
+span.card__infoicon{
+  position:absolute;
+  font-size:1.4em;
+  color:#000000;
+  transition:ease-out .3s;
+}
+
+#info{
+  top:-12px;
+  right: -310px;
+  position:absolute;
+  width: 20px;
+  height: 20px;
+}
+
+h2.card__title{
+  margin: 2px;
+  font-size: 2em;
+  }
+
+p.card__description{
+  margin: 2px;
+  text-align: center;
+  font-size: 1.1em;
+  }
+    
+div.card:hover, .card:focus{
+  clip-path: circle(75%);
+  border-radius: 20px;
+  box-shadow: 0px 3px 9px rgba(0,0,0,0.12), 0px 3px 18px rgba(0,0,0,0.08);
+  background:#ffffff;
+  outline:none;
+}
+
+#promocode{
+  margin: auto;
+  font-size: small;
+  border: 1px dashed black;
+  border-radius: 5px;
+  width:fit-content;
+}
+
