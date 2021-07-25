@@ -93,13 +93,16 @@ hr::before {
   }
 
 .vertical-menu{
+    margin: 0;
+    padding: 0;
     width: 10%;
-    font-family: 'Roboto', sans-serif;
+    background-color: #040B10;
     position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 
 .vertical-menu a{
-    background-color: #040B10;
     color: white;
     display: block;
     padding: 12px;
@@ -112,19 +115,4 @@ hr::before {
 
 .vertical-menu a:active{
     background-color: red;
-}
-
-.product_menu_image{
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.product_image{
-    max-height: 30%;
-}
-
-.product_image.potrait{
-    height: auto;
-    width: auto;
 }
