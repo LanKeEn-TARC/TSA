@@ -6,29 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="product.css">
+    <script src="product.js"></script>
 </head>
 <body>
     <header>
-        <div class="sticky">
+        <div class="sticky" id="myTopnav">
             <nav>
                 <ul>
                     <li><a href="homepage.html">Home</a></li>
                     <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="product.html">Products</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Products</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-Content">
+                                <a href="keyboard.html">Keyboard</a>
+                                <a href="console.html">Console</a>
+                                <a href="mouse.html">Mouse</a>
+                                <a href="controllers.html">Controllers</a>
+                                <a href="accessories.html">Accessories</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#">Cart</a></li>
                  </ul>
             </nav>
         </div>
         <hr width="1000em">
     </header>
-
-    <div class="vertical-menu">
-        <a href="keyboard.html">Keyboard</a>
-        <a href="console.html">Console</a>
-        <a href="mouse.html">Mouse</a>
-        <a href="controllers.html">Controllers</a>
-        <a href="accessories.html">Accessories</a>
-    </div>
-
 </body>
 </html>
