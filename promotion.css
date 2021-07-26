@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 @import url('http://fonts.cdnfonts.com/css/games');
+@import url(product.css);
 
 body{
     background: #040B10;
