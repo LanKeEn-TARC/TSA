@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="product.css">
+    <script src="product.js"></script>
 </head>
 <body>
     <header>
@@ -30,6 +31,37 @@
         <hr width="1000em">
     </header>
 
+    <!--this is slide-->
+    <div class="slideshow-container">
+
+        <!--first slide-->
+        <div class="mySlides fade">
+            <img src="Pictures/pic1.jpg" alt="pic1" style="width: 75%;">
+        </div>
+
+        <!--second slide-->
+        <div class="mySlides fade">
+            <img src="Pictures/pic2.jpg" alt="pic2" style="width: 75%;">
+        </div>
+
+        <!--third slide-->
+        <div class="mySlides fade">
+            <img src="Pictures/pic3.jpg" alt="pic3" style="width: 75%;">
+        </div>
+
+        <!--next and previous button-->
+        <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" >&#10095;</a>
+    </div>
+
+    <br />
+
+    <!--show which page of slide user are on-->
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
     <!--slide at the top of the page or at the center for introduce our product-->
     <!--slide 1:futuristic STYLE MADAFOKER-->
     <!--slide 2: step into the gaming world-->
