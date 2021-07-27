@@ -196,7 +196,6 @@ hr::before {
 }
 
 div.slideshow-container {
-  margin: auto;
   top: 900px;
   z-index: 1;
   height: 450px;
@@ -205,6 +204,7 @@ div.slideshow-container {
 }
 
 .slideshow-container > img {
+  
   margin: auto;
   height: 400px;
   width: 400px;
