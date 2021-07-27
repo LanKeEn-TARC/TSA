@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registeration Form</title>
+    <link rel="stylesheet" href="Login_and_Registeration_Form.css" />
+</head>
+<body>
+    <div class="login-register">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="button"></div>
+                <button type="button" class="toggle-button" onclick="login()">Log In</button>
+                <button type="button" class="toggle-button" onclick="signup()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+                <img src="Image/instagram.png" alt="" />
+                <img src="Image/twitter.png" alt="" />
+                <img src="Image/google.png" alt="" />
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID" required />
+                <input type="text" class="input-field" placeholder="Enter Password" required />
+                <input type="checkbox" class="check-box" /><span>Remember Password</span>
+                <button type="submit" class="submit-button">Log In</button>
+            </form>
+            <form id="signup" class="input-group">
+                <input type="text" class="input-field" placeholder="User ID" required />
+                <input type="email" class="input-field" placeholder="Email" required />
+                <input type="text" class="input-field" placeholder="Enter Password" required />
+                <input type="checkbox" class="check-box" required /><span>I agree to the terms and condition.</span>
+                <button type="submit" class="submit-button">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="Java-Script-Functions/Sliding Function.js"></script>
+    <script src="Java-Script-Functions/Login_and_Registration_Form.js"></script>
+
+</body>
+</html>
