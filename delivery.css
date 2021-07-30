@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+/*sticky navbar, grid, slideshows, vidoes*/
+body{
+  background: #040B10;
+    /*background-image: url(Pictures/circuits_board-wallpaper-1920x1200.jpg);
+    background-attachment: fixed;*/
+}
+
+nav {
+    text-align: center;
+    width: 600px;
+    margin: auto;
+	top: 0;
+    padding-bottom: 10px ;
+}
+
+nav ul{
+    display: flex;
+    margin: auto;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul li a{
+    color: #fafafa;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 16px;
+}
+
+nav a:hover {
+   text-decoration: underline;
+    color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  text-align: inherit;
+  font-size: inherit;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px red;
+  padding: 2px 0 5px 0;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+hr{
+    width: 700px;
+    margin: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #cc0f0f;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red;
+    padding: 0;
+    animation: glow 1s ease-in-out infinite;
+    -webkit-animation: glow 1s ease-in-out infinite;
+}
+
+hr::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #222;
+    width: 600px;
+    margin: -2px 50px;
+    border-radius: 2px;
+    box-shadow: 0 0 3px black;
+    animation: glowMinr 1s ease-in-out;
+    -webkit-animation: glowMinor 0.5s ease-in-out infinite 
+  }
+
+@keyframes glow {
+    0%{box-shadow: 0 0 2px red;}
+    50%{box-shadow: 0 0 8px red;}
+    100%{box-shadow: 0 0 2px red;}
+  }
+  
+  @-webkit-keyframes glow {
+    0%{box-shadow: 0 0 2px red;}
+    50%{box-shadow: 0 0 8px red;}
+    100%{box-shadow: 0 0 2px red;}
+  }
+  
+  @keyframes glowMinor {
+    0%{box-shadow: 0 0 2px black;}
+    50%{box-shadow: 0 0 8px black;}
+    100%{box-shadow: 0 0 2px black;}
+  }
+  
+  @-webkit-keyframes glowMinor {
+    0%{box-shadow: 0 0 2px black;}
+    50%{box-shadow: 0 0 8px black;}
+    100%{box-shadow: 0 0 2px black;}
+  }
+
+.pricing-area {
+	padding: 10px;
+}
+
+
+.table-list {
+	text-align: center;
+	transition: all 0.4s ease 0s;
+	background: #fff;
+	border-radius: 5px;
+	position: relative;
+	overflow: hidden;
+	padding-left: 10px;
+}
+.top-price-inner {
+	position: relative;
+	text-align: center;
+	padding: 40px 30px 0px;
+	background: #F5F8FB;
+	margin-bottom: 80px;
+	z-index: 1;
+	transition: all 0.4s ease 0s;
+}
+.top-price-inner::after {
+	border-top: 99px solid #F5F8FB;
+	border-left: 90px solid transparent;
+	border-right: 90px solid transparent;
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	content: "";
+	z-index: -1;
+	left: 0;
+	bottom: -55px;
+	transition: all 0.4s ease 0s;
+}
+.top-price-inner h4 {
+	color: #444;
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: capitalize;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+}
+
+.prices {
+	font-size: 40px;
+	font-weight: 600;
+	color: #666;
+	padding-right: 10px;
+}
+.table-list:hover {
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+	transition: all 0.4s ease 0s;
+}
+.table-list:hover .top-price-inner {
+	background: #F5F8FB;
+	background: #1067DB;
+	transition: all 0.4s ease 0s;
+}
+.table-list:hover .top-price-inner::after {
+	border-top: 99px solid #1067DB;
+	border-left: 140px solid transparent;
+	border-right: 140px solid transparent;
+	transition: all 0.4s ease 0s;
+}
+.table-list:hover .top-price-inner h4, .table-list:hover .prices {
+	color: #fff;
+}
+.table-list ol li {
+	color: #888e94;
+	padding: 8px 0px;
+	position: relative;
+	text-align: center;
+	font-weight: 400;
+}
+
+.price-btn {
+	padding: 30px 20px;
+}
+.price-btn a {
+	color: #fff;
+	transition: all 0.4s ease 0s;
+	border-radius: 2px;
+	font-weight: 700;
+	font-size: 14px;
+	padding: 12px 34px;
+	background: #1067DB;
+	border: 1px solid #1067DB;
+}
+
+.table-list ol {
+	list-style: outside none none;
+	margin-top: 10px;
+	padding: 0;
+}
+.price-btn a:hover {
+	background: #fff;
+	color: #1067DB;
+	border: 1px solid #1067DB;
+}
