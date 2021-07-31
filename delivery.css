@@ -115,10 +115,91 @@ hr::before {
     100%{box-shadow: 0 0 2px black;}
   }
 
-.pricing-area {
-	padding: 10px;
-}
+  .container{
+    display: block;
+    box-sizing: border-box;
+  }
 
+  .col-50{
+    background-color: #ddd;
+    padding: 0 16px;
+    flex: 50%;
+    border-radius: 10px;
+  }
+
+  h3{
+    padding: 10px;
+  }
+
+  .checkout{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .checkout_container {
+    width: 500px;
+    background:#fff;
+    box-shadow: 10px 30px 0px 10px rgb(94, 87, 87);
+  }
+ 
+  h2 {
+    margin-bottom:0px;
+    margin-top:25px;
+    text-align:center;
+    font-weight:200;
+    font-size:19px;
+    font-size:1.2rem;
+  }
+
+  .thin {
+    font-weight:400;
+  }
+  .small {
+    font-size:12px;
+    font-size:.8rem;
+  }
+
+  .order-info {
+    width: 100%;
+    height:100%;
+    padding-left:25px;
+    padding-right:25px;
+    box-sizing:border-box;
+    display:flex;
+    justify-content:center;
+    position:relative;
+  }
+
+
+  .order-table {
+      position:relative;
+  }
+  .line {
+    height:1px;
+    width:100%;
+    margin-top:5px;
+    margin-bottom:5px;
+    background:#ddd;
+  }
+
+  .order-info-content {
+    table-layout:fixed;
+  
+  }
+  
+  .total {
+    margin-top:25px;
+    font-size:20px;
+    font-size:1.3rem;
+    position:absolute;
+    bottom:30px;
+    right:27px;
+    left:35px;
+  }
+
+.row{
+  display: flex;
+}
 
 .table-list {
 	text-align: center;
@@ -127,30 +208,30 @@ hr::before {
 	border-radius: 5px;
 	position: relative;
 	overflow: hidden;
-	padding-left: 10px;
+  margin: 10px;
+  width: 300px;
 }
+
 .top-price-inner {
 	position: relative;
 	text-align: center;
-	padding: 40px 30px 0px;
+	padding: 0px;
 	background: #F5F8FB;
 	margin-bottom: 80px;
 	z-index: 1;
 	transition: all 0.4s ease 0s;
 }
 .top-price-inner::after {
-	border-top: 99px solid #F5F8FB;
-	border-left: 90px solid transparent;
-	border-right: 90px solid transparent;
-	height: 50px;
+	height: 20px;
 	width: 100%;
 	position: absolute;
 	content: "";
 	z-index: -1;
 	left: 0;
-	bottom: -55px;
+	bottom: -60px;
 	transition: all 0.4s ease 0s;
 }
+
 .top-price-inner h4 {
 	color: #444;
 	font-size: 24px;
@@ -164,7 +245,7 @@ hr::before {
 	font-size: 40px;
 	font-weight: 600;
 	color: #666;
-	padding-right: 10px;
+	padding-right: 10px; 
 }
 .table-list:hover {
 	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -172,13 +253,12 @@ hr::before {
 }
 .table-list:hover .top-price-inner {
 	background: #F5F8FB;
-	background: #1067DB;
+	background: #cc0f0f;
 	transition: all 0.4s ease 0s;
 }
 .table-list:hover .top-price-inner::after {
-	border-top: 99px solid #1067DB;
-	border-left: 140px solid transparent;
-	border-right: 140px solid transparent;
+	border-top: 100px solid #1067DB;
+	border-left: 50px solid transparent;
 	transition: all 0.4s ease 0s;
 }
 .table-list:hover .top-price-inner h4, .table-list:hover .prices {
@@ -193,26 +273,11 @@ hr::before {
 }
 
 .price-btn {
-	padding: 30px 20px;
-}
-.price-btn a {
-	color: #fff;
-	transition: all 0.4s ease 0s;
-	border-radius: 2px;
-	font-weight: 700;
-	font-size: 14px;
-	padding: 12px 34px;
-	background: #1067DB;
-	border: 1px solid #1067DB;
+	padding-bottom: 30px;
 }
 
 .table-list ol {
 	list-style: outside none none;
-	margin-top: 10px;
-	padding: 0;
-}
-.price-btn a:hover {
-	background: #fff;
-	color: #1067DB;
-	border: 1px solid #1067DB;
+	margin-top: 5px;
+  padding: 0;
 }
