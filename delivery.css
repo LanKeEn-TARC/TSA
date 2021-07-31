@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 
-/*sticky navbar, grid, slideshows, vidoes*/
 body{
   background: #040B10;
-    /*background-image: url(Pictures/circuits_board-wallpaper-1920x1200.jpg);
-    background-attachment: fixed;*/
 }
 
 nav {
