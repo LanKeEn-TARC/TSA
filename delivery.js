@@ -13,22 +13,30 @@ const shippingDetails = [
 
         
 function dispOrder(){
+    var btn = document.getElementsByClassName('price-btn')
+
     let html = '';
-    if (document.getElementById('basic').checked) {
-        localStorage.setItem('fees', JSON.stringify(shippingDetails[0]))
-      } else if (document.getElementById('standard').checked){
-        localStorage.setItem('fees', JSON.stringify(shippingDetails[1]))
-    } else{
-        localStorage.setItem('fees', JSON.stringify(shippingDetails[2]))
+    for(i=0; i<btn.length; i++){
+        if (document.getElementById('basic').checked) {
+            localStorage.setItem('fees', JSON.stringify(shippingDetails[0]))
+          } else if (document.getElementById('standard').checked){
+            localStorage.setItem('fees', JSON.stringify(shippingDetails[1]))
+        } else{
+            localStorage.setItem('fees', JSON.stringify(shippingDetails[2]))
+        }
     }
+   
+
+    var x = localStorage.getItem('fees', JSON.stringify(shippingDetails))
+
     
         html += `
 
                 <tfoot style="margin: auto;">
                  
                   <tr>
-                    <td>Delivery</td> 
-                    <td>${fees.price}</td>
+                    <td>Delivery: </td> 
+                    <td>${x.price}</td>
                   </tr>
                 
                 </tfoot>
