@@ -118,3 +118,7 @@ table{
   width: 75%;
   background-image: linear-gradient(to bottom right, #8fa4c3,#586c91, #283347);
 }
+
+#description{
+  color: #586c91;
+}
