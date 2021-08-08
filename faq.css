@@ -231,6 +231,7 @@ hr.separatorLine {
               0 0 160px #F08080;
 }
 
+/*Main Content*/
 .grid-container {
   display: grid;
   grid-gap: 3em;
@@ -272,4 +273,19 @@ hr.separatorLine {
 
 .itemDesc {
   cursor: pointer;
+}
+.animActive {
+  animation: activeAnimation 3s ease;
+}
+
+@keyframes activeAnimation {
+  0% {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
