@@ -218,17 +218,48 @@ nav a:hover {
 
 hr.separatorLine {
   margin: auto;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   border-radius: 10px;
   height: 0.7em;
   width: 55vw;
-  background: white;
-  box-shadow: 0 0 10px #00b3ff,
-              0 0 20px #00b3ff,
-              0 0 40px #00b3ff,
-              0 0 80px #00b3ff,
-              0 0 160px #00b3ff;
+  background: #FFF0F5;
+  box-shadow: 0 0 10px #F08080,
+              0 0 20px #F08080,
+              0 0 40px #F08080,
+              0 0 80px #F08080,
+              0 0 160px #F08080;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 3em;
+  width: 80vw;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  font-size: 1.5em;
+}
+
+.item-container {
+  box-shadow: 0 0 4px #F08080,
+              0 0 8px #F08080,
+              0 0 16px #F08080,
+              0 0 32px #F08080,
+              0 0 64px #F08080;
+  border-radius: 1em;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.item-container:last-of-type {
+  grid-column: 1 / -1;
 }
 
 .arrowIcon {
@@ -237,4 +268,8 @@ hr.separatorLine {
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg) translateY(-5px);
+}
+
+.itemDesc {
+  cursor: pointer;
 }
