@@ -124,23 +124,25 @@ table{
 
 /* the coloumn */
 .left-column{
-  width: 65%;
+  width: 65;
   position: relative;
 }
 
 .right-column{
-  width:35%;
+  width:55%;
   margin-top: 60px;
 }
 
 /* left-column */
 .left-column img{
-  width: 100%;
-  position:absolute;
+  width: 75%;
+  position:relative;
   left: 0;
   top: 0;
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 0.3s ease;
+  padding-top: 10%;
+  background-color: #040B10;
 }
 
 /* right column */
@@ -208,7 +210,7 @@ table{
 }
  
 .product-choose-color input[type="radio"]:checked + label span {
-  background-image: url(images/check-icn.svg);
+  background-color: red;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -242,4 +244,8 @@ table{
 }
 .addToCart:hover {
   background-color: #323457;
+}
+
+table> tr > th{
+  align-items: center;
 }
