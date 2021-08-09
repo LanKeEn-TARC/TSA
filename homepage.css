@@ -45,7 +45,8 @@ nav ul li {
     display: block;
     padding: 5px;
     font-size: larger;
-    font-family: arial,'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 nav ul li a{

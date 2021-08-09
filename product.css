@@ -143,6 +143,7 @@ table{
   transition: all 0.3s ease;
   padding-top: 10%;
   background-color: #040B10;
+  height: 35%;
 }
 
 /* right column */
