@@ -32,21 +32,15 @@
          <a href="cart.html"><img src="Pictures/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
     </header>
 
-    <!--name will be change-->
-
-    <!--floating window keyboard1 -->
-    <!--show the keyboard image-->
-
     <table>
         <tr>
-            <th>Keyboard</th>
+            <th colspan="2">Keyboard</th>
         </tr>
 
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/ducky-black.jfif" alt="Black Keyboard1">
-                    <!-- <img data-image="product-pic" src="uncut-pic/ducky-white.jfif" alt="White Keyboard1"> -->
+                    <img src="uncut-pic/ducky-black.jfif" alt="" id="keyboard1-pic">
                 </div>
             </td>
 
@@ -61,15 +55,11 @@
                     <div class="product-config">
                         <div class="keyboard1-color">
                             <span>Color</span>
-                            <div class="keyboard1-choose-color">
-                                <div>
-                                    <input data-image="black-keyboard1" type="radio" id="black-keyboard1" name="keybaord1-color" value="black" checked>
-                                    <label for="black-keyboard1"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="white-keyboard1" type="radio" id="white-keyboard1" name="keybaord1-color" value="white" checked>
-                                    <label for="white-keyboard1"><span></span></label>
-                                </div>
+                            <div class="color-choose">
+                                <form action="" id="keyboard1">
+                                    <input type="radio" id="black-keyboard1" name="keyboard1" value="black" onclick="changeSrcKeyboard1()" checked>black <br>
+                                    <input type="radio" id="white-keyboard1" name="keyboard1" value="white" onclick="changeSrcKeyboard1()">white
+                                </form>
                             </div>
                         </div>
             
@@ -103,8 +93,7 @@
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/razerblackwidowEliteBlack.png" alt="Black Keyboard2">
-                    <!-- <img data-image="product-pic" src="uncut-pic/blackwidoweliteQuartz.jpg" alt="Pink Keyboard2"> -->
+                    <img src="uncut-pic/razerblackwidowEliteBlack.png" alt="" id="keyboard2-pic">
                 </div>
             </td>
 
@@ -119,15 +108,11 @@
                     <div class="keyboard2-config">
                         <div class="keyboard2-color">
                             <span>Color</span>
-                            <div class="keyboard2-choose-color">
-                                <div>
-                                    <input data-image="black-keyboard2" type="radio" id="black-keyboard2" name="keyboard2-color" value="black" checked>
-                                    <label for="black-keyboard2"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="pink-keyboard2" type="radio" id="pink-keyboard2" name="keyboard2-color" value="Pink" checked>
-                                    <label for="pink-keyboard2"><span></span></label>
-                                </div>
+                            <div class="color-choose">
+                                <form action="" id="keyboard2">
+                                    <input type="radio" id="black-keyboard2" name="keyboard2" value="black" onclick="changeSrcKeyboard2()" checked>Black <br>
+                                    <input type="radio" id="pink-keyboard2" name="keyboard2" value="pink" onclick="changeSrcKeyboard2()">Pink
+                                </form>
                             </div>
                         </div>
             
@@ -161,8 +146,7 @@
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/razer-huntman-black.jfif" alt="Black Keyboard3">
-                    <!-- <img data-image="product-pic" src="uncut-pic/razer-hunter-pink.png" alt="Pink Keyboard3"> -->
+                    <img src="uncut-pic/razer-huntman-black.jfif" alt="" id="keyboard3-pic">
                 </div>
             </td>
 
@@ -178,15 +162,11 @@
                     <div class="keyboard3-config">
                         <div class="keyboard3-color">
                             <span>Color</span>
-                            <div class="keyboard3-choose-color">
-                                <div>
-                                    <input data-image="black-keyboard3" type="radio" id="black-keyboard3" name="keyboard3-color" value="black" checked>
-                                    <label for="black-keyboard3"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="pink-keyboard3" type="radio" id="pink-keyboard3" name="keyboard3-color" value="Pink" checked>
-                                    <label for="pink-keyboard3"><span></span></label>
-                                </div>
+                            <div class="color-choose">
+                                <form action="" id="Keyboard3">
+                                    <input type="radio" id="black-keyboard3" name="keyboard3" value="black" onclick="changeSrcKeyboard3()" checked>Black <br>
+                                    <input type="radio" id="pink-keyboard3" name="keyboard3" value="pink" onclick="changeSrcKeyboard3()">Pink
+                                </form>
                             </div>
                         </div>
             

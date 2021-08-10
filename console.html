@@ -37,14 +37,13 @@
 
     <table>
         <tr>
-            <th>Consoles</th> 
+            <th colspan="2">Consoles</th> 
         </tr>
 
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/ps4-black.jpg" alt="Black Keyboard1">
-                    <!-- <img data-image="product-pic" src="uncut-pic/ducky-white.jfif" alt="White Keyboard1"> -->
+                    <img src="uncut-pic/ps4-black.jpg" alt="" id="console1-pic">
                 </div>
             </td>
 
@@ -59,15 +58,11 @@
                     <div class="product-config">
                         <div class="product-color">
                             <span>Color</span>
-                            <div class="product-choose-color-ps4">
-                                <div>
-                                    <input data-image="black-keyboard1" type="radio" id="black-keyboard1" name="keybaord1-color" value="black" checked>
-                                    <label for="black-keyboard1"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="white-keyboard1" type="radio" id="white-keyboard1" name="keybaord1-color" value="white" checked>
-                                    <label for="white-keyboard1"><span></span></label>
-                                </div>
+                            <div class="color-choose">
+                                <form action="" id="console1">
+                                    <input type="radio" id="black-console1" name="console1" value="black" onclick="changeSrcConsole1()" checked>black <br>
+                                    <input type="radio" id="white-console1" name="console1" value="white" onclick="changeSrcConsole1()">white
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -89,8 +84,7 @@
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/ps4-pro-white.webp" alt="Black Keyboard1">
-                    <!-- <img data-image="product-pic" src="uncut-pic/ducky-white.jfif" alt="White Keyboard1"> -->
+                    <img src="uncut-pic/ps4pro-black.jfif" alt="" id="console2-pic">
                 </div>
             </td>
 
@@ -105,15 +99,11 @@
                     <div class="product-config">
                         <div class="product-color">
                             <span>Color</span>
-                            <div class="product-choose-color-ps4">
-                                <div>
-                                    <input data-image="black-keyboard1" type="radio" id="black-keyboard1" name="keybaord1-color" value="black" checked>
-                                    <label for="black-keyboard1"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="white-keyboard1" type="radio" id="white-keyboard1" name="keybaord1-color" value="white" checked>
-                                    <label for="white-keyboard1"><span></span></label>
-                                </div>
+                            <div class="color-choose">
+                                <form action="" id="console2">
+                                    <input type="radio" id="black-console2" name="console2" value="black" onclick="changeSrcConsole2()" checked>black <br>
+                                    <input type="radio" id="white-console2" name="console2" value="white" onclick="changeSrcConsole2()">white
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -133,8 +123,7 @@
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/ps5.jpg" alt="Black Keyboard1">
-                    <!-- <img data-image="product-pic" src="uncut-pic/ducky-white.jfif" alt="White Keyboard1"> -->
+                    <img src="uncut-pic/ps5-disc.jpg" alt="" id="console3-pic">
                 </div>
             </td>
 
@@ -148,16 +137,12 @@
                     </div>
                     <div class="product-config">
                         <div class="product-color">
-                            <span>Color</span>
-                            <div class="product-choose-color-ps5">
-                                <div>
-                                    <input data-image="black-keyboard1" type="radio" id="black-keyboard1" name="keybaord1-color" value="black" checked>
-                                    <label for="black-keyboard1"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="white-keyboard1" type="radio" id="white-keyboard1" name="keybaord1-color" value="white" checked>
-                                    <label for="white-keyboard1"><span></span></label>
-                                </div>
+                            <span>Version</span>
+                            <div class="color-choose">
+                                <form action="" id="console3">
+                                    <input type="radio" id="disc-console3" name="console3" value="disc" onclick="changeSrcConsole3()" checked>Disc <br>
+                                    <input type="radio" id="digital-console3" name="console3" value="digital" onclick="changeSrcConsole3()">Digital
+                                </form>
                             </div>
                         </div>
                     </div>

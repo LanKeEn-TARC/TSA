@@ -31,12 +31,7 @@
          <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
          <a href="cart.html"><img src="Pictures/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
     </header>
-
-    <!--floating window for more specific description/color choice/customize-->
-    <!--the product picture is slide-->
-
-
-    <!-- driving sim wheel
+   <!-- driving sim wheel
 
     logitech g29 (this shit so expensive but no gear shift)
     richass wheel
@@ -44,7 +39,7 @@
 
     <table>
         <tr>
-            <th>Driving Sim Wheel</th>
+            <th colspan="2">Driving Sim Wheel</th>
         </tr>
 
         <tr>
@@ -102,7 +97,7 @@
 
 
         <tr>
-            <th>gearshift</th>
+            <th colspan="2">Gearshift</th>
         </tr>
 
         <tr>
@@ -134,19 +129,19 @@
         </tr>
 
         <tr>
-            <th>Controllers</th>
+            <th colspan="2">Controllers</th>
         </tr>
 
         <tr>
             <td>
                 <!-- 
-                 controller1
+                controller1
                 not enuf buudget
                 rm 100-200
                 exp:dualshock 4 -->
 
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/dualshock-black.jfif" alt="dualshock 4">
+                    <img src="uncut-pic/dualshock-black.jfif" alt="" id="controller1-pic">
                 </div>
             </td>
 
@@ -163,13 +158,11 @@
                         <div class="controller1-color">
                             <span>Color</span>
                             <div class="controller1-choose-color">
-                                <div>
-                                    <input data-image="black-controller" type="radio" id="black-controller1" name="controller-color" value="black" checked>
-                                    <label for="black-controller1"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="red-controller" type="radio" id="red-controller1" name="controller-color" value="Red" checked>
-                                    <label for="red-controller1"><span></span></label>
+                                <div class="color-choose">
+                                    <form action="" id="controller1">
+                                        <input type="radio" id="black-controller1" name="controller1" value="black" onclick="changeSrcController1()" checked>black <br>
+                                        <input type="radio" id="red-controller1" name="controller1" value="white" onclick="changeSrcController1()">white
+                                    </form>
                                 </div>
                             </div>
                     </div>
@@ -194,8 +187,7 @@
                 exp:dualsense -->
 
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/dualsense-white.jfif" alt="dualsense">
-                    <!-- <img data-image="product-pic" class="active" src="uncut-pic/dualsense-white.jfif" alt="dualsense"> -->
+                    <img src="uncut-pic/dualsense-black.jpg" alt="" id="controller2-pic">
                 </div>
             </td>
 
@@ -212,13 +204,11 @@
                         <div class="controller2-color">
                             <span>Color</span>
                             <div class="controller2-choose-color">
-                                <div>
-                                    <input data-image="black-controller" type="radio" id="black-controller2" name="controller-color" value="black" checked>
-                                    <label for="black-controller2"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="white-controller" type="radio" id="white-controller2" name="controller-color" value="White" checked>
-                                    <label for="White-controller2"><span></span></label>
+                                <div class="color-choose">
+                                    <form action="" id="controller2">
+                                        <input type="radio" id="black-controller2" name="controller2" value="black" onclick="changeSrcController2()" checked>black <br>
+                                        <input type="radio" id="white-controller2" name="controller2" value="white" onclick="changeSrcController2()">white
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +230,7 @@
                 exp:xbox one or series x controller
                 color: black white blue(why blue one more expensive) -->
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/xbox-black.jfif" alt="xbox">
+                    <img src="uncut-pic/xbox-black.jfif" alt="" id="controller3-pic">
                 </div>
             </td>
 
@@ -257,13 +247,11 @@
                         <div class="controller3-color">
                             <span>Color</span>
                             <div class="controller3-choose-color">
-                                <div>
-                                    <input data-image="black-controller" type="radio" id="black-controller3" name="controller-color" value="black" checked>
-                                    <label for="black-controller3"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="white-controller" type="radio" id="white-controller3" name="controller-color" value="White" checked>
-                                    <label for="white-controller3"><span></span></label>
+                                <div class="color-choose">
+                                    <form action="" id="controller3">
+                                        <input type="radio" id="black-controller3" name="controller3" value="black" onclick="changeSrcController3()" checked>black <br>
+                                        <input type="radio" id="white-controller3" name="controller3" value="white" onclick="changeSrcController3()">white
+                                    </form>
                                 </div>
                             </div>
                         </div>

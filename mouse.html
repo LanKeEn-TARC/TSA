@@ -36,7 +36,7 @@
 
     <table>
         <tr>
-            <th>Mouse</th>
+            <th colspan="2">Mouse</th>
         </tr>
 
             <!-- mouse1 (with holes) ULTRALIGHT
@@ -47,7 +47,7 @@
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/coolmaster-black.jfif" alt="mouse1">
+                    <img src="uncut-pic/coolmaster-black.jfif" alt="" id="mouse1-pic">
                 </div>
             </td>
 
@@ -61,16 +61,12 @@
                     </div>
                     <div class="Mouse-color">
                         <span>Color</span>
-                        <div class="Mouse-choose-color">
-                            <div>
-                                <input data-image="black-Mouse" type="radio" id="black-Mouse" name="Mouse-color" value="black" checked>
-                                <label for="black-Mouse"><span></span></label>
+                            <div class="color-choose">
+                                <form action="" id="mouse1">
+                                    <input type="radio" id="black-mouse1" name="mouse1" value="black" onclick="changeSrcMouse1()" checked>Black <br>
+                                    <input type="radio" id="white-mouse1" name="mouse1" value="white" onclick="changeSrcMouse1()">White
+                                </form>
                             </div>
-                            <div>
-                                <input data-image="white-Mouse" type="radio" id="white-Mouse" name="Mouse-color" value="white" checked>
-                                <label for="white-Mouse"><span></span></label>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="product-price"></div>
@@ -90,7 +86,7 @@
         <tr>
             <td>
                 <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/logitech-g29.png" alt="mouse1">
+                    <img data-image="product-pic" class="active" src="uncut-pic/g502.webp" alt="mouse1">
                 </div>
             </td>
 
