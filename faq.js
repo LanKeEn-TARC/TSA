@@ -22,6 +22,16 @@ function reveal () {
   }
 }
 
+// function revealDesc () {
+//   var descBox = document.querySelectorAll('faqQuestions')
+//
+//   for (var i = 0; i < descBox.length; i++) {
+//     descBox[i].addEventListener('click', function () {
+//       this.classList.toggle('faqQuestions-show')
+//     })
+//   }
+// }
+
 // to show the div for controller desc
 function controllerDescReveal () {
   document.getElementById('controllerFaq').classList.toggle('faqQuestions-show')
