@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="homepage.css">
+    <!-- <script src="cart.js"></script> -->
+</head>
+<body>
+    <header>
+        <div class="sticky">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li class="dropdown"><a href="product.html">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="keyboard.html">Keyboard</a></li>
+                            <li><a href="console.html">Console</a></li>
+                            <li><a href="mouse.html">Mouse</a></li>
+                            <li><a href="controllers.html">Controllers</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cart.html">Cart</a></li>
+                 </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <marquee scrollamount="20" direction="left">
+            <h1>Welcome to Shopping Cart. Hope you enjoy your Shopping in TSA</h1>
+        </marquee>
+        
+        <div id="cartDetails">
+            <p class="cartTitle">Product Name</p>
+            <p class="cartTitle">Quantity</p>
+            <p class="cartTitle">Price(RM)</p>
+            <p class="cartTitle">Total</p>
+            <p class="cartTitle">Remove</p>
+        </div>
+        <hr id="hrCart">
+        <div class="productDisplay">
+            <!--<div class="cart">
+                <div class="name"><p>RAZER</p></div>
+                <div class="quantity"><p>1</p></div>
+                <div class="price"><p>RM</p></div>
+                <div class="total"><p>RM</p></div>
+                <div class="remove"><button>Remove</button></div>
+            </div>-->
+        </div>
+    
+        <div class="cartPayment">
+            <div id="totalPrice"><h3>Total: RM<span></span></h3></div>
+            <!--
+            <div class="goPayment">
+                <button onclick="location.href='/accessories.html'">Process to Payment Pages</button>
+            </div>
+            -->
+            <div class="slidingButton">
+                <a href="/payment.html" class="btn_one">
+                    CHECKOUT
+                </a>
+                <a href="/product.html" class="btn_two">
+                    <span>CONTINUE SHOPPING</span>
+                    <div class="btn_bg"></div>
+                </a>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+</html>
