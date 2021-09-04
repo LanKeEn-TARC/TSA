@@ -57,7 +57,7 @@
                         <tr>
                             <td><label for="profileName">Name</label></td>
                             <td>
-                                <input type="text" id="profileName" class="profile__input" autofocus placeholder="Your Full Name" />
+                                <input type="text" id="profileName" class="profile__input" autofocus placeholder="Your Full Name" value="" />
                             </td>
                         </tr>
                         <tr>
@@ -70,7 +70,7 @@
                             <td><label for="profilePhone">Phone Number</label></td>
                             <td>
                                 <input type="tel" id="profilePhone" class="profile__input" autofocus  
-                                pattern="[01]{2}[0|2-9]{1}-[0-9]{3} [0-9]{4}|[011]{3}-[0-9]{4} [0-9]{4}" placeholder="01x-xxx(x) xxxx"/>
+                                pattern="[01]{2}[0|2-9]{1}-[0-9]{3} [0-9]{4}|[011]{3}-[0-9]{4} [0-9]{4}" placeholder="01x-xxx(x) xxxx" value=""/>
                             </td>
                         </tr>
                         <tr>
@@ -128,11 +128,22 @@
                 }
             }  
         };
-        document.getElementById("profileName").value = localStorage.pname;
-        document.getElementById("profilePhone").value = localStorage.pphone;
-        document.getElementById("profileDate").value = localStorage.pdate;
-        document.querySelector('.Gender:checked').setAttribute("checked",false);
-        document.querySelector(`#${localStorage.pgender}`).setAttribute("checked",true);
+
+        if(localStorage.pname == null || localStorage.pphone == null || localStorage.pdate == null){
+            var defaultName = "CHONG XIN YI",
+            defaultPhone = "011-2123 0408",
+            defaultDate = "2000-01-01";
+            document.getElementById("profileName").value = defaultName;
+            document.getElementById("profilePhone").value = defaultPhone;
+            document.getElementById("profileDate").value = defaultDate;
+        }
+        else{
+            document.getElementById("profileName").value = localStorage.pname;
+            document.getElementById("profilePhone").value = localStorage.pphone;
+            document.getElementById("profileDate").value = localStorage.pdate;
+            document.querySelector('.Gender:checked').setAttribute("checked",false);
+            document.querySelector(`#${localStorage.pgender}`).setAttribute("checked",true);
+        }
 
         //Change value of profileName
     </script>
