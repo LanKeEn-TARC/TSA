@@ -1,0 +1,31 @@
+Login and Signup Page
+Signup Email: localStorage.su_email
+Signup Password: localStorage.su_password
+Signup Username: localStorage.su_username
+
+Profile Page
+Profile Name: localStorage.pname
+Profile Date: localStorage.pdate
+Profile Phone: localStorage.pphone
+Profile Gender: localStorage.pgender
+
+Bank and Card Page
+Bank Card Detail: localStorage.details
+Bank Card Name: localStorage.details.name
+Bank Card Number: localStorage.details.number
+Bank Card Date: localStorage.details.date
+Bank Card Cvv: localStorage.details.cvv
+
+Bank Account Detail: localStorage.accounts
+Bank Account Name: localStorage.accounts.a_name
+Bank Account Number: localStorage.accounts.a_number
+Bank Account Bank: localStorage.accounts.a_bank
+
+Address Page
+Full Address: localStorage.addressDetail
+Address Name: localStorage.addressDetail.ad_name
+Address Phone Number: localStorage.addressDetail.ad_phone
+Address State: localStorage.addressDetail.ad_state
+Address Area: localStorage.addressDetail.ad_area
+Address Postal Code: localStorage.addressDetail.ad_postal
+Address Detail: localStorage.addressDetail.ad_detail

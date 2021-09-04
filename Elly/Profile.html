@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg" />
+    <link rel="stylesheet" href="Profile.css" />
+    <title>Profile</title>
+</head>
+<body>
+    <header id="stick_nav">
+        <a href="homepage.html"><img src="Image/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
+        <nav>
+            <ul>
+                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+                <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
+                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="keyboard.html">Keyboard</a></li>
+                        <li><a href="console.html">Console</a></li>
+                        <li><a href="mouse.html">Mouse</a></li>
+                        <li><a href="controllers.html">Controllers</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+            </ul>          
+         </nav>
+         <a href="Profile.html"><img src="Image/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
+         <a href="cart.html"><img src="Image/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
+    </header>
+    <div class="page_content">
+        <div class="left_container">
+            <div class="vertical_profile">
+                <a href="Profile.html">Profile</a>
+                <a href="Bank_and_Card.html">Bank and Card</a>
+                <a href="Address.html">Address</a>
+                <a href="My_Purchase.html">My Purchase</a>
+            </div>
+        </div>
+        <div class="right_container">
+            <h1>My Profile</h1>
+            <div class="split_line"></div>
+            <div class="profile_content">
+                <form class="profile_form">
+                    <table class="profile_table">
+                        <tr>
+                            <td><label>Username</label></td>
+                            <td>
+                                <p id="usernameDisplay"></p>
+                            </td>
+                            <td rowspan="6">
+                                <img src="Image/pro_pic_avatar.jpg" alt="User Profile Picture" class="profile_picture" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="profileName">Name</label></td>
+                            <td>
+                                <input type="text" id="profileName" class="profile__input" autofocus value="Chong Xin Yi" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Email</label></td>
+                            <td>
+                                <p id="emailDisplay"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="profilePhone">Phone Number</label></td>
+                            <td>
+                                <input type="tel" id="profilePhone" class="profile__input" autofocus value="011-2123 0408" 
+                                pattern="[01]{2}[0|2-9]{1}-[0-9]{3} [0-9]{4}|[011]{3}-[0-9]{4} [0-9]{4}" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Gender</td>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="male" class="Gender" />
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" class="Gender" checked/>
+                                <label for="female">Female</label>
+                                <input type="radio" id="other" name="gender" value="other" class="Gender" />
+                                <label for="other">Other</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="profileDate">Date of Birth</label></td>
+                            <td>
+                                <input type="date" value="2000-01-01" id="profileDate"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Save" id="saveProfile" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Get data from localStorage
+        document.getElementById("usernameDisplay").innerHTML = localStorage.su_username;
+        document.getElementById("emailDisplay").innerHTML = localStorage.su_email;
+
+        //Save data when user input
+        document.getElementById("saveProfile").onclick = function(){
+            
+            var name = document.querySelector("#profileName").value,
+            phone = document.querySelector("#profilePhone").value,
+            date = document.querySelector("#profileDate").value,
+            gender = document.querySelector('.Gender:checked').value,
+            valid_phone = document.getElementById("profilePhone");
+
+            if(name != "" && phone != "" && date != ""){
+                if(valid_phone.validity.patternMismatch){
+                    alert("Invalid phone number format!");
+                    return false;
+                } else{
+                    localStorage.pname = name;
+                    localStorage.pphone = phone;
+                    localStorage.pdate = date;
+                    localStorage.pgender = gender;
+                    alert("Profile saved!");
+                }
+            }  
+        };
+        document.getElementById("profileName").value = localStorage.pname;
+        document.getElementById("profilePhone").value = localStorage.pphone;
+        document.getElementById("profileDate").value = localStorage.pdate;
+        document.querySelector('.Gender:checked').setAttribute("checked",false);
+        document.querySelector(`#${localStorage.pgender}`).setAttribute("checked",true);
+
+        //Change value of profileName
+    </script>
+    <footer></footer>
+</body>
+</html>

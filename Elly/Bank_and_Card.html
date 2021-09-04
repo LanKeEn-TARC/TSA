@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg" />
+    <link rel="stylesheet" href="Profile.css" />
+    <title>Bank and Card</title>
+</head>
+<body>
+    <header id="stick_nav">
+        <a href="homepage.html"><img src="Image/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
+        <nav>
+            <ul>
+                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+                <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
+                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="keyboard.html"> Keyboard</a></li>
+                        <li><a href="console.html">Console</a></li>
+                        <li><a href="mouse.html">Mouse</a></li>
+                        <li><a href="controllers.html">Controllers</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+            </ul>          
+         </nav>
+         <a href="Profile.html"><img src="Image/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
+         <a href="cart.html"><img src="Image/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
+    </header>
+    <div class="page_content">
+        <div class="left_container">
+            <div class="vertical_profile">
+                <a href="Profile.html">Profile</a>
+                <a href="Bank_and_Card.html">Bank and Card</a>
+                <a href="Address.html">Address</a>
+                <a href="My_Purchase.html">My Purchase</a>
+            </div>
+        </div>
+        <div class="right_container">
+            <h1>Bank and Card</h1>
+            <div class="split_line"></div>
+            <div class="bnc__content">
+                <div class="bnc__card">
+                    <div class="bnc--title">
+                        <h3 class="bnc--h3">Credit / Debit Cards</h3>
+                    </div>
+                    <div class="bnc--button">
+                        <input type="submit" value="+ Add Credit / Debit Card" id="saveCard" class="card"/>
+                    </div>
+                    <div class="bnc--split_line"></div>
+                    <div class="bnc--display">
+                        <table class="bnc__card--table">
+                            <colgroup>
+                                <col style="width: 250px;" />
+                                <col style="width: 300px;" />
+                                <col />
+                                <col style="width: 50px;" /> 
+                            </colgroup>
+                            <thead class="bnc__card--thead">
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Card Number</th>
+                                    <th>Expired Date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="bnc__card--tbody">
+                                <tr>
+                                    <!--Card details insert here after user input-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bnc__account">
+                    <div class="bnc--title">
+                        <h3 class="bnc--h3">My Bank Accounts</h3>
+                    </div>
+                    <div class="bnc--button">
+                        <input type="submit" value="+ Add Bank Account" id="saveAccount" class="account" />
+                    </div>
+                    <div class="bnc--split_line"></div>
+                    <div class="bnc--display">
+                        <table class="bnc__bank--table">
+                            <colgroup>
+                                <col style="width: 180px;" />
+                                <col style="width: 180px;" />
+                                <col />
+                                <col style="width: 40px;" /> 
+                            </colgroup>
+                            <thead class="bnc__bank--thead">
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Account Number</th>
+                                    <th>Bank Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody class="bnc__bank--tbody">
+                                <tr>
+                                    <!--Account details insert here after user input-->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bnc__background_overlay"></div>
+        <div class="container">
+            <div class="containerContent">
+                <div class="bnc__addCard">
+                    <a href="" class="bnc--close" onclick="document.querySelector('.bnc__addCard').style.display='none'">&times;</a>
+                    <h2 class="bnc--h2">ADD CARD</h2>
+                    <div class="bnc__addCard--details">
+                        <span class="bnc--span">Card Details</span><br />
+                        <input type="text" id="cardName" class="bnc--input" placeholder="Name on Card" required /><br >
+                        <input type="text" id="cardNumber" class="bnc--input" placeholder="Card Number (4/5XXX XXXX XXXX XXXX)" 
+                        pattern="[4|5]{1}[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}" required /><br>
+                        <div class="bnc__addCard--dnc">
+                            <input type="text" id="cardDate" class="bnc--input" placeholder="Expiry Date (MM/YY)" 
+                            pattern="[0]{1}[1-9]{1}/[0-9]{2}|[1]{1}[0-2]{1}/[0-9]{2}" required />
+                            <input type="text" id="cardCvv" class="bnc--input" placeholder="CVV (XXX)" 
+                            pattern="[0-9]{3}" required />  
+                        </div>
+                        <button id="storeCard" class="bnc--saveCard">Save</button>
+                    </div>
+                </div>
+                <div class="bnc__addAccount">
+                    <a href="" class="bnc--close" onclick="document.querySelector('.bnc__addAccount').style.display='none'">&times;</a>
+                    <h2 class="bnc--h2">ADD ACCOUNT</h2>
+                    <div class="bnc__addAccount--details">
+                        <span class="bnc--span">Account Details</span><br />
+                        <input type="text" id="accountName" class="bnc--input" placeholder="Full name in the bank account(i.e.Michael Wong)" required /><br >
+                        <input type="text" id="accountNumber" class="bnc--input" placeholder="Account No." required /><br>
+                        <input type="text" id="accountBank" class="bnc--input" placeholder="Bank name" list="banks" />
+                        <datalist id="banks">
+                            <option value="ALLIANCE BANK MALAYSIA BERHAD"></option>
+                            <option value="AMBANK BHD"></option>
+                            <option value="BANK ISLAM MALAYSIA BERHAD"></option>
+                            <option value="CIMB BANK BHD"></option>
+                            <option value="CITIBANK BHD"></option>
+                            <option value="HONG LEONG BANK BHD"></option>
+                            <option value="MALAYAN BANKING BHD(MAYBANK)"></option>
+                            <option value="PUBLIC BANK BHD"></option>
+                            <option value="RHB BANK BHD"></option>
+                        </datalist>
+                        <button id="storeAccount" class="bnc--saveAccount">Save</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Javascript for adding bank cards-->
+    <script src="Java-Script-Functions/Bank_Card.js"></script>
+    <!--Javascript for adding bank accounts-->
+    <script src="Java-Script-Functions/Bank_Account.js"></script>
+    <script>
+        //Display add card div
+        document.querySelector("#saveCard").addEventListener('click', (e) => {
+            document.querySelector('.bnc__background_overlay').style.display = 'block';
+            document.querySelector('.bnc__addCard').style.display = 'block';
+        });
+
+        //Display add account div
+        document.querySelector("#saveAccount").addEventListener('click', (e) => {
+            document.querySelector('.bnc__background_overlay').style.display = 'block';
+            document.querySelector('.bnc__addAccount').style.display = 'block';
+        });
+    </script>
+    <footer></footer>
+    <!--Link for icon for delete section-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</body>
+</html>
