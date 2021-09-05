@@ -106,7 +106,7 @@
         document.getElementById("usernameDisplay").innerHTML = localStorage.su_username;
         document.getElementById("emailDisplay").innerHTML = localStorage.su_email;
 
-        //Save data when user input
+        //Save data into localStorage when user input
         document.getElementById("saveProfile").onclick = function(){
             
             var name = document.querySelector("#profileName").value,
@@ -129,6 +129,7 @@
             }  
         };
 
+        // Display localStorage data
         if(localStorage.pname == null || localStorage.pphone == null || localStorage.pdate == null){
             var defaultName = "CHONG XIN YI",
             defaultPhone = "011-2123 0408",
