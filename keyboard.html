@@ -8,6 +8,7 @@
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
     <link rel="stylesheet" href="product.css">
     <script src="product.js"></script>
+    <script src="cart.js"></script>
 </head>
 <body>
     <header id="stick_nav">
@@ -16,7 +17,7 @@
             <ul>
                 <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
                 <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
-                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
+                <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
                     <ul class="dropdown-content">
                         <li><a href="keyboard.html"> Keyboard</a></li>
                         <li><a href="console.html">Console</a></li>
@@ -35,12 +36,12 @@
 
     <table>
         <tr>
-            <th colspan="2">Keyboard</th>
+            <th colspan="2" id="product-title">Keyboard</th>
         </tr>
 
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/ducky-black.jfif" alt="" id="keyboard1-pic">
                 </div>
             </td>
@@ -77,10 +78,11 @@
                         </div>
                     </div>
             
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM500</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button type="button" class="addToCart">Add to Cart</button>
                     </div>
                 </div>
                 <!-- keyboard 1
@@ -93,7 +95,7 @@
 
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/razerblackwidowEliteBlack.png" alt="" id="keyboard2-pic">
                 </div>
             </td>
@@ -130,10 +132,11 @@
                         </div>
                     </div>
             
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM699</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
                 <!-- keyboard2 
@@ -146,7 +149,7 @@
             
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/razer-huntman-black.jfif" alt="" id="keyboard3-pic">
                 </div>
             </td>
@@ -184,10 +187,11 @@
                         </div>
                     </div>
             
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM999</span>
+                    </div>                    
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button type="button" class="addToCart">Add to Cart</button>
                     </div>
                 </div>
                 <!-- keyboard3 (richass keyboard)

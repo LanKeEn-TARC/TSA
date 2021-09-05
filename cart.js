@@ -13,14 +13,14 @@ for(var i = 0 ; i < button.length; i++){
         var price_Rm = event.target.parentElement.parentElement.children[2].textContent;
         var price_Number = price_Rm.slice(2,price_Rm.length);
         //debug
-        console.log('Add to cart button have been clicked');
-        console.log('name :' + event.target.parentElement.parentElement.children[0].children[0].textContent);
+        console.log('Add to cart button have been clicked');    
+        console.log('name :' + event.target.parentElement.parentElement[1].children[0].children[1].children[1].children[1].children[0].children[0].textContent);
         console.log('price :' + event.target.parentElement.parentElement.children[2].textContent);
         console.log('total price:' + parseInt(price_Number));
 
         //declare list of the item to display in shoping cart
         let product = {
-            name:event.target.parentElement.parentElement.children[0].children[0].textContent,
+            name: event.target.parentElement.parentElement[1].children[0].children[1].children[1].children[1].children[0].children[0].textContent,     
             price:event.target.parentElement.parentElement.children[2].textContent,
             totalPrice: parseInt(price_Number),
             quantity:1
