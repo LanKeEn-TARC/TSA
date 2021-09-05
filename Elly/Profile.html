@@ -131,6 +131,8 @@
 
         // Display localStorage data
         if(localStorage.pname == null || localStorage.pphone == null || localStorage.pdate == null){
+            window.location.href="Login_and_Signup.html";
+            alert("You haven't login. Please login or signup first!");
             var defaultName = "CHONG XIN YI",
             defaultPhone = "011-2123 0408",
             defaultDate = "2000-01-01";
