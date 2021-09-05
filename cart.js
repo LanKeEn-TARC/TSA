@@ -5,7 +5,6 @@ const button = document.getElementsByClassName('addToCart')
 console.log(button);//check how many button available in document (debug propose)
 const products = []
 
-
 for(var i = 0 ; i < button.length; i++){
     let addToCartButton = button[i]
     addToCartButton.addEventListener('click', () =>{
@@ -107,3 +106,9 @@ function cartTotalPrice(){
     document.querySelector('.cartPayment #totalPrice h3 span').textContent = total
 }
 cartTotalPrice()
+
+//for cart onclick message
+function popupMessage()
+{
+    alert("Product Added to Cart")
+}
