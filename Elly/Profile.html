@@ -129,26 +129,31 @@
             }  
         };
 
-        // Display localStorage data
-        if(localStorage.pname == null || localStorage.pphone == null || localStorage.pdate == null){
+        if(localStorage.su_email == null && localStorage.su_username == null){
             window.location.href="Login_and_Signup.html";
             alert("You haven't login. Please login or signup first!");
-            var defaultName = "CHONG XIN YI",
-            defaultPhone = "011-2123 0408",
-            defaultDate = "2000-01-01";
             document.getElementById("profileName").value = defaultName;
             document.getElementById("profilePhone").value = defaultPhone;
             document.getElementById("profileDate").value = defaultDate;
         }
         else{
-            document.getElementById("profileName").value = localStorage.pname;
-            document.getElementById("profilePhone").value = localStorage.pphone;
-            document.getElementById("profileDate").value = localStorage.pdate;
-            document.querySelector('.Gender:checked').setAttribute("checked",false);
-            document.querySelector(`#${localStorage.pgender}`).setAttribute("checked",true);
+            // Display localStorage data
+            if(localStorage.pname == null || localStorage.pphone == null || localStorage.pdate == null){
+                var defaultName = "CHONG XIN YI",
+                defaultPhone = "011-2123 0408",
+                defaultDate = "2000-01-01";
+                document.getElementById("profileName").value = defaultName;
+                document.getElementById("profilePhone").value = defaultPhone;
+                document.getElementById("profileDate").value = defaultDate;
+            }
+            else{
+                document.getElementById("profileName").value = localStorage.pname;
+                document.getElementById("profilePhone").value = localStorage.pphone;
+                document.getElementById("profileDate").value = localStorage.pdate;
+                document.querySelector('.Gender:checked').setAttribute("checked",false);
+                document.querySelector(`#${localStorage.pgender}`).setAttribute("checked",true);
+            }
         }
-
-        //Change value of profileName
     </script>
     <footer></footer>
 </body>
