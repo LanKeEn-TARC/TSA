@@ -1,7 +1,7 @@
 var stateData = [];
 $.ajax({
     type: "GET",
-    url: "http://localhost:5500/State_and_Area.json",
+    url: "http://localhost:5501/Elly/State_and_Area.json",
     success: async function(data){
         console.log(data)
         stateData = await data
