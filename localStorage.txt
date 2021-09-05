@@ -1,9 +1,0 @@
-Login and Signup Page
-Signup Email: localStorage.su_email
-Signup Password: localStorage.su_password
-Signup Username: localStorage.su_username
-
-Profile Page
-Profile Name: localStorage.pname
-Profile Date: localStorage.pdate
-Profile Phone: localStorage.pphone
