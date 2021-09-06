@@ -8,15 +8,16 @@
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
     <link rel="stylesheet" href="product.css">
     <script src="product.js"></script>
+    <script src="cart.js"></script>
 </head>
 <body>
     <header id="stick_nav">
-        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
+        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
         <nav>
             <ul>
                 <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
                 <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
-                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
+                <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
                     <ul class="dropdown-content">
                         <li><a href="keyboard.html"> Keyboard</a></li>
                         <li><a href="console.html">Console</a></li>
@@ -28,19 +29,18 @@
                 <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
             </ul>
            
-         </nav>
-         <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
-         <a href="cart.html"><img src="Pictures/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
+        </nav>
+        <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
 
-    <table>
+    <table class="rainbow">
         <tr>
-            <th colspan="2">Keyboard</th>
+            <th colspan="2" id="product-title">Keyboard</th>
         </tr>
 
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/ducky-black.jfif" alt="" id="keyboard1-pic">
                 </div>
             </td>
@@ -48,7 +48,7 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>Keyboard1</h1>
+                        <h1>Ducky One 2</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
@@ -77,10 +77,11 @@
                         </div>
                     </div>
             
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM500</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
                 <!-- keyboard 1
@@ -93,7 +94,7 @@
 
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/razerblackwidowEliteBlack.png" alt="" id="keyboard2-pic">
                 </div>
             </td>
@@ -101,7 +102,7 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>Keyboard2</h1>
+                        <h1>Razer Blackwidow Elite</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
@@ -130,10 +131,11 @@
                         </div>
                     </div>
             
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM699</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button>  
                     </div>
                 </div>
                 <!-- keyboard2 
@@ -146,7 +148,7 @@
             
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/razer-huntman-black.jfif" alt="" id="keyboard3-pic">
                 </div>
             </td>
@@ -154,7 +156,7 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>Keyboard3</h1>
+                        <h1>Razer Huntsman Elite</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
@@ -184,10 +186,11 @@
                         </div>
                     </div>
             
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM999</span>
+                    </div>                    
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
                 <!-- keyboard3 (richass keyboard)

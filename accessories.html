@@ -8,10 +8,11 @@
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
     <link rel="stylesheet" href="product.css">
     <script src="product.js"></script>
+    <script src="cart.js"></script>
 </head>
 <body>
     <header id="stick_nav">
-        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
+        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
         <nav>
             <ul>
                 <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
@@ -28,9 +29,8 @@
                 <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
             </ul>
            
-         </nav>
-         <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
-         <a href="cart.html"><img src="Pictures/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
+        </nav>
+        <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
 
     <!--floating window for more specific description/color choice/customize-->
@@ -40,16 +40,14 @@
     got rgb(why u want rgb in ur headphone? u cant see it anyway)
     black white -->
 
-    <h1>Accessories</h1>
-    
-    <table>
+    <table class="rainbow">
         <tr>
-            <th colspan="2">Headphones</th>
+            <th colspan="2" id="product-title">Headphones</th>
         </tr>
 
         <tr>
             <td>
-                <div class="left-column">
+                <div class="product-pic">
                     <img data-image="product-pic" class="active" src="uncut-pic/razer-headphones.png" alt="headphone1">
                 </div>
             </td>
@@ -57,17 +55,18 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>headphone1</h1>
+                        <h1>Razer Kraken Pro</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
                     </div>
 
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM349</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
-                    </div>
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button>  
+                    </div> 
                 </div>
             </td>
         </tr>
@@ -78,7 +77,7 @@
                 richass (listen music more siok the sounds goes BRRRR and BOOOOM play game with more siok(ur gonna get deaf when enemy throw grenade at you))
                 1000 and above
                 sony/ -->
-                <div class="left-column">
+                <div class="product-pic">
                     <img src="uncut-pic/sony-black.jfif" alt="" id="headphone2-pic">
                 </div>
             </td>
@@ -86,7 +85,7 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>headphone2</h1>
+                        <h1>Sony WH-1000XM4</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
@@ -102,12 +101,13 @@
                             </div>
                         </div>
                     </div>    
-                    <div class="product-price"></div>
-                        <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM1399</span>
+                    </div>                        
                         <div>
-                            <input type="button" class="addToCart" value="Add to Cart"> 
+                            <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
                         </div>
-                    </div>
+                </div>
             </td>  
         </tr>
 
@@ -122,7 +122,7 @@
             fake leather ur back will break chair
             color white/red/black/PINK -->
         
-            <div class="left-column">
+            <div class="product-pic">
                 <img src="uncut-pic/sakula-chair.jfif" alt="" id="chair1-pic">
             </div>
             </td>
@@ -130,7 +130,7 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>chair1</h1>
+                        <h1>Sakula Chair</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
@@ -148,10 +148,11 @@
                         </div>
                     </div>
 
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM229</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
             </td>
@@ -164,7 +165,7 @@
                ur back will be protected
                but not ur wallet and ur life(ur mom gonna kill u) -->
             
-               <div class="left-column">
+               <div class="product-pic">
                <img data-image="product-pic" class="active" src="uncut-pic/secretlab.jpg" alt="chair2">
                </div>
             </td>
@@ -172,16 +173,17 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>chair2</h1>
+                        <h1>Secretlab Titan Evo</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
                     </div>
 
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM1099</span>
+                    </div>                    
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
             </td>
@@ -193,56 +195,11 @@
 
         <tr>
             <td>
-                <!-- earphone1
-                earrape sound below 100
-                no color choice cheap already u want what color -->
-
-                <div class="left-column">
-                    <img data-image="product-pic" class="active" src="uncut-pic/cheap-earphone.png" alt="earphone1">
-                </div>
-            </td>
-
-            <td>
-                <div class="right-column">
-                    <div class="product-description">
-                        <h1>earphone1</h1>
-                    </div>
-                    <div id="description">
-                        <p>description</p>
-                    </div>
-
-                    <div class="earphone-config">
-                        <div class="earphone-color">
-                            <span>Color</span>
-                            <div class="earphone-choose-color">
-                                <div>
-                                    <input data-image="black-earphone" type="radio" id="black-earphone" name="earphone-color" value="Black" checked>
-                                    <label for="black-earphone"><span></span></label>
-                                </div>
-                                <div>
-                                    <input data-image="red-earphone" type="radio" id="red-earphone" name="earphone-color" value="Red" checked>
-                                    <label for="red-earphone"><span></span></label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-price"></div>
-                    <span>RM???</span>
-                    <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
-                    </div>
-                 </div>
-            </td>
-        </tr>
-
-        <tr>
-            <td>
                 <!-- earphone2 
                 mediocore 100-200
                 less earrape but sad no rgb -->
 
-                <div class="left-column">
+                <div class="product-pic">
                     <img data-image="product-pic" class="active" src="uncut-pic/razer-hammerhead.jfif" alt="earphone2">
                 </div>
             </td>
@@ -250,16 +207,17 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                       <h1>earphone2</h1>
+                       <h1>Razer Hammerhead</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
                     </div>
        
-                    <div class="product-price"></div>
-                    <span>RM???</span>
+                    <div class="product-price">
+                        <span>RM129</span>
+                    </div>                   
                     <div>
-                        <input type="button" class="addToCart" value="Add to Cart"> 
+                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
                     </div>
                </div>
             </td>

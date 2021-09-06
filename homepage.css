@@ -26,7 +26,7 @@ header img{
 
 #profilePic{
   padding-right: 40px; 
-  padding-top: 25px;
+  padding-top: 20px;
 }
 
 nav {
@@ -172,14 +172,8 @@ hr::before {
     background-color:rgb(41, 40, 40);
 }
 
-#intro_vid1{
+video#vid {
   width: 100%;
-  height: 600px;
-}
-
-#vid video source{
-  width: 80%;
-  height: 300px;
   padding: 0;
   margin: auto;
 }
@@ -227,23 +221,29 @@ a{
 
 #slider{
   position: relative;
-  flex-direction: column;
-	width: 1800px;
-	height: 500px;
+	width: 100%;
+	height: 450px;
 	justify-content: center;
 	align-items: center;
-  display: grid;
-  grid-gap: 16px;
-  grid-auto-flow: column;
-  margin: auto;
-  box-sizing: border-box;
+}
+
+#controller{
   overflow: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
 
-#slider::-webkit-scrollbar {
+#controller::-webkit-scrollbar {
   height: 0;
+}
+
+#slide{
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+
 }
 
 #prev,
@@ -259,7 +259,7 @@ a{
 }
 
 #prev {
-  background-image: url(Pictures/next_button.png);
+  background-image: url(Pictures/prev_button.png);
   left: 0;
   transform: translate(50%, -50%);
   display: none;
@@ -380,7 +380,6 @@ a{
 
 #bestseller{
   padding: 5px;
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -389,17 +388,108 @@ a{
   border-radius: 30px 30px 30px 30px;
   box-shadow: 0 0 20px  #2196f3;
   animation: glow 1s ease-in-out infinite;
-
 }
 
 #bestseller2{
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   height: 600px;
   border-radius: 30px 30px 120px 30px;
   background-color:rgb(41, 40, 40) ;
   background-image: url(Pictures/circuit.jpeg);
+}
+
+.items {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.items .item {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 290px;
+  height: 400px;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.items img{
+  width: 290px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.item.active {
+  opacity: 1;
+  z-index: 99;
+  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+}
+
+.item.prevB {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-125%, -50%);
+}
+
+.item.nextB {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(25%, -50%);
+}
+
+.items .button-container {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 275px;
+  z-index: 100;
+}
+
+.button-container .button {
+  color: #fff;
+  font-size: 32px;
+  position: relative;
+  opacity: 0.75;
+  transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+  opacity: 1;
+}
+
+.button-container .button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+  float: left;
+}
+
+.button-container .button:nth-child(2) {
+  float: right;
+}
+
+#banner_best{
+  width: 300px;
+  position: relative;
+  background-color:white;
 }
 
 #intro_card {
