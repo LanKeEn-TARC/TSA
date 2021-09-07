@@ -383,11 +383,78 @@ a{
 }
 
 #product_cat{
+  position: relative;
   height: 400px;
-  width:100%;
   padding: 10px;
-  background-color: rgb(116, 50, 105);
+  background-color: rgb(95, 57, 89);
 }
+
+#product1{
+  position: absolute;
+  background-color:white;
+  width:320px;
+  height: 400px;
+  clip-path: polygon(0 1%, 100% 0%, 70% 100%, 0% 100%);
+
+
+}
+
+#product2{
+  position: absolute;
+  left:260px;
+  background-color:white;
+  width:384px;
+  height: 400px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#product3{
+  position: absolute;
+  left:570px;
+  background-color:white;
+  width:384px;
+  height: 400px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#product4{ 
+  position: absolute;
+  background-color:white;
+  left: 880px;
+  width:384px;
+  height: 400px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#product5{
+  position: absolute;
+  background-color:white;
+  left: 1190px;
+  width:310px;
+  height: 400px;
+  clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+#product1:hover{
+  transform: scale(1.1);
+}
+
+#product2:hover{
+  transform: scale(1.1);
+}
+
+#product3:hover{
+  transform: scale(1.1);
+}
+
+#product4:hover{ 
+  transform: scale(1.1);
+}
+
+#product5:hover{
+  transform: scale(1.1);
+}
+
 
 #bestseller{
   padding: 5px;
