@@ -118,9 +118,3 @@ function changeSrcChair1() {
       document.getElementById("chair1-pic").src = "uncut-pic/sakula-red.webp";
   }
 }
-
-// //pop out 
-// function popoutFunction() {
-//   var popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
-// }

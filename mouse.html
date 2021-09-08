@@ -8,6 +8,8 @@
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
     <link rel="stylesheet" href="product.css">
     <script src="product.js"></script>
+    <!-- <script src="cart.js"></script> -->
+    <!-- <script src="cart2.js"></script> -->
 </head>
 <body>
     <header id="stick_nav">
@@ -25,7 +27,7 @@
                         <li><a href="accessories.html">Accessories</a></li>
                     </ul>
                 </li>
-                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+                <li><a href="cart.html"><span></span><span></span><span></span><span></span>Cart</a></li>
             </ul>
            
         </nav>
@@ -54,7 +56,7 @@
             <td>
                 <div class="right-column">
                     <div class="product-description">
-                        <h1>Cooler Master mm710</h1>
+                        <h1 >Cooler Master mm710</h1>
                     </div>
                     <div id="description">
                         <p>description</p>
@@ -63,8 +65,8 @@
                         <span>Color</span>
                             <div class="color-choose">
                                 <form action="" id="mouse1">
-                                    <input type="radio" id="black-mouse1" name="mouse1" value="black" onclick="changeSrcMouse1()" checked>Black <br>
-                                    <input type="radio" id="white-mouse1" name="mouse1" value="white" onclick="changeSrcMouse1()">White
+                                    <input type="radio" id="black-mouse1" name="mouse1" value="black" onclick="changeSrcMouse1()" checked> Black <br>
+                                    <input type="radio" id="white-mouse1" name="mouse1" value="white" onclick="changeSrcMouse1()"> White
                                 </form>
                             </div>
                     </div>
@@ -73,7 +75,7 @@
                         <span>RM209</span>
                     </div>                    
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                        <button type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
             </td>
@@ -103,7 +105,7 @@
                         <span>RM308</span>
                     </div>                    
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                        <button type="button" class="addToCart">Add to Cart</button>
                     </div>
                 </div>
             </td>
@@ -116,7 +118,7 @@
                 wired wireless -->
             <td>
                 <div class="product-pic">
-                    <img data-image="product-pic" class="active" src="uncut-pic/razer-viper-mini.jpg" alt="mouse3">
+                    <img data-image="product-pic" class="active" src="uncut-pic/razer-viper-mini .jpg" alt="mouse3">
                 </div>
             </td>
 
@@ -132,12 +134,13 @@
                         <span>RM129</span>
                     </div>  
                    <div>
-                    <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                    <button type="button" class="addToCart">Add to Cart</button>
                     </div>
                 </div>
             </td>
         </tr>
               
     </table>
+    <script src="cart.js"></script>
 </body>
 </html>

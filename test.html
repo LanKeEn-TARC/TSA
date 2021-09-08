@@ -1,24 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="test.css">
-<script src="test.js"></script>
-<style>
-
-</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse</title>
+    <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
+    <link rel="stylesheet" href="product.css">
+    <script src="product.js"></script>
+    <!-- <script src="cart.js"></script> -->
+    <!-- <script src="cart2.js"></script> -->
 </head>
 <body>
-    <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Neon Button
-    </a>
+    <header id="stick_nav">
+        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
+        <nav>
+            <ul>
+                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+                <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
+                <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
+                    <ul class="dropdown-content">
+                        <li><a href="keyboard.html"> Keyboard</a></li>
+                        <li><a href="console.html">Console</a></li>
+                        <li><a href="mouse.html">Mouse</a></li>
+                        <li><a href="controllers.html">Controllers</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="cart.html" class="cartQuantity"><span></span><span></span><span></span><span></span>Cart<span> 0</span></a></li>
+            </ul>
+           
+        </nav>
+        <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
+    </header>
 
+    <!--floating window for more specific description/color choice/customize-->
 
+    <table class="rainbow">
+        <tr>
+            <th colspan="2" id="product-title">Mouse</th>
+        </tr>
 
+            <!-- mouse1 (with holes) ULTRALIGHT
+            color white and black
+            cooler master mm710
+            wired wireless
+            add to cart  -->
+        <tr>
+            <td>
+                <div class="product-pic">
+                    <img src="uncut-pic/coolmaster-black.jfif" alt="" id="mouse1-pic">
+                </div>
+            </td>
 
+            <td>
+                <div class="right-column">
+                    <div class="product-description mouse1">
+                        <h1 >Cooler Master mm710</h1>
+                    </div>
+                    <div id="description">
+                        <p>description</p>
+                    </div>
+                    <div class="Mouse-color">
+                        <span>Color</span>
+                            <div class="color-choose">
+                                <form action="" id="mouse1">
+                                    <input type="radio" id="black-mouse1" name="mouse1" value="black" onclick="changeSrcMouse1()" checked> Black <br>
+                                    <input type="radio" id="white-mouse1" name="mouse1" value="white" onclick="changeSrcMouse1()"> White
+                                </form>
+                            </div>
+                    </div>
+
+                    <div class="product-price">
+                        <span>RM209</span>
+                    </div>                    
+                    <div>
+                        <button type="button" class="addToCart mouse1">Add to Cart</button> 
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+<!-- mouse2 (for normal hands)
+            no color choice black only
+             logitech g502(ur wrist will be damage)
+            razer viper ultimate(wireless)
+            wired wireless -->
+        <tr>
+            <td>
+                <div class="product-pic">
+                    <img data-image="product-pic" class="active" src="uncut-pic/g502.webp" alt="mouse1">
+                </div>
+            </td>
+
+            <td>
+                <div class="right-column">
+                    <div class="product-description mouse2">
+                        <h1>Logitech G502</h1>
+                    </div>
+                    <div id="description">
+                        <p>description</p>
+                    </div>
+                    <div class="product-price">
+                        <span>RM308</span>
+                    </div>                    
+                    <div>
+                        <button onclick="cartButton()" type="button" class="addToCart mouse1">Add to Cart</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+            
+        <tr>
+              <!-- mouse3 (for small hands)
+                razer viper mini(this one memang bagus)
+                color 1 and 2
+                wired wireless -->
+            <td>
+                <div class="product-pic">
+                    <img data-image="product-pic" class="active" src="uncut-pic/razer-viper-mini .jpg" alt="mouse3">
+                </div>
+            </td>
+
+            <td>
+                <div class="right-column">
+                    <div class="product-description mouse3">
+                        <h1>Razer Viper Mini</h1>
+                    </div>
+                    <div id="description">
+                        <p>description</p>
+                    </div>
+                    <div class="product-price">
+                        <span>RM129</span>
+                    </div>  
+                   <div>
+                    <button type="button" class="addToCart mouse1">Add to Cart</button>
+                    </div>
+                </div>
+            </td>
+        </tr>
+              
+    </table>
+    <script src="cart2.js"></script>
 </body>
-</html> 
+</html>
