@@ -8,19 +8,31 @@ const products = []
 for(var i = 0 ; i < button.length; i++){
     let addToCartButton = button[i]
     addToCartButton.addEventListener('click', () =>{
+        alert('Product added to cart');
+
+
+        //display product name and price
+        var productInfo = addToCartButton.parentNode.parentNode;
+        console.log(productInfo.querySelector('.product-description h1').textContent);
+        console.log(productInfo.querySelector('.product-price span').textContent);
+        console.log(productInfo);
+        
+        //declare the variable for product name and price
+        var productName = productInfo.querySelector('.product-description h1').textContent;
+        var productPrice = productInfo.querySelector('.product-price span').textContent;
+
         //decalre variable (Separate Rm and number)
-        var price_Rm = event.target.parentElement.parentElement.children[2].textContent;
-        var price_Number = price_Rm.slice(2,price_Rm.length);
+        var price_Number = productPrice.slice(2,productPrice.length);
         //debug
-        console.log('Add to cart button have been clicked');    
-        console.log('name :' + event.target.parentElement.parentElement[1].children[0].children[1].children[1].children[1].children[0].children[0].textContent);
-        console.log('price :' + event.target.parentElement.parentElement.children[2].textContent);
+        console.log('Add to cart button have been clicked'); 
+        console.log('name: ' + productName);  
+        console.log('price: ' + productPrice)
         console.log('total price:' + parseInt(price_Number));
 
         //declare list of the item to display in shoping cart
         let product = {
-            name: event.target.parentElement.parentElement[1].children[0].children[1].children[1].children[1].children[0].children[0].textContent,     
-            price:event.target.parentElement.parentElement.children[2].textContent,
+            name: productName,     
+            price: productPrice,
             totalPrice: parseInt(price_Number),
             quantity:1
         }
@@ -106,9 +118,3 @@ function cartTotalPrice(){
     document.querySelector('.cartPayment #totalPrice h3 span').textContent = total
 }
 cartTotalPrice()
-
-//for cart onclick message
-function popupMessage()
-{
-    alert("Product Added to Cart")
-}

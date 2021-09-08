@@ -8,7 +8,6 @@
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
     <link rel="stylesheet" href="product.css">
     <script src="product.js"></script>
-    <script src="cart.js"></script>
 </head>
 <body>
     <header id="stick_nav">
@@ -62,7 +61,7 @@
                         <span>RM1499</span>
                     </div>                    
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                        <button type="button" class="addToCart">Add to Cart</button>  
                     </div>
                 </div>
             </td>
@@ -90,7 +89,7 @@
                         <span>RM579</span>
                     </div>                    
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button>   
+                        <button type="button" class="addToCart">Add to Cart</button>   
                     </div>
                 </div>
             </td>
@@ -125,7 +124,7 @@
                         <span>RM169</span>
                     </div>                    
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button>  
+                        <button type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
             </td>
@@ -158,23 +157,23 @@
                     </div>
 
                     <div class="controller-config">
-                        <div class="controller1-color">
+                        <div class="controller2-color">
                             <span>Color</span>
-                            <div class="controller1-choose-color">
+                            <div class="controller2-choose-color">
                                 <div class="color-choose">
-                                    <form action="" id="controller1">
-                                        <input type="radio" id="black-controller1" name="controller1" value="black" onclick="changeSrcController1()" checked>black <br>
-                                        <input type="radio" id="red-controller1" name="controller1" value="white" onclick="changeSrcController1()">white
+                                    <form action="" id="controller2">
+                                        <input type="radio" id="black-controller2" name="controller2" value="black" onclick="changeSrcController2()" checked> Black <br>
+                                        <input type="radio" id="white-controller2" name="controller2" value="white" onclick="changeSrcController2()"> White
                                     </form>
                                 </div>
                             </div>
+                        </div>
                     </div>
-
                     <div class="product-price">
-                        <span>RM149</span>
+                        <span>RM129</span>
                     </div>                   
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                        <button type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
             </td>
@@ -210,8 +209,8 @@
                             <div class="controller2-choose-color">
                                 <div class="color-choose">
                                     <form action="" id="controller2">
-                                        <input type="radio" id="black-controller2" name="controller2" value="black" onclick="changeSrcController2()" checked>black <br>
-                                        <input type="radio" id="white-controller2" name="controller2" value="white" onclick="changeSrcController2()">white
+                                        <input type="radio" id="black-controller2" name="controller2" value="black" onclick="changeSrcController2()" checked> Black <br>
+                                        <input type="radio" id="white-controller2" name="controller2" value="white" onclick="changeSrcController2()"> White
                                     </form>
                                 </div>
                             </div>
@@ -221,7 +220,7 @@
                         <span>RM349</span>
                     </div>                   
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                        <button type="button" class="addToCart">Add to Cart</button> 
                     </div>
                 </div>
             </td>
@@ -254,8 +253,8 @@
                             <div class="controller3-choose-color">
                                 <div class="color-choose">
                                     <form action="" id="controller3">
-                                        <input type="radio" id="black-controller3" name="controller3" value="black" onclick="changeSrcController3()" checked>black <br>
-                                        <input type="radio" id="white-controller3" name="controller3" value="white" onclick="changeSrcController3()">white
+                                        <input type="radio" id="black-controller3" name="controller3" value="black" onclick="changeSrcController3()" checked> Black <br>
+                                        <input type="radio" id="white-controller3" name="controller3" value="white" onclick="changeSrcController3()"> White
                                     </form>
                                 </div>
                             </div>
@@ -266,11 +265,12 @@
                         <span>RM269</span>
                     </div>
                     <div>
-                        <button onclick = "popupMessage()" type="button" class="addToCart">Add to Cart</button> 
+                        <button type="button" class="addToCart">Add to Cart</button> 
                     </div> 
                 </div>
             </td>
         </tr>
     </table>
+    <script src="cart.js"></script>
 </body>
 </html>
