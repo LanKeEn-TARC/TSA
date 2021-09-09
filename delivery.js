@@ -52,6 +52,20 @@ function dispOrder(){
 }
 dispOrder()
 
+//displaying the delivery in payment report page
+function reportDelivery(){
+    let reportDeliveryHtml = '';
+    let deliveryReportFee = JSON.parse(localStorage.getItem('fees'))
+
+    reportDeliveryHtml += `
+    <tr>
+        <td>Delivery: RM</td> 
+        <td>${deliveryReportFee.price}</td>
+    </tr>
+    `
+}
+
+reportDelivery();
 
 
 
