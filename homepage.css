@@ -261,6 +261,7 @@ nav a{
 }
 
 .slide-img{
+  background-color: white;
 	height: 300px;
 	position: relative;
 }
@@ -273,7 +274,7 @@ nav a{
 }
 
 .detail-box{
-  background:rgb(236, 214, 252);
+  background:rgb(194, 163, 163);
 	width: 100%;
   display: flex;
 	justify-content: space-between;
@@ -289,6 +290,7 @@ nav a{
 }
 
 .type a{
+  text-decoration: none;
 	color:#222222;
 	margin: 5px 0px;
 	font-weight: 700;
@@ -323,6 +325,7 @@ nav a{
 }
 
 .buy-btn{
+  text-decoration: none;
 	width:160px;
 	height: 40px;
 	display: flex;
@@ -461,9 +464,9 @@ nav a{
 .items .item {
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 32%;
   transform: translate(-50%, -50%);
-  width: 700px;
+  width: 390px;
   height: 500px;
   overflow: hidden;
   transition: all 300ms ease-in-out;
@@ -475,24 +478,27 @@ nav a{
   width: 390px;
   height: 600px;
   object-fit: cover;
+
 }
 
 .item.active {
   opacity: 1;
   z-index: 99;
-  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 60px 20px rgb(112, 2, 255);
 }
 
 .item.prevB {
   z-index: 2;
   opacity: 0.25;
   transform: translate(-75%, -50%);
+
 }
 
 .item.nextB {
   z-index: 2;
   opacity: 0.25;
   transform: translate(-25%, -50%);
+
 }
 
 .items .button-container {
