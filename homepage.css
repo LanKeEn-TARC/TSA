@@ -656,6 +656,7 @@ footer{
 }
 
 footer a{
+  letter-spacing:1px;
   color:rgb(255, 255, 255);
   text-decoration: none;
 }
@@ -669,30 +670,26 @@ footer #footerSeparate{
   display: flex;
 }
 #footersec1{
-  display: flex;
+  padding:0px;
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
   line-height: 15px;
+  display: flex;
   font-family: 'Roboto';
-  font-size: 16px;
 }
 
-#footersec2{
-  display:block;
-  line-height: 15px;
-  font-family: 'Roboto';
-  font-size: 16px;
-}
+
 #footer1{
-  opacity: 1;
   padding: 5px;
   margin: auto;
-  padding-left: 20px;
   padding-right: 20px;
 }
 
 #footer2{
   padding: 5px;
  margin: auto;
-  padding-left: 20px;
+
   padding-right: 20px;
 }
 
@@ -704,6 +701,13 @@ footer #footerSeparate{
 }
 
 #footer4{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer5{
   padding: 5px;
   margin: auto;
   padding-left: 20px;
