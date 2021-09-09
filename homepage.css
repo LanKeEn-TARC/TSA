@@ -649,8 +649,8 @@ nav a{
 }
 
 footer{
-  color:rgb(255, 255, 255);
   text-align: center;
+  color:rgb(255, 255, 255);
   background-color: #040B10;
   padding: 5px;
 }
@@ -664,14 +664,23 @@ footer a:hover{
   text-decoration: underline;
 }
 
+footer #footerSeparate{
+  margin: auto;
+  display: flex;
+}
 #footersec1{
+  display: flex;
   line-height: 15px;
   font-family: 'Roboto';
   font-size: 16px;
-  display: block;
 }
 
-
+#footersec2{
+  display:block;
+  line-height: 15px;
+  font-family: 'Roboto';
+  font-size: 16px;
+}
 #footer1{
   opacity: 1;
   padding: 5px;
@@ -701,8 +710,7 @@ footer a:hover{
   padding-right: 20px;
 }
 
-#footersec2{
+#footersec3{
   font-size:12px;
-
   color: white;
 }
