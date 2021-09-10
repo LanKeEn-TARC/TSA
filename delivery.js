@@ -38,18 +38,18 @@ function dispAddress(){
     }
     let html = '';
     
-    let address = JSON.parse(localStorage.getItem('addressDetail'));
+    let address = JSON.parse(localStorage.getItem('addressDetail'))[0];
+    console.log(address);
         html += 
         `
         <br>
         <div>
-            Full Name:${address.ad_name}<br>
-            Phone:${address.ad_phone}<br>
-            Address:${address.ad_detail}<br>
-            Postal: ${address.ad_postal}<br>
-            Area: ${address.ad_area}<br>
-            State:  ${address.ad_state}<br>
-            <br>
+            Full Name: ${address.ad_name}<br><br>
+            Phone: ${address.ad_phone}<br><br>
+            Address: ${address.ad_detail}<br><br>
+            Postal: ${address.ad_postal}<br><br>
+            Area: ${address.ad_area}<br><br>
+            State: ${address.ad_state}<br><br>
         </div>
         `
         document.querySelector('#home1').innerHTML = html;
