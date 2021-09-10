@@ -18,7 +18,44 @@ const shippingDetails = [
     var radios = document.getElementsByName('price')
     for(var i = 0; i <radios.length; i++) 
         radios[i].onclick = dispOrder;
+
+    var ele= document.getElementsByName("address")
+    for(var i = 0; i <ele.length; i++) {
+        ele[i].onclick = dispAddress;
+    }
+
+
+
+
+function dispAddress(){
+    if (document.getElementById('homeB').checked) {
+        document.getElementById('home1').style.display = 'block';
+        document.getElementById('others1').style.display = 'none';
+    }
+    if (document.getElementById('othersB').checked) {
+        document.getElementById('others1').style.display = 'block';
+        document.getElementById('home1').style.display = 'none';
+    }
+    let html = '';
     
+    let address = JSON.parse(localStorage.getItem('addressDetail'));
+        html += 
+        `
+        <br>
+        <div>
+            Full Name:${address.ad_name}<br>
+            Phone:${address.ad_phone}<br>
+            Address:${address.ad_detail}<br>
+            Postal: ${address.ad_postal}<br>
+            Area: ${address.ad_area}<br>
+            State:  ${address.ad_state}<br>
+            <br>
+        </div>
+        `
+        document.querySelector('#home1').innerHTML = html;
+}
+dispAddress()
+
 function dispOrder(){
 
     let html = '';
@@ -37,6 +74,7 @@ function dispOrder(){
             localStorage.setItem('fees', JSON.stringify(shippingDetails[3]))
          
         }
+        
 
         let shippingFee = JSON.parse(localStorage.getItem('fees'))
         html += `
@@ -64,10 +102,11 @@ function reportDelivery(){
     </tr>
     `
 }
-
 reportDelivery();
 
+function deliveryDetails(){
 
+}
 
 
 

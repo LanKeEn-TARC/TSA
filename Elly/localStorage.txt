@@ -21,7 +21,7 @@ Bank Account Name: localStorage.accounts.a_name
 Bank Account Number: localStorage.accounts.a_number
 Bank Account Bank: localStorage.accounts.a_bank
 
-Address Page
+Delivery and Address Page
 Full Address: localStorage.addressDetail
 Address Name: localStorage.addressDetail.ad_name
 Address Phone Number: localStorage.addressDetail.ad_phone
@@ -29,3 +29,4 @@ Address State: localStorage.addressDetail.ad_state
 Address Area: localStorage.addressDetail.ad_area
 Address Postal Code: localStorage.addressDetail.ad_postal
 Address Detail: localStorage.addressDetail.ad_detail
+

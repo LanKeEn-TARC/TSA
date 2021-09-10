@@ -8,7 +8,9 @@
   font-family:Neon;
   src: url(Pictures/fonts/neon.regular.ttf);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 /*sticky navbar, grid, slideshows, vidoes*/
 body{
   background: #040B10;

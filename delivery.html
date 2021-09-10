@@ -56,43 +56,63 @@
             </div>
           </div>
       </div>
-      <div class="container">
-        <div class="col-50">
-          <h3>Billing Address</h3>
-          <label for="fname"> Full Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-          <br>
-          <br>
-          <label for="email"> Email</label>
-          <input type="text" id="email" name="email" placeholder="john@example.com">
-          <br>
-          <br>
-          <label for="adr">Address</label>
-          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-          <br>
-          <br>
-          <label for="city">City</label>
-          <input type="text" id="city" name="city" placeholder="New York">
-          <br>
-          <br>
+      <div class="details">
+      
+        <div id = "details1">
+          <h3 style="font-size:28px">Billing Address</h3>
+         
+            <div id="choose">
+              <input type="radio" id="homeB" name="address">
+              Home Address
+            </div>
+            <div id="home1">
 
-          <div class="row">
-            <div>
-              <label for="state">State</label>
-              <input type="text" id="state" name="state" placeholder="NY">
             </div>
-            <div style="padding-left: 100px;">
-              <label for="zip">Zip</label>
-              <input type="text" id="zip" name="zip" placeholder="10001">
+
+            <div id="others">
+              <input type="radio" id="othersB" name="address" >
+              Other Address
             </div>
-          </div>
-          <br>
-          <br>
+            <div id="others1">
+              <hr>
+              <label for="fname"> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your Full Name">
+              <br>
+              <br>
+              <label for="email"> Email</label>
+              <input type="text" id="email" name="email" placeholder="123@example.com">
+              <br>
+              <br>
+              <label for="adr">Address</label>
+              <input type="text" id="adr" name="address" placeholder="Receiving address">
+              <br>
+              <br>
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" placeholder="Petaling Jaya">
+              <br>
+              <br>
+              <div class="row">
+                <div>
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" placeholder="Selangor">
+                </div>
+                <div style="padding-left: 100px;">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="47810">
+                </div>
+              </div>
+              <br>
+              <input type="submit" value="Save" id="saveDelivery" />
+              <input type="reset" value="Reset" id="cancelDelivery" />
+              <br>
+              <br>
+            </div>
+        
         </div>
+        
       
         <div class="row">
           <div class="col-lg-4 col-md-6"> 
-            <!-- Start Single Pricing Area -->
             <div class="table-list">
               <div class="top-price-inner">
                 <h4>Basic</h4>
@@ -111,7 +131,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6"> 
-            <!-- Start Single Pricing Area -->
+
             <div class="table-list">
               <div class="top-price-inner">
                 <h4>Standard</h4>
@@ -130,7 +150,7 @@
             </div>
           </div>
           <div class="col-lg-4 col-md-6"> 
-            <!-- Start Single Pricing Area -->
+ 
             <div class="table-list">
               <div class="top-price-inner">
                 <h4>Premium</h4>
