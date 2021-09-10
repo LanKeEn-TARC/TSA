@@ -14,49 +14,61 @@ body{
 
 /* searchbox */
 #searchBox {
+  margin: auto;
+  display: block;
   background-color: #040B10;
   height: 20px;
   width: 200px;
   font-size: 16px;
   border: 1px solid #ddd;
-  position: fixed;
-  margin: auto;
+  margin-right: 50px;
   width: auto;
   z-index: 1;
-  float: right;
   color: white;
+}
+summary p {
+  margin-top: 10px;
+  margin-right: 100px;
+  display: block;
+  position: static;
+  color: white;
+  text-decoration: none;
 }
 
 #searchList {
+  width: inherit;
+  position: fixed;
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: inline-block;
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: white;
+  background-color: #040B10;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
 }
 
 #searchList li {
-  border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: white;
+  background-color: #040B10;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
+  color: white;
 }
 
-#searchBox:focus > #searchList > li > a{
-  display: block;
+#searchList li a{
+  color: white;
+}
+
+#searchList li a:hover{
+  text-decoration: none;
 }
 
 #searchList li a:hover:not(.header) {
-  background-color: #eee;
+  background-color: blue;
 }
 
 /* product */
@@ -261,28 +273,4 @@ input[type='radio']:checked:after {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
