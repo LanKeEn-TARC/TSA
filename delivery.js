@@ -25,19 +25,44 @@ const shippingDetails = [
     }
 
 function dispAddress(){
+
     if (document.getElementById('homeB').checked) {
         document.getElementById('home1').style.display = 'block';
         document.getElementById('others1').style.display = 'none';
     }
-    if (document.getElementById('othersB').checked) {
+    else if (document.getElementById('othersB').checked) {
         document.getElementById('others1').style.display = 'block';
         document.getElementById('home1').style.display = 'none';
     }
-    let html = '';
-    
-    let address = JSON.parse(localStorage.getItem('addressDetail'))[0];
+}
+dispAddress()
+
+let html = '';
+let address = JSON.parse(localStorage.getItem('addressDetail'));
+
+    address.forEach(chooseAddress);
     console.log(address);
-        html += 
+    var ele= document.getElementsByName("get")
+        for(var i = 0; i <ele.length; i++) {
+        ele[i].onclick = getAddress(i);
+function chooseAddress(address, i){
+    html += 
+    `
+        <div >
+        <br>
+            Address ${i+1}
+            <hr>
+        </div>
+        `
+        document.querySelector('#home1').innerHTML = html;
+        i++;
+        
+}
+
+function getAddress(i){
+    address = JSON.parse(localStorage.getItem('addressDetail'))[i];
+    let html = '';
+html += 
         `
         <br>
         <div>
@@ -49,9 +74,9 @@ function dispAddress(){
             Address: ${address.ad_detail}<br><br>
         </div>
         `
-        document.querySelector('#home1').innerHTML = html;
+        document.querySelector('#home2').innerHTML = html;
 }
-dispAddress()
+
 
 function storeAddress(){
 
@@ -66,11 +91,11 @@ function storeAddress(){
             alert("Fields cannot be empty!");
             return false;
         }
-        else if(phone.validity.patternMismatch){
+        else if(  addressPhone.validity.patternMismatch){
             alert("Invalid phone number format!");
             return false;
         }
-        else if(postal.validity.patternMismatch){
+        else if(addressPostal.validity.patternMismatch){
             alert("Invalid postal code format!");
             return false;
         }
@@ -85,10 +110,15 @@ function storeAddress(){
             };
 
             console.log(fullAddress0);
-            localStorage.setItem('addressDetailsOrder',fullAddress0);
+            localStorage.setItem('addressDetailsOrder', JSON.stringify(fullAddress0))
             console.log('Address is sucessfully added!');
+            alert("Address added!");
         };
     };
+
+function resetAddress(){
+
+}
 
 function dispOrder(){
 
