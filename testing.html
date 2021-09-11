@@ -22,101 +22,39 @@
     </style>
 </head>
 <body>
-    <header id="stick_nav">
-        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
-        <nav>
-            <ul>
-                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
-                <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
-                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="keyboard.html">Keyboard</a></li>
-                        <li><a href="console.html">Console</a></li>
-                        <li><a href="mouse.html">Mouse</a></li>
-                        <li><a href="controllers.html">Controllers</a></li>
-                        <li><a href="accessories.html">Accessories</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
-            </ul>
-           
-         </nav>
-         <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
-         <a href="cart.html"><img src="Pictures/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
-    </header>
+    <tr id="others1">
+        <label for="fname"> Full Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your Full Name">
+      <br>
+      <br>
+      <label for="email"> Email</label>
+      <input type="text" id="email" name="email" placeholder="123@example.com">
+      <br>
+      <br>
+      <label for="adr">Address</label>
+      <input type="text" id="adr" name="address" placeholder="Receiving address">
+      <br>
+      <br>
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" placeholder="Petaling Jaya">
+      <br>
+      <br>
 
-    <section class="container content-section">
-        <h2 class="section-header">MUSIC</h2>
-        <div class="shop-items">
-            <div class="shop-item">
-                <span class="shop-item-title">Album 1</span>
-                <img class="shop-item-image" src="Images/Album 1.png">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$12.99</span>
-                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="shop-item">
-                <span class="shop-item-title">Album 2</span>
-                <img class="shop-item-image" src="Images/Album 2.png">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$14.99</span>
-                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="shop-item">
-                <span class="shop-item-title">Album 3</span>
-                <img class="shop-item-image" src="Images/Album 3.png">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$9.99</span>
-                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="shop-item">
-                <span class="shop-item-title">Album 4</span>
-                <img class="shop-item-image" src="Images/Album 4.png">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$19.99</span>
-                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                </div>
-            </div>
+      <div class="row">
+        <div>
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" placeholder="Selangor">
         </div>
-    </section>
-    <section class="container content-section">
-        <h2 class="section-header">MERCH</h2>
-        <div class="shop-items">
-            <div class="shop-item">
-                <span class="shop-item-title">T-Shirt</span>
-                <img class="shop-item-image" src="Images/Shirt.png">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$19.99</span>
-                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                </div>
-            </div>
-            <div class="shop-item">
-                <span class="shop-item-title">Coffee Cup</span>
-                <img class="shop-item-image" src="Images/Cofee.png">
-                <div class="shop-item-details">
-                    <span class="shop-item-price">$6.99</span>
-                    <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                </div>
-            </div>
+        <div style="padding-left: 100px;">
+          <label for="zip">Zip</label>
+          <input type="text" id="zip" name="zip" placeholder="47810">
         </div>
-    </section>
-    <section class="container content-section">
-        <h2 class="section-header">CART</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">Products</span>
-            <span class="cart-price cart-header cart-column">Price</span>
-            <span class="cart-quantity cart-header cart-column">Quantity</span>
-        </div>
-        <div class="cart-items">
-        </div>
-        <div class="cart-total">
-            <strong class="cart-total-title">Total</strong>
-            <span class="cart-total-price">$0</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
-    </section>
+      </div>
+      <br>
+      <input type="submit" value="Save" id="saveDelivery" />
+      <input type="reset" value="Reset" id="cancelDelivery" />
+      <br>
+      <br>
+    </tr>
 </body>
 </html>
