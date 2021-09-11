@@ -10,12 +10,12 @@
 </head>
 <body>
     <header id="stick_nav">
-        <a href="../homepage.html"><img src="Image/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
+        <a href="homepage.html"><img src="Image/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
         <nav>
             <ul>
-                <li><a href="../homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
                 <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
-                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
+                <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
                     <ul class="dropdown-content">
                         <li><a href="keyboard.html"> Keyboard</a></li>
                         <li><a href="console.html">Console</a></li>
@@ -25,10 +25,10 @@
                     </ul>
                 </li>
                 <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
-            </ul>          
-         </nav>
-         <a href="Profile.html"><img src="Image/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
-         <a href="cart.html"><img src="Image/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
+            </ul>
+           
+        </nav>
+        <a href="Profile.html"><img src="Image/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
     <div class="page_content">
         <div class="left_container">
@@ -154,6 +154,47 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div id="footerSeparate">
+            <div id ="footersec1">
+                <div id="footer1">
+                    <img src="Image/nav_logo.jpeg" alt="facebookIcon" height="100px" weight="100px" >
+                </div>
+                <div id="footer2">
+                    <h4>Products</h4>
+                    <a href="keyboard.html">Keyboard</a><br><br>
+                    <a href="console.html">Consoles</a><br><br>
+                    <a href="mouse.html">Mouse</a><br><br>
+                    <a href="controllers.html">Controllers</a><br><br>
+                    <a href="accessories.html">Accessories</a><br><br>
+                </div>       
+                <div id="footer3">
+                    <h4>Supports</h4>
+                    <a href="about_us.html">About Us</a><br><br>
+                    <a href="#">Contact Us</a><br><br>
+                    <a href="faq.html">FAQ</a><br><br>
+                    <a href="#.html">Live Chat</a><br>
+                    <br><br><br>
+                </div>      
+                <div id="footer4">
+                   <h4>Follow our socials</h4>
+                   <img src="Image/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Image/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Image/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            
+                <div id="footer5">
+                    <h4>Verified By</h4>
+                    <img src="Image/tsa_foundation.jpeg" alt="facebookIcon" height="100px" weight="150px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                </div>
+            </div>
+        
+        <br>
+        <div id ="footersec3">
+            <i> @All copyrights reserved under TSA</i>
+        </div>  
+    </footer>
     <!--Javascript for adding bank cards-->
     <script src="Java-Script-Functions/Bank_Card.js"></script>
     <!--Javascript for adding bank accounts-->
@@ -171,7 +212,6 @@
             document.querySelector('.bnc__addAccount').style.display = 'block';
         });
     </script>
-    <footer></footer>
     <!--Link for icon for delete section-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" 
