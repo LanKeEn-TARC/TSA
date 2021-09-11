@@ -10,14 +10,14 @@
 </head>
 <body>
     <header id="stick_nav">
-        <a href="../homepage.html"><img src="Image/nav_logo.jpeg" alt="navigation logo" width="80px" height="80px"></a>
+        <a href="homepage.html"><img src="Image/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
         <nav>
             <ul>
-                <li><a href="../homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
                 <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
-                <li class="dropdown"><a href="product.html"><span></span><span></span><span></span><span></span>Products</a>
+                <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
                     <ul class="dropdown-content">
-                        <li><a href="keyboard.html">Keyboard</a></li>
+                        <li><a href="keyboard.html"> Keyboard</a></li>
                         <li><a href="console.html">Console</a></li>
                         <li><a href="mouse.html">Mouse</a></li>
                         <li><a href="controllers.html">Controllers</a></li>
@@ -25,10 +25,10 @@
                     </ul>
                 </li>
                 <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
-            </ul>          
-         </nav>
-         <a href="Profile.html"><img src="Image/profilepic.png" alt="navigation profile pic" width="40px" height="40px"></a>
-         <a href="cart.html"><img src="Image/nav_shoppingcart.png" alt="navigation cart" width="40px" height="40px"></a>
+            </ul>
+           
+        </nav>
+        <a href="Profile.html"><img src="Image/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
     <div class="page_content">
         <div class="left_container">
@@ -57,7 +57,7 @@
                         <tr>
                             <td><label for="profileName">Name</label></td>
                             <td>
-                                <input type="text" id="profileName" class="profile__input" autofocus placeholder="Your Full Name" value="" />
+                                <input type="text" id="profileName" class="profile__input" autofocus value="Chong Xin Yi" />
                             </td>
                         </tr>
                         <tr>
@@ -69,8 +69,8 @@
                         <tr>
                             <td><label for="profilePhone">Phone Number</label></td>
                             <td>
-                                <input type="tel" id="profilePhone" class="profile__input" autofocus  
-                                pattern="[01]{2}[0|2-9]{1}-[0-9]{3} [0-9]{4}|[011]{3}-[0-9]{4} [0-9]{4}" placeholder="01X-XXX(X) XXXX" value=""/>
+                                <input type="tel" id="profilePhone" class="profile__input" autofocus value="011-2123 0408" 
+                                pattern="[01]{2}[0|2-9]{1}-[0-9]{3} [0-9]{4}|[011]{3}-[0-9]{4} [0-9]{4}" />
                             </td>
                         </tr>
                         <tr>
@@ -101,6 +101,47 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div id="footerSeparate">
+            <div id ="footersec1">
+                <div id="footer1">
+                    <img src="Image/nav_logo.jpeg" alt="facebookIcon" height="100px" weight="100px" >
+                </div>
+                <div id="footer2">
+                    <h4>Products</h4>
+                    <a href="keyboard.html">Keyboard</a><br><br>
+                    <a href="console.html">Consoles</a><br><br>
+                    <a href="mouse.html">Mouse</a><br><br>
+                    <a href="controllers.html">Controllers</a><br><br>
+                    <a href="accessories.html">Accessories</a><br><br>
+                </div>       
+                <div id="footer3">
+                    <h4>Supports</h4>
+                    <a href="about_us.html">About Us</a><br><br>
+                    <a href="#">Contact Us</a><br><br>
+                    <a href="faq.html">FAQ</a><br><br>
+                    <a href="#.html">Live Chat</a><br>
+                    <br><br><br>
+                </div>      
+                <div id="footer4">
+                   <h4>Follow our socials</h4>
+                   <img src="Image/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Image/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Image/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            
+                <div id="footer5">
+                    <h4>Verified By</h4>
+                    <img src="Image/tsa_foundation.jpeg" alt="facebookIcon" height="100px" weight="150px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                </div>
+            </div>
+        
+        <br>
+        <div id ="footersec3">
+            <i> @All copyrights reserved under TSA</i>
+        </div>  
+    </footer>
     <script>
         //Get data from localStorage
         document.getElementById("usernameDisplay").innerHTML = localStorage.su_username;
@@ -155,6 +196,5 @@
             }
         }
     </script>
-    <footer></footer>
 </body>
 </html>
