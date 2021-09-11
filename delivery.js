@@ -24,9 +24,6 @@ const shippingDetails = [
         ele[i].onclick = dispAddress;
     }
 
-
-
-
 function dispAddress(){
     if (document.getElementById('homeB').checked) {
         document.getElementById('home1').style.display = 'block';
@@ -45,16 +42,53 @@ function dispAddress(){
         <br>
         <div>
             Full Name: ${address.ad_name}<br><br>
-            Phone: ${address.ad_phone}<br><br>
-            Address: ${address.ad_detail}<br><br>
-            Postal: ${address.ad_postal}<br><br>
+            Phone Number: ${address.ad_phone}<br><br>
+            Postal Code: ${address.ad_postal}<br><br>
             Area: ${address.ad_area}<br><br>
             State: ${address.ad_state}<br><br>
+            Address: ${address.ad_detail}<br><br>
         </div>
         `
         document.querySelector('#home1').innerHTML = html;
 }
 dispAddress()
+
+function storeAddress(){
+
+        var addressName = document.querySelector("#addressNameO"),
+        addressPhone = document.querySelector("#addressPhoneO"),
+        addressState = document.querySelector("#stateO"),
+        addressArea = document.querySelector("#areaO"),
+        addressPostal = document.querySelector("#addressPostalO"),
+        addressDetails = document.querySelector("#addressDetailsO");
+
+        if(addressName.value == "" || addressPhone.value == "" || addressState.value == "" || addressArea.value == "" || addressPostal.value == "" || addressDetails.value == ""){
+            alert("Fields cannot be empty!");
+            return false;
+        }
+        else if(phone.validity.patternMismatch){
+            alert("Invalid phone number format!");
+            return false;
+        }
+        else if(postal.validity.patternMismatch){
+            alert("Invalid postal code format!");
+            return false;
+        }
+        else{
+            let fullAddress0 = {
+                ad_name0: addressName.value,
+                ad_phone0: addressPhone.value,
+                ad_state0: addressState.value,
+                ad_area0: addressArea.value,
+                ad_postal0: addressPostal.value,
+                ad_detail0: addressDetails.value
+            };
+
+            console.log(fullAddress0);
+            localStorage.setItem('addressDetailsOrder',fullAddress0);
+            console.log('Address is sucessfully added!');
+        };
+    };
 
 function dispOrder(){
 

@@ -3,10 +3,9 @@
 body{
   background: #040B10;
 }
-
-.details{
-  position: relative;
-  float: right;
+.checkout{
+  display: flex;
+  justify-content: space-between;
 }
 
   #details1{
@@ -14,7 +13,6 @@ body{
     box-sizing: border-box;
     background-color: #ddd;
     padding:0px 16px;
-    flex: 50%;
     border-radius: 10px;
   }
 
@@ -29,11 +27,6 @@ body{
   h3{
     padding: 5px;
     margin: 0;
-  }
-
-  .checkout{
-    display: flex;
-    justify-content: space-between;
   }
 
   .checkout_container {
@@ -69,7 +62,6 @@ body{
     box-sizing:border-box;
     display:flex;
     justify-content:center;
-
   }
 
   .line {
@@ -91,6 +83,7 @@ body{
   }
 
 .row{
+  float:right;
   display: flex;
 }
 

@@ -20,7 +20,7 @@
               <h2>Order Summary</h2>
               <div class='line'></div>
               
-              <table class='order-table'>
+              <table class='order-table' style="overflow: auto;">
                <!--<tbody>
                   <tr>
                     <td>
@@ -55,121 +55,112 @@
               </table>
             </div>
           </div>
-      </div>
-      <div class="details">
-      
-        <div id = "details1">
-          <h3 style="font-size:28px">Billing Address</h3>
-         
-            <div id="choose">
-              <input type="radio" id="homeB" name="address">
-              Home Address
-            </div>
-            <div id="home1">
-
-            </div>
-
-            <div id="others">
-              <input type="radio" id="othersB" name="address" >
-              Other Address
-            </div>
-            <div id="others1">
-              <hr>
-              <label for="fname"> Full Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your Full Name">
-              <br>
-              <br>
-              <label for="email"> Email</label>
-              <input type="text" id="email" name="email" placeholder="123@example.com">
-              <br>
-              <br>
-              <label for="adr">Address</label>
-              <input type="text" id="adr" name="address" placeholder="Receiving address">
-              <br>
-              <br>
-              <label for="city">City</label>
-              <input type="text" id="city" name="city" placeholder="Petaling Jaya">
-              <br>
-              <br>
-              <div class="row">
-                <div>
-                  <label for="state">State</label>
-                  <input type="text" id="state" name="state" placeholder="Selangor">
-                </div>
-                <div style="padding-left: 100px;">
-                  <label for="zip">Zip</label>
-                  <input type="text" id="zip" name="zip" placeholder="47810">
-                </div>
-              </div>
-              <br>
-              <input type="submit" value="Save" id="saveDelivery" />
-              <input type="reset" value="Reset" id="cancelDelivery" />
-              <br>
-              <br>
-            </div>
-        
         </div>
+        <div style="position: absolute; display: block; left: 35%;">
+          <div id = "details1">
+            <h3 style="font-size:28px">Billing Address</h3>
+           
+              <div id="choose">
+                <input type="radio" id="homeB" name="address">
+               Saved Addresses
+              </div>
+              <div id="home1">
+  
+              </div>
+  
+              <div id="others">
+                <input type="radio" id="othersB" name="address" >
+                Other Address
+              </div>
+              <div id="others1">
+                <hr>
+                <label for="fname">Full Name: </label>
+                <input type="text" id="addressNameO"  placeholder="Full Name" required /><br><br>
+                <label for="pNumber">Phone Number: </label>
+                <input type="tel" id="addressPhoneO" placeholder="(01X-XXX(X) XXXX)" pattern="[01]{2}[0|2-9]{1}-[0-9]{3} [0-9]{4}|[011]{3}-[0-9]{4} [0-9]{4}" required /><br><br>
+                <label for="state">State: </label>
+                <select name="state" id="stateO">
+                        <option value="">-- Select State --</option>
+                    </select><br><br>
+                    <label for="area">Area: </label>
+                    <select name="area" id="areaO">
+                        <option value="">-- Select Area --</option>
+                    </select><br><br>
+                <label for="state">Postal Code: </label>
+                <input type="text" id="addressPostal" placeholder="(XXXXX)" pattern="[0-9]{5}" required /><br><br>
+                <label for="address">Address: </label><br>
+                <textarea id="addressDetailsO" name="addressDetails" cols=30" rows="2" placeholder="Unit number, House number, Building, Street name" required></textarea>
+                <br>
+                <br>
+                <button onclick="storeAddress()">Save</button>
+                <input type="reset" value="Reset" id="cancelDelivery" />
+                <br>
+                <br>
+              </div>     
+              </div>
+          
         
-      
-        <div class="row">
-          <div class="col-lg-4 col-md-6"> 
-            <div class="table-list">
-              <div class="top-price-inner">
-                <h4>Basic</h4>
-                <div class="rates"> <span class="prices">RM5</span> </div>
-              </div>
-              <ol>
-                <li class="check">Online System</li>
-                <li class="check">Free apps</li>
-                <li class="check cross">full access</li>
-                <li class="check">live preview</li>
-                <li class="check cross">Support unlimited</li>
-              </ol>
-              <div class="price-btn">  
-                <input type="radio"  id="basic" name="price" value="5" checked>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6"> 
-
-            <div class="table-list">
-              <div class="top-price-inner">
-                <h4>Standard</h4>
-                <div class="rates"> <span class="prices">RM10</span> </div>
-              </div>
-              <ol>
-                <li class="check">Online System</li>
-                <li class="check">Free apps</li>
-                <li class="check cross">full access</li>
-                <li class="check">live preview</li>
-                <li class="check cross">Support unlimited</li>
-              </ol>
-              <div class="price-btn">  
-                <input type="radio" id="standard" name="price" value="10">
+          <div class="row">
+            <div class="col-lg-4 col-md-6"> 
+              <div class="table-list">
+                <div class="top-price-inner">
+                  <h4>Basic</h4>
+                  <div class="rates"> <span class="prices">RM5</span> </div>
+                </div>
+                <ol>
+                  <li class="check">Online System</li>
+                  <li class="check">Free apps</li>
+                  <li class="check cross">full access</li>
+                  <li class="check">live preview</li>
+                  <li class="check cross">Support unlimited</li>
+                </ol>
+                <div class="price-btn">  
+                  <input type="radio"  id="basic" name="price" value="5" checked>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-md-6"> 
- 
-            <div class="table-list">
-              <div class="top-price-inner">
-                <h4>Premium</h4>
-                <div class="rates"> <span class="prices">RM15</span> </div>
+            <div class="col-lg-4 col-md-6"> 
+  
+              <div class="table-list">
+                <div class="top-price-inner">
+                  <h4>Standard</h4>
+                  <div class="rates"> <span class="prices">RM10</span> </div>
+                </div>
+                <ol>
+                  <li class="check">Online System</li>
+                  <li class="check">Free apps</li>
+                  <li class="check cross">full access</li>
+                  <li class="check">live preview</li>
+                  <li class="check cross">Support unlimited</li>
+                </ol>
+                <div class="price-btn">  
+                  <input type="radio" id="standard" name="price" value="10">
+                </div>
               </div>
-              <ol>
-                <li class="check">Online System</li>
-                <li class="check">Free apps</li>
-                <li class="check cross">full access</li>
-                <li class="check">live preview</li>
-                <li class="check cross">Support unlimited</li>
-              </ol>
-              <div class="price-btn">  
-                <input type="radio"  id="premium" name="price" value="15">
+            </div>
+            <div class="col-lg-4 col-md-6"> 
+   
+              <div class="table-list">
+                <div class="top-price-inner">
+                  <h4>Premium</h4>
+                  <div class="rates"> <span class="prices">RM15</span> </div>
+                </div>
+                <ol>
+                  <li class="check">Online System</li>
+                  <li class="check">Free apps</li>
+                  <li class="check cross">full access</li>
+                  <li class="check">live preview</li>
+                  <li class="check cross">Support unlimited</li>
+                </ol>
+                <div class="price-btn">  
+                  <input type="radio"  id="premium" name="price" value="15">
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+       
 
     </div>
 
@@ -178,3 +169,5 @@
 
     </body>
     <script src="delivery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="Elly/Java-Script-Functions/State_and_Area.js"></script>
