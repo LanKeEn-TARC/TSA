@@ -39,28 +39,26 @@ dispAddress()
 
 let html = '';
 let address = JSON.parse(localStorage.getItem('addressDetail'));
-
     address.forEach(chooseAddress);
     console.log(address);
-    var ele= document.getElementsByName("get")
-        for(var i = 0; i <ele.length; i++) {
-        ele[i].onclick = getAddress(i);
-function chooseAddress(address, i){
+   
+function chooseAddress(address, no){
     html += 
     `
-        <div >
+        <div>
         <br>
-            Address ${i+1}
-            <hr>
+        <button class="getA" name="getA">Button</button>
+        Address ${no+1}
+        <hr>
         </div>
         `
+      
         document.querySelector('#home1').innerHTML = html;
-        i++;
-        
 }
 
-function getAddress(i){
-    address = JSON.parse(localStorage.getItem('addressDetail'))[i];
+
+function getAddress(){
+    address = JSON.parse(localStorage.getItem('addressDetail'));
     let html = '';
 html += 
         `
@@ -168,9 +166,7 @@ function reportDelivery(){
 }
 reportDelivery();
 
-function deliveryDetails(){
 
-}
 
 
 
