@@ -154,7 +154,8 @@ function storeAddress(){
     };
 
 function resetAddress(){
-
+    localStorage.setItem('addressDetailsOrder', JSON.stringify(0))
+    alert("Details reset!");
 }
 
 function dispOrder(){
