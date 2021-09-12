@@ -32,35 +32,63 @@ function dispAddress(){
     }
     else if (document.getElementById('othersB').checked) {
         document.getElementById('others1').style.display = 'block';
+        document.getElementById('home2').style.display = 'none';
         document.getElementById('home1').style.display = 'none';
     }
 }
 dispAddress()
 
 let html = '';
-let address = JSON.parse(localStorage.getItem('addressDetail'));
-    address.forEach(chooseAddress);
-    console.log(address);
-   
-function chooseAddress(address, no){
-    html += 
+let address1 = JSON.parse(localStorage.getItem('addressDetail'));
+address1.forEach(chooseAddress);
+    console.log(address1);
+function chooseAddress(address1, no){
+   html += 
     `
         <div>
         <br>
-        <button class="getA" name="getA">Button</button>
+        <button id="get${no}" name="getA">Button</button>
         Address ${no+1}
         <hr>
         </div>
         `
-      
         document.querySelector('#home1').innerHTML = html;
 }
 
+if(document.getElementById("get0").onclick=function()
+{
+    console.log('c')
+        let address = JSON.parse(localStorage.getItem('addressDetail'))[0];
+        document.getElementById('home2').style.display = 'block';
+        getAddress(address);
+    })
 
-function getAddress(){
-    address = JSON.parse(localStorage.getItem('addressDetail'));
+    if(document.getElementById("get1").onclick=function()
+    {
+        console.log('c')
+
+            let address = JSON.parse(localStorage.getItem('addressDetail'))[1];
+            document.getElementById('home2').style.display = 'block';
+            getAddress(address);
+        })
+
+        if(document.getElementById("get2").onclick){
+            console.log('c')
+                let address = JSON.parse(localStorage.getItem('addressDetail'))[2];
+                document.getElementById('home2').style.display = 'block';
+                getAddress(address);
+            }
+
+function getAddress(address){
+    var addressName = document.querySelector("#addressName"),
+        addressPhone = document.querySelector("#addressPhone"),
+        addressState = document.querySelector("#state"),
+        addressArea = document.querySelector("#area"),
+        addressPostal = document.querySelector("#addressPostal"),
+        addressDetails = document.querySelector("#addressDetails");
+    console.log(address);
     let html = '';
-html += 
+    html += 
         `
         <br>
         <div>
@@ -72,9 +100,19 @@ html +=
             Address: ${address.ad_detail}<br><br>
         </div>
         `
+      
         document.querySelector('#home2').innerHTML = html;
-}
 
+        let shippingAddress = {
+            ad_name: addressName,
+                ad_phone: addressPhone,
+                ad_state: addressState,
+                ad_area: addressArea,
+                ad_postal: addressPostal,
+                ad_detail: addressDetails
+        };
+        localStorage.setItem('comfirmAddress', JSON.stringify(shippingAddress))
+}
 
 function storeAddress(){
 

@@ -27,7 +27,7 @@ body{
   }
 
   #home2{
-    padding: 10px;
+    display: none;
   }
 
   h3{
