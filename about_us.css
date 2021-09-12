@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
-@import url(homepage.css);
+@font-face {
+  font-family:Tech;
+  src: url(Pictures/fonts/TarrgetAcademyItalic-qzmx.otf);
+}
 
+@font-face {
+  font-family:Neon;
+  src: url(Pictures/fonts/neon.regular.ttf);
+}
+html{
+  scroll-behavior: smooth;
+}
 /*sticky navbar, grid, slideshows, vidoes*/
 body{
   background: #040B10;
 }
 
-/* Navigation */
 header{
   display: flex;
   padding:0px;
@@ -23,7 +32,7 @@ header img{
   width: 100%;
   background:#040B10;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 
 #profilePic{
@@ -123,48 +132,34 @@ nav ul li ul li a:hover{
   display: block;
 }
 
-hr{
-    width: 1000px;
-    margin: 10px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid #cc0f0f;
-    color: black;
-    border-radius: 5px;
-    box-shadow: 0 0 5px red;
-    padding: 0;
-    animation: glow 1s ease-in-out infinite;
-    -webkit-animation: glow 1s ease-in-out infinite;
-}
-
-hr::before {
-    content: '';
-    position: absolute;
-    border: 2px solid #222;
-    width: 900px;
-    margin: -2px 50px;
-    border-radius: 2px;
-    box-shadow: 0 0 3px black;
-    animation: glowMinr 1s ease-in-out;
-    -webkit-animation: glowMinor 0.5s ease-in-out infinite 
-  }
 
 @keyframes glow {
     0%{box-shadow: 0 0 20px #2196f3;}
     50%{box-shadow: 0 0 1px #2196f3;}
     100%{box-shadow: 0 0 20px #2196f3;}
-  }
+}
+
+.myBtn{
+  position: absolute;
+  z-index: 1;
+}
+
   .grid { 
       margin: 2px; 
       float:left; 
     }
 
+    .grid img{
+      opacity:0.6;
+      filter: blur(1px);
+    }
+
+
   #locations { 
       height: 150px; 
       width:  450px; 
-      background-color: red;
     }
-
+ 
     #promises { 
         height: 150px; 
         width:  850px; 
@@ -180,19 +175,21 @@ hr::before {
   #introduction { 
       height: 350px; 
       width:  300px;
-      background-color: orange;
     }
-
+  #introduction img{
+    
+    position: absolute;
+  top: 40%;
+  left: 43%;
+}
   #products { 
       height: 550px; 
       width: 447px; 
-      background-color: yellow;
     }
 
   #social { 
       height: 198px;
       width: 852px; 
-      background-color: brown;
       margin-top:-198px;
     }
 
@@ -231,4 +228,73 @@ hr::before {
         text-decoration: none;
         cursor: pointer;
       }
-
+      footer{
+        text-align: center;
+        color:rgb(255, 255, 255);
+        background-color: #040B10;
+        padding: 5px;
+      }
+      
+      footer a{
+        letter-spacing:1px;
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+      }
+      
+      footer a:hover{
+        text-decoration: underline;
+      }
+      
+      footer #footerSeparate{
+        margin: auto;
+        display: flex;
+      }
+      #footersec1{
+        padding:0px;
+        width: 100%;
+        margin: auto;
+        font-size: 15px;
+        line-height: 15px;
+        display: flex;
+        font-family: 'Roboto';
+      }
+      
+      
+      #footer1{
+        padding: 5px;
+        margin: auto;
+        padding-right: 20px;
+      }
+      
+      #footer2{
+        padding: 5px;
+       margin: auto;
+      
+        padding-right: 20px;
+      }
+      
+      #footer3{
+        padding: 5px;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      #footer4{
+        padding: 5px;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      #footer5{
+        padding: 5px;
+        margin: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      
+      #footersec3{
+        font-size:12px;
+        color: white;
+      }
