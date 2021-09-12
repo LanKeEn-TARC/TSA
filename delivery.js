@@ -72,12 +72,13 @@ if(document.getElementById("get0").onclick=function()
             getAddress(address);
         })
 
-        if(document.getElementById("get2").onclick){
+        if(document.getElementById("get2").onclick=function()
+        {
             console.log('c')
                 let address = JSON.parse(localStorage.getItem('addressDetail'))[2];
                 document.getElementById('home2').style.display = 'block';
                 getAddress(address);
-            }
+            })
 
 function getAddress(address){
     var addressName = document.querySelector("#addressName"),
