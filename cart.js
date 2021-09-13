@@ -1,4 +1,4 @@
-
+document.addEventListener("DOMContentLoaded", function () {
 console.log('Welcome to shoping cart TSA');
 
 //Declare variable
@@ -126,4 +126,4 @@ function cartTotalPrice(){
     document.querySelector('.cartPayment #totalPrice h3 span').textContent = total
 }
 cartTotalPrice();
-
+})
