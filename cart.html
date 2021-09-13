@@ -7,7 +7,7 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="homepage.css">
-    <script src="cart.js"></script>
+    <!-- <script src="cart.js"></script> -->
 </head>
 <body>
     <header id="stick_nav">
@@ -36,15 +36,50 @@
         <marquee scrollamount="20" direction="left">
             <h1>Welcome to Shopping Cart. Hope you enjoy your Shopping in TSA</h1>
         </marquee>
-        
-        <div id="cartDetails">
-            <p class="cartTitle">Product Name</p>
-            <p class="cartTitle">Quantity</p>
-            <p class="cartTitle">Price(RM)</p>
-            <p class="cartTitle">Total</p>
-            <p class="cartTitle">Remove</p>
-        </div>
-        <hr id="hrCart">
+
+        <table id="cartDetails">
+            <thead>
+               <th>Product Images</th>
+               <th>Product Name</th>
+               <th>Quantity</th>
+               <th>Price(RM)</th>
+               <th>Total</th>
+               <th>Button</th>
+            </thead>
+            
+            <tbody class="productDisplay">
+                <!-- <tr class="cart">
+                    <td class="cartProductImg"><img src="${item.pic}" alt="Product Picture"></td>
+                    <td class="name"><p>${item.name}</p></td>
+                    <td class="quantity"><p>${item.quantity}</p></td>  
+                    <td class="price"><p>${item.price}</p></td>
+                    <td class="total"><p>RM${item.totalPrice}</td>
+                    <td class="remove"><button>Remove</button></td>
+                </tr> -->
+            </tbody>
+
+            <!-- <tfoot>
+                <div class="cartPayment">
+                    <div id="totalPrice"><h3>Total: RM<span></span></h3></div>
+                    <!--
+                    <div class="goPayment">
+                        <button onclick="location.href='/accessories.html'">Process to Payment Pages</button>
+                    </div>
+                ->
+                    <div class="slidingButton">
+                        <a href="/payment.html" class="btn_one">
+                            CHECKOUT
+                        </a>
+                        <a href="/product.html" class="btn_two">
+                            <span>CONTINUE SHOPPING</span>
+                            <div class="btn_bg"></div>
+                        </a>
+                    </div>
+                </div>
+            </tfoot> -->
+            
+            
+        </table>
         <div class="productDisplay">
             <!--<div class="cart">
                 <div class="name"><p>RAZER</p></div>
@@ -54,24 +89,7 @@
                 <div class="remove"><button>Remove</button></div>
             </div>-->
         </div>
-        <div class="cartPayment">
-            <div id="totalPrice"><h3>Total: RM<span></span></h3></div>
-            <!--
-            <div class="goPayment">
-                <button onclick="location.href='/accessories.html'">Process to Payment Pages</button>
-            </div>
-            -->
-            <div class="slidingButton">
-                <a href="/payment.html" class="btn_one">
-                    CHECKOUT
-                </a>
-                <a href="/product.html" class="btn_two">
-                    <span>CONTINUE SHOPPING</span>
-                    <div class="btn_bg"></div>
-                </a>
-            </div>
-        </div>
-        
+    <script src="cart.js"></script> <!--Caiwen-->  
     </main>
     <footer>
         <div id="footerSeparate">

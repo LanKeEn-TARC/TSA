@@ -83,29 +83,27 @@ function displayCartItem(){
     cartProduct && cartProduct.forEach((item) => {
         recycleView += 
         `
-        <div class="cart">
-            <div class="pictures"><img src="${item.pic}" alt=""></div>
-            <div class="name"><p>${item.name}</p></div>
-            <div class="quantity"><p>${item.quantity}</p></div>
-            <div class="price"><p>${item.price}</p></div>
-            <div class="total"><p>RM${item.totalPrice}</div>
-
-            <div class="remove"><button>Remove</button></div>
-        </div>
-        <hr>
+        <tr class="cart">
+            <td class="cartProductImg"><img src="${item.pic}" alt="Product Picture"></td>
+            <td class="name"><p>${item.name}</p></td>
+            <td class="quantity"><p>${item.quantity}</p></td>  
+            <td class="price"><p>${item.price}</p></td>
+            <td class="total"><p>RM${item.totalPrice}</td>
+            <td class="remove"><button>Remove</button></td>
+        </tr>
         `;
-    });
+    });//${item.quantity}  //${item.price}
     document.querySelector('.productDisplay').innerHTML = recycleView;
 }
 displayCartItem();
 
-
+//getAttribute("src").getAttribute("src")
 const removeProduct = document.getElementsByClassName('remove')
 for(var i = 0; i < removeProduct.length; i++){
     let removeButton = removeProduct[i]
     removeButton.addEventListener('click', () =>{
         let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
-        console.log(event.target.parentElement.parentElement.children[0].children[0].getAttribute("src"));
+        console.log(event.target.parentElement.parentElement.children[0].children[0]);
         cartProduct.forEach(item => {
             if(item.pic != event.target.parentElement.parentElement.children[0].children[0].getAttribute("src")){
                 products.push(item) 
