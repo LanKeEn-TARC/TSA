@@ -47,38 +47,23 @@ function chooseAddress(address1, no){
     `
         <div>
         <br>
-        <button id="get${no}" name="getA">Button</button>
+        <button id="${address1.ad_name}">Button</button>
         Address ${no+1}
         <hr>
         </div>
         `
         document.querySelector('#home1').innerHTML = html;
-}
 
-if(document.getElementById("get0").onclick=function()
-{
-    console.log('c')
-        let address = JSON.parse(localStorage.getItem('addressDetail'))[0];
-        document.getElementById('home2').style.display = 'block';
-        getAddress(address);
-    })
+            document.getElementById(address1.ad_name).onclick=function()
+            {
+                console.log('c')
+                    let address = JSON.parse(localStorage.getItem('addressDetail'))[address1.ad_name];
+                    document.getElementById('home2').style.display = 'block';
+                    getAddress(address);
+                }
 
-    if(document.getElementById("get1").onclick=function()
-    {
-        console.log('c')
+        }
 
-            let address = JSON.parse(localStorage.getItem('addressDetail'))[1];
-            document.getElementById('home2').style.display = 'block';
-            getAddress(address);
-        })
-
-        if(document.getElementById("get2").onclick=function()
-        {
-            console.log('c')
-                let address = JSON.parse(localStorage.getItem('addressDetail'))[2];
-                document.getElementById('home2').style.display = 'block';
-                getAddress(address);
-            })
 
 function getAddress(address){
     var addressName = document.querySelector("#addressName"),
@@ -191,20 +176,6 @@ function dispOrder(){
    document.querySelector('.order-table').innerHTML = html;
 }
 dispOrder()
-
-//displaying the delivery in payment report page
-function reportDelivery(){
-    let reportDeliveryHtml = '';
-    let deliveryReportFee = JSON.parse(localStorage.getItem('fees'))
-
-    reportDeliveryHtml += `
-    <tr>
-        <td>Delivery: RM</td> 
-        <td>${deliveryReportFee.price}</td>
-    </tr>
-    `
-}
-reportDelivery();
 
 
 
