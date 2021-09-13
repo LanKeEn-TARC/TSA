@@ -6,3 +6,13 @@
     margin-right: auto;
     background-color: white;
 } */
+
+@media print {
+    .footer,
+    #non-printable {
+        display: none !important;
+    }
+    #printable {
+        display: block;
+    }
+}

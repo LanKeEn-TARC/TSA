@@ -172,30 +172,10 @@ function dispOrder(){
         </tr>
         </tfoot>
                 `    
-                console.log(shippingFee.price)
+    
    document.querySelector('.order-table').innerHTML = html;
 }
 dispOrder()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

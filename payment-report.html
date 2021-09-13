@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="paymentReport.css">
 </head>
 <body>
-    <header id="stick_nav">
+    <header id="stick_nav"  id='non-printable'>
         <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
-        <nav>
+        <nav id='non-printable'>
             <ul>
                 <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
                 <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
@@ -32,10 +32,9 @@
 
         </nav>
         <a href="Elly\Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
-        <a href="Elly/Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
 
-    <table class="report-table">
+    <table class="report-table" id="printable">
         <th class="report-table-customerDetails">
 
         </th>
@@ -51,6 +50,53 @@
             
         </tr>
     </table>
-    <script src="payment-report.js"></script> 
+    <div id='non-printable'>
+        <button onClick="window.print()">Print this page</button>
+    </div>
 </body>
+<footer  id='non-printable'>
+    <div id="footerSeparate">
+        <div id ="footersec1">
+            <div id="footer1">
+                <img src="Pictures/nav_logo.jpeg" alt="facebookIcon" height="100px" weight="100px" >
+            </div>
+            <div id="footer2">
+                <h4>Products</h4>
+                <a href="keyboard.html">Keyboard</a><br><br>
+                <a href="console.html">Consoles</a><br><br>
+                <a href="mouse.html">Mouse</a><br><br>
+                <a href="controllers.html">Controllers</a><br><br>
+                <a href="accessories.html">Accessories</a><br><br>
+            </div>
+        
+            <div id="footer3">
+                <h4>Supports</h4>
+                <a href="about_us.html">About Us</a><br><br>
+                <a href="#">Contact Us</a><br><br>
+                <a href="faq.html">FAQ</a><br><br>
+                <a href="#.html">Live Chat</a><br>
+                <br><br><br>
+            </div>
+
+           
+            <div id="footer4">
+               <h4>Follow our socials</h4>
+               <img src="Pictures/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <img src="Pictures/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <img src="Pictures/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+        
+            <div id="footer5">
+                <h4>Verified By</h4>
+                <img src="Pictures/tsa_foundation.jpeg" alt="facebookIcon" height="100px" weight="150px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            </div>
+        </div>
+    
+    <br>
+    <div id ="footersec3">
+        <i> @All copyrights reserved under TSA</i>
+    </div>
+</footer>
+<script src="payment-report.js"></script> 
 </html>
