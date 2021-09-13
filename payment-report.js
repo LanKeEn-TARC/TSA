@@ -1,0 +1,49 @@
+//delivery name and price get and show
+
+let deliveryType = JSON.parse(localStorage.getItem('fees'));
+console.log(deliveryType.price);
+console.log(deliveryType.name);
+
+let deliveryTypeFeeReport = "";
+deliveryTypeFeeReport += `
+
+    <td>${deliveryType.name}</td>
+    <td>${deliveryType.price}</td>
+
+`
+document.querySelector('.report-table-delivery').innerHTML = deliveryTypeFeeReport;
+
+
+//product details get and show
+let productReport = "";
+let productReportGet = JSON.parse(localStorage.getItem("productInCart"));
+    productReportGet && productReportGet.forEach((item) =>{
+        console.log(item.name)
+        console.log(item.price)
+        productReport += `
+        <tr>
+        <td>${item.name}</td>
+        <td>${item.price}</td>
+        <td>${item.totalPrice}</td>
+        <td>${item.quantity}</td>
+        </tr>
+        `
+    })
+
+document.querySelector('.report-table-product').innerHTML = productReport;
+
+let customerReport = "";
+let customerDetailsGet = JSON.parse(localStorage.getItem("addressDetailsOrder"));
+    customerDetailsGet && customerDetailsGet.forEach((item) =>{
+    console.log(item.ad_area0)
+    console.log(item.ad_detail0)
+    customerReport += `
+    <tr>
+    <td>${item.name}</td>
+    <td>${item.price}</td>
+    <td>${item.totalPrice}</td>
+    <td>${item.quantity}</td>
+    </tr>
+    `
+})
+document.querySelector('.report-table-customerDetails').innerHTML = customerReport;

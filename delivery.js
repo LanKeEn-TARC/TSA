@@ -187,22 +187,22 @@ function dispOrder(){
         </tr>
         </tfoot>
                 `    
-    
+                console.log(shippingFee.price)
    document.querySelector('.order-table').innerHTML = html;
 }
 dispOrder()
 
 //displaying the delivery in payment report page
 function reportDelivery(){
+    
     let reportDeliveryHtml = '';
     let deliveryReportFee = JSON.parse(localStorage.getItem('fees'))
-
+ console.log(deliveryReportFee.price)
     reportDeliveryHtml += `
-    <tr>
         <td>Delivery: RM</td> 
         <td>${deliveryReportFee.price}</td>
-    </tr>
     `
+    document.querySelector('.delivery-price-report div').innerHTML = html;
 }
 reportDelivery();
 
