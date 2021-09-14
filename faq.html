@@ -12,6 +12,29 @@
 </head>
 <body>
   <header id="stick_nav">
+
+      <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
+      <nav>
+          <ul>
+              <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+              <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
+              <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
+                  <ul class="dropdown-content">
+                      <li><a href="keyboard.html"> Keyboard</a></li>
+                      <li><a href="console.html">Console</a></li>
+                      <li><a href="mouse.html">Mouse</a></li>
+                      <li><a href="controllers.html">Controllers</a></li>
+                      <li><a href="accessories.html">Accessories</a></li>
+                  </ul>
+              </li>
+              <li><a href="faq.html"><span></span><span></span><span></span><span></span>FAQ</a></li>
+              <li><a href="promotion.html"><span></span><span></span><span></span><span></span>Promotion</a></li>
+              <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+          </ul>
+
+      </nav>
+      <a href="Elly/Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
+  </header>
     <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
     <nav>
         <ul>
@@ -30,7 +53,7 @@
             <li><a href="promotion.html"><span></span><span></span><span></span><span></span>Promotion</a></li>
             <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
         </ul>
-       
+
     </nav>
     <a href="Elly/Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
 </header>
@@ -63,64 +86,124 @@
 
       <hr class="separatorLine"/>
 
-      <div class="grid-container">
+      <div class="content-container">
 
         <div class="item-container">
-          <div class="item">
-            <img src="Pictures/faqController.png" alt="controller" id="faq-controllerImage">
+          <div class="item-image">
+            <img src="./Pictures/faqConsole.png" alt="console">
           </div>
-          <div class="item itemDesc" id="controllerExpandBtn">
+
+          <div class="item-btn">
+            <p>Console <span class="arrowIcon"></span></p>
+          </div>
+
+          <div class="item-questions">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam incidunt pariatur, accusamus ratione repellendus est sint aut quaerat neque impedit obcaecati ipsam ut aliquam iste expedita placeat, maxime non, laudantium.</p>
+          </div>
+        </div>
+
+        <div class="item-container">
+          <div class="item-image">
+            <img src="./Pictures/faqMouse.png" alt="mouse">
+          </div>
+
+          <div class="item-btn">
+            <p>Mouse <span class="arrowIcon"></span></p>
+          </div>
+
+          <div class="item-questions">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam incidunt pariatur, accusamus ratione repellendus est sint aut quaerat neque impedit obcaecati ipsam ut aliquam iste expedita placeat, maxime non, laudantium.</p>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="item-image">
+            <img src="./Pictures/faqHeadset.png" alt="headset">
+          </div>
+
+          <div class="item-btn">
+            <p>Headset <span class="arrowIcon"></span></p>
+          </div>
+
+          <div class="item-questions">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam incidunt pariatur, accusamus ratione repellendus est sint aut quaerat neque impedit obcaecati ipsam ut aliquam iste expedita placeat, maxime non, laudantium.</p>
+          </div>
+        </div>
+        <div class="item-container">
+          <div class="item-image">
+            <img src="./Pictures/faqController.png" alt="controller">
+          </div>
+
+          <div class="item-btn">
             <p>Controller <span class="arrowIcon"></span></p>
-            <div class="faqQuestions" id="controllerFaq">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt facere labore minima quam quasi impedit dolore molestias rerum cumque quisquam necessitatibus laudantium cum beatae doloremque, autem earum doloribus ipsa corporis.</p>
-            </div>
+          </div>
+
+          <div class="item-questions">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam incidunt pariatur, accusamus ratione repellendus est sint aut quaerat neque impedit obcaecati ipsam ut aliquam iste expedita placeat, maxime non, laudantium.</p>
           </div>
         </div>
-
         <div class="item-container">
-          <div class="item">
-            <img src="Pictures/faqConsole.png" alt="console">
+          <div class="item-image">
+            <img src="./Pictures/faqkeyboard.jpg" alt="console">
           </div>
-          <div class="item itemDesc">
-            <p>Console <span class="arrowIcon" id="consoleExpand"></span></p>
-          </div>
-        </div>
 
-        <div class="item-container">
-          <div class="item">
-            <img src="Pictures/faqMouse.png" alt="mouse">
+          <div class="item-btn">
+            <p>Keyboard <span class="arrowIcon"></span></p>
           </div>
-          <div class="item itemDesc">
-            <p>Mouse <span class="arrowIcon" id="mouseExpand"></span></p>
-          </div>
-        </div>
 
-        <div class="item-container">
-          <div class="item">
-            <img src="Pictures/faqHeadset.png" alt="accessories">
-          </div>
-          <div class="item itemDesc">
-            <p>Accessories <span class="arrowIcon" id="accessoriesExpand
-            "></span></p>
-          </div>
-        </div>
-
-        <div class="item-container">
-          <div class="item">
-            <img src="Pictures/faqKeyboard.jpg" alt="keyboard">
-          </div>
-          <div class="item itemDesc">
-            <p>Keyboard <span class="arrowIcon" id="keyboardExpand"></span></p>
+          <div class="item-questions">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam incidunt pariatur, accusamus ratione repellendus est sint aut quaerat neque impedit obcaecati ipsam ut aliquam iste expedita placeat, maxime non, laudantium.</p>
           </div>
         </div>
 
       </div>
 
-      <script src="faq.js"></script>
-    </body>
 
     <footer>
+        <div id="footerSeparate">
+            <div id ="footersec1">
+                <div id="footer1">
+                    <img src="Pictures/nav_logo.jpeg" alt="facebookIcon" height="100px" weight="100px" >
+                </div>
+                <div id="footer2">
+                    <h4>Products</h4>
+                    <a href="keyboard.html">Keyboard</a><br><br>
+                    <a href="console.html">Consoles</a><br><br>
+                    <a href="mouse.html">Mouse</a><br><br>
+                    <a href="controllers.html">Controllers</a><br><br>
+                    <a href="accessories.html">Accessories</a><br><br>
+                </div>
+
+                <div id="footer3">
+                    <h4>Supports</h4>
+                    <a href="about_us.html">About Us</a><br><br>
+                    <a href="#">Contact Us</a><br><br>
+                    <a href="faq.html">FAQ</a><br><br>
+                    <a href="#.html">Live Chat</a><br>
+                    <br><br><br>
+                </div>
+
+
+                <div id="footer4">
+                   <h4>Follow our socials</h4>
+                   <img src="Pictures/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Pictures/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Pictures/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+
+                <div id="footer5">
+                    <h4>Verified By</h4>
+                    <img src="Pictures/tsa_foundation.jpeg" alt="facebookIcon" height="100px" weight="150px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                </div>
+            </div>
+
+        <br>
+        <div id ="footersec3">
+            <i> @All copyrights reserved under TSA</i>
+        </div>
+
 
     </footer>
+    <script src="faq.js"></script>
 </body>
 </html>

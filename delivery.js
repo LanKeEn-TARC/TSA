@@ -40,38 +40,39 @@ dispAddress()
 
 let html = '';
 let address1 = JSON.parse(localStorage.getItem('addressDetail'));
-address1.forEach(chooseAddress);
-    console.log(address1);
+for(let i = 0; i < address1.length; i++) {
+    let address1 = JSON.parse(localStorage.getItem('addressDetail'))[i];
+    chooseAddress(address1,i);
+}
+
 function chooseAddress(address1, no){
+console.log(address1)
    html += 
     `
         <div>
         <br>
-        <button id="${address1.ad_name}">Button</button>
+        <button id="${no}">Button</button>
         Address ${no+1}
         <hr>
         </div>
         `
-        document.querySelector('#home1').innerHTML = html;
+    
+    document.querySelector('#home1').innerHTML  = html;
+}
+for(let no = 0 ; no < address1.length; no ++){
+    document.getElementById(no).onclick=function()
 
-            document.getElementById(address1.ad_name).onclick=function()
-            {
-                console.log('c')
-                    let address = JSON.parse(localStorage.getItem('addressDetail'))[address1.ad_name];
-                    document.getElementById('home2').style.display = 'block';
-                    getAddress(address);
-                }
-
-        }
-
+    {
+        console.log('c')
+            let address = JSON.parse(localStorage.getItem('addressDetail'))[no];
+            document.getElementById('home2').style.display = 'block';
+            console.log(address)
+            getAddress(address);
+    }
+}
 
 function getAddress(address){
-    var addressName = document.querySelector("#addressName"),
-        addressPhone = document.querySelector("#addressPhone"),
-        addressState = document.querySelector("#state"),
-        addressArea = document.querySelector("#area"),
-        addressPostal = document.querySelector("#addressPostal"),
-        addressDetails = document.querySelector("#addressDetails");
+
     console.log(address);
     let html = '';
     html += 
@@ -90,14 +91,26 @@ function getAddress(address){
         document.querySelector('#home2').innerHTML = html;
 
         let shippingAddress = {
-            ad_name: addressName,
-                ad_phone: addressPhone,
-                ad_state: addressState,
-                ad_area: addressArea,
-                ad_postal: addressPostal,
-                ad_detail: addressDetails
+            name:address.ad_name,
+            phone:address.ad_phone,
+            state:address.ad_state,
+            area:address.ad_area,
+            postal:address.ad_postal,
+            details:address.ad_detail
         };
+
         localStorage.setItem('comfirmAddress', JSON.stringify(shippingAddress))
+
+        let finalAddress = {
+            final_name:address.ad_name,
+            final_phone:address.ad_phone,
+            final_state:address.ad_state,
+            final_area:address.ad_area,
+            final_postal:address.ad_postal,
+            final_details:address.ad_detail
+        };
+
+        localStorage.setItem('finalAddress', JSON.stringify(finalAddress))
 }
 
 function storeAddress(){
@@ -133,6 +146,17 @@ function storeAddress(){
 
             console.log(fullAddress0);
             localStorage.setItem('addressDetailsOrder', JSON.stringify(fullAddress0))
+
+            let finalAddress = {
+                final_name: addressName.value,
+                final_phone: addressPhone.value,
+                final_state: addressState.value,
+                final_area: addressArea.value,
+                final_postal: addressPostal.value,
+                final_details: addressDetails.value
+            };
+            console.log(finalAddress);
+            localStorage.setItem('finalAddress', JSON.stringify(finalAddress))
             console.log('Address is sucessfully added!');
             alert("Address added!");
         };
