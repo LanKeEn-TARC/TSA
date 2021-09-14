@@ -3,6 +3,7 @@
 
 body{
   background: #040B10;
+  color: white;
 }
 
 header{
@@ -25,7 +26,7 @@ header img{
 }
 
 #profilePic{
-  padding-right: 40px; 
+  padding-right: 40px;
   padding-top: 20px;
 }
 
@@ -121,38 +122,13 @@ nav ul li ul li a:hover{
   display: block;
 }
 
-hr{
-    width: 1000px;
-    margin: 10px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid #cc0f0f;
-    color: black;
-    border-radius: 5px;
-    box-shadow: 0 0 5px red;
-    padding: 0;
-    animation: glow 1s ease-in-out infinite;
-    -webkit-animation: glow 1s ease-in-out infinite;
-}
-
-hr::before {
-    content: '';
-    position: absolute;
-    border: 2px solid #222;
-    width: 900px;
-    margin: -2px 50px;
-    border-radius: 2px;
-    box-shadow: 0 0 3px black;
-    animation: glowMinr 1s ease-in-out;
-    -webkit-animation: glowMinor 0.5s ease-in-out infinite 
-  }
 
 @keyframes glow {
     0%{box-shadow: 0 0 20px #2196f3;}
     50%{box-shadow: 0 0 1px #2196f3;}
     100%{box-shadow: 0 0 20px #2196f3;}
   }
-  
+
 /*FAQ Header*/
 .faqHeader {
   height: 100vh;
@@ -186,7 +162,7 @@ hr::before {
 
 .lightBar:first-of-type {
   position: absolute;
-  top: 30%;
+  top: 23%;
   left: 0;
   width: 0.7em;
   height: 75%;
@@ -202,7 +178,7 @@ hr::before {
 
 .lightBar:last-of-type {
   position: absolute;
-  top: 30%;
+  top: 23%;
   right: 0;
   width: 0.7em;
   height: 75%;
@@ -314,39 +290,52 @@ hr.separatorLine {
 }
 
 /*Main Content*/
-.grid-container {
-  display: grid;
-  grid-gap: 3em;
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em;
   width: 80vw;
-  grid-template-columns: repeat(2, 1fr);
-  -webkit-grid-template-columns: repeat(2, 1fr);
-  -moz-grid-template-columns: repeat(2, 1fr);
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5em;
-  margin-bottom: 5em;
-  font-size: 1.5em;
+  align-items: flex-start;
 }
 
 .item-container {
+  width: 40%;
   box-shadow: 0 0 4px #F08080,
               0 0 8px #F08080,
               0 0 16px #F08080,
               0 0 32px #F08080,
               0 0 64px #F08080;
+  margin: 2em;
   border-radius: 1em;
 }
 
-.item img {
-  width: 100%;
-  border-radius: 10px;
+.item-container.hover {
+  animation: colorChange 5s infinite;
 }
 
-.item-container:last-of-type {
-  grid-column: 1 / -1;
-  -webkit-grid-column: 1 / -1;
-  -moz-grid-column: 1 / -1;
+.item-container img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+.item-btn {
+  height: 3em;
+  border-radius: 1em;
+}
+
+.item-container .item-btn p {
+  font-size: 1.5em;
+  margin: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.item-container .item-questions {
+  margin: 0.5em;
+  display: none;
 }
 
 .arrowIcon {
@@ -357,9 +346,97 @@ hr.separatorLine {
     transform: rotate(45deg) translateY(-5px);
 }
 
-.itemDesc {
-  cursor: pointer;
+@keyframes colorChange {
+  0% {
+    box-shadow: 0 0 4px blue,
+                0 0 8px blue,
+                0 0 16px blue,
+                0 0 32px blue,
+                0 0 64px blue;
+
+  }
+  10% {
+    box-shadow: 0 0 4px #8e44ad,
+                0 0 8px #8e44ad,
+                0 0 16px #8e44ad,
+                0 0 32px #8e44ad,
+                0 0 64px #8e44ad;
+
+  }
+  20% {
+    box-shadow: 0 0 4px #F08080,
+                0 0 8px #F08080,
+                0 0 16px #F08080,
+                0 0 32px #F08080,
+                0 0 64px #F08080;
+
+  }
+  30% {
+    box-shadow: 0 0 4px #1abc9c,
+                0 0 8px #1abc9c,
+                0 0 16px #1abc9c,
+                0 0 32px #1abc9c,
+                0 0 64px #1abc9c;
+
+  }
+  40% {
+    box-shadow: 0 0 4px blue,
+                0 0 8px blue,
+                0 0 16px blue,
+                0 0 32px blue,
+                0 0 64px blue;
+
+  }
+  50% {
+    box-shadow: 0 0 4px #34495e,
+                0 0 8px #34495e,
+                0 0 16px #34495e,
+                0 0 32px #34495e,
+                0 0 64px #34495e;
+
+  }
+  60% {
+    box-shadow: 0 0 4px blue,
+                0 0 8px blue,
+                0 0 16px blue,
+                0 0 32px blue,
+                0 0 64px blue;
+
+  }
+  70% {
+    box-shadow: 0 0 4px #2980b9,
+                0 0 8px #2980b9,
+                0 0 16px #2980b9,
+                0 0 32px #2980b9,
+                0 0 64px #2980b9;
+
+  }
+  80% {
+    box-shadow: 0 0 4px #f1c40f,
+                0 0 8px #f1c40f,
+                0 0 16px #f1c40f,
+                0 0 32px #f1c40f,
+                0 0 64px #f1c40f;
+
+  }
+  90% {
+    box-shadow: 0 0 4px #2980b9,
+                0 0 8px #2980b9,
+                0 0 16px #2980b9,
+                0 0 32px #2980b9,
+                0 0 64px #2980b9;
+
+  }
+  100% {
+    box-shadow: 0 0 4px pink,
+                0 0 8px pink,
+                0 0 16px pink,
+                0 0 32px pink,
+                0 0 64px pink;
+  }
 }
+
+
 .animActive {
   animation: activeAnimation 3s ease;
   -webkit-animation: activeAnimation 3s ease;
@@ -399,14 +476,79 @@ hr.separatorLine {
   }
 }
 
-.faqQuestions {
-  font-size: 0.8em;
-  display: none;
-  overflow: auto;
-  max-width: 100%;
-  border-radius: 0 0 1em 1em;
+
+
+
+
+
+/*Footer*/
+footer{
+  text-align: center;
+  color:rgb(255, 255, 255);
+  background-color: #040B10;
+  padding: 5px;
 }
 
-.faqQuestions-show {
-  display: block;
+footer a{
+  letter-spacing:1px;
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer #footerSeparate{
+  margin: auto;
+  display: flex;
+}
+#footersec1{
+  padding:0px;
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  font-family: 'Roboto';
+}
+
+
+#footer1{
+  padding: 5px;
+  margin: auto;
+  padding-right: 20px;
+}
+
+#footer2{
+  padding: 5px;
+ margin: auto;
+
+  padding-right: 20px;
+}
+
+#footer3{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer4{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer5{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footersec3{
+  font-size:12px;
+  color: white;
 }
