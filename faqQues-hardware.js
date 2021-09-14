@@ -1,6 +1,17 @@
 //to display ques and ans div onclick
 var active = document.querySelectorAll('.expand');
 
+//get the url
+var currentUrl = window.location.href;
+var openBlock = currentUrl.split("#")[1];
+console.log(document.querySelector('#' + openBlock));
+
+
+if (openBlock != null && openBlock != undefined) {
+    document.querySelector('#' + openBlock).style.display = 'block';
+}
+
+
 for (var i = 0; i < active.length; i++) {
     active[i].addEventListener('click', function() {
         this.classList.toggle('.active');
