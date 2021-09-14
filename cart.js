@@ -154,6 +154,11 @@ function cartTotalPrice(){
         total += item.totalPrice;
     })
     console.log('Your cart total price is ' + total);
+
+    let totalCartPrice = {
+        total: total
+    }
+    localStorage.setItem('finalCartTotal', JSON.stringify(totalCartPrice));
     document.querySelector('.cartPayment #totalPrice h3 span').textContent = total
 }
 
