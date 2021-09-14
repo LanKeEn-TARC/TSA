@@ -37,7 +37,6 @@ marquee > h1{
     font-weight: bold; 
 }
 
-
 /* A row of the cart items */
 .cart {
     background-color: #040B10;
@@ -65,6 +64,10 @@ marquee > h1{
     width: 20%;
     text-align: center;
 }
+
+.quantity input.quantityValue{
+    font-weight: bold;
+}
 .price {
     width: 10%;
     text-align: center;
@@ -89,7 +92,6 @@ marquee > h1{
 
 .cart p {
     margin:0;
-    /* text-shadow: 1px 1px #b3bbca; */
     color: #CACCCD;
     font-size: 20pt;
     font-family: 'Times New Roman', Times, serif;
@@ -103,7 +105,7 @@ marquee > h1{
     font-size: 20px;
     text-decoration: none;
     cursor:pointer;
-    border: 2px solid red;
+    border: 2px solid #2196f3 ;
     border-radius: 12px;
 }
 
@@ -127,8 +129,8 @@ marquee > h1{
     width: 50px;
     height: 30px;
     font-size: 1.4em;
-    color: white;
-    background-color: #2196f3;
+    color: black;
+    background-color: white;
     font-weight: 300;
     
 }
@@ -155,57 +157,32 @@ button[class*=Button] {
     outline: 0;
 }
   
-
-  
-  
-
-/*tfoot*/
+/*Total*/
 .cartPayment{
-    border: 1px solid #111;
-    box-shadow:
-          1px 1px #111,
-          2px 2px #111,
-          3px 3px #111,
-          4px 4px #111,
-          5px 5px #111,
-          6px 6px #111,
-          7px 7px #111,
-          8px 8px #111,
-          9px 9px #111,
-          10px 10px #111,
-          12px 12px #111,
-          13px 13px #111,
-          14px 14px #111,
-          15px 15px #111,
-          16px 16px #111,
-          17px 17px #111,
-          18px 18px #111,
-          19px 19px #111,
-          20px 20px #111;
-    -webkit-transform: translateX(-3px);
-    transform: translateX(-3px);
-    /*hhaha*/
     display: flex;
     flex-direction: row;
     width: 80%;
+    height: 100%;
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }
 
 #totalPrice{
     text-align: center;
     font-weight: bold;
+    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;    
     letter-spacing: 1px;
-    color: red;
+    color: white;
 }
 
 #totalPrice h3{
+    margin-top: 10px;
     margin-left: 20px;
 }
+
 /*sliding Button*/
 .slidingButton {
     width: 340px;
@@ -216,12 +193,14 @@ button[class*=Button] {
     z-index: 1;
 }
 .btn_one {
+    font-size: 1.1em;
     float: left;
     color: rgb(255, 255, 255);
     text-decoration: none;
     transition: 1.0s;
 }
 .btn_two {
+    font-size: 1.1em;
     float: right;
     text-decoration: none;
     color: #a6afbf;
@@ -239,19 +218,19 @@ button[class*=Button] {
     border-radius: 5px; 
 }
 
-span:hover + .btn_bg {
+#continueShop:hover + .btn_bg {
     width: 252px;
     margin-left: -40px;
 }
 
-.btn_two > span:hover {
+.btn_two > #continueShop:hover {
     color: white;
 }
 
 .btn_two:hover ~ .btn_one {
     color: #a6afbf;
 }
-span {
+#continueShop {
     padding: 10px 0;
     transition: 1.0s;
 }
