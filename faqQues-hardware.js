@@ -15,3 +15,40 @@ for (var i = 0; i < active.length; i++) {
 
     })
 }
+
+
+//extend accordion when the link is clicked
+var consoleLink = document.getElementById('consoleHeadLink');
+var consoleSection = document.getElementById('consoleSec');
+
+function consoleSecShow() {
+    consoleSection.style.display = 'block';
+}
+
+var mouseHeadLink = document.getElementById('mouseHeadLink');
+var mouseSection = document.getElementById('mouseSec');
+
+function mouseSecShow() {
+    mouseSection.style.display = 'block';
+}
+
+var headsetHeadLink = document.getElementById('headsetHeadLink');
+var headsetSection = document.getElementById('headsetSec');
+
+function headsetSecShow() {
+    headsetSection.style.display = 'block';
+}
+
+var controllerHeadLink = document.getElementById('controllerHeadLink');
+var controllerSection = document.getElementById('controllerSec');
+
+function controllerSecShow() {
+    controllerSection.style.display = 'block';
+}
+
+var keyboardHeadLink = document.getElementById('keyboardHeadLink');
+var keyboardSection = document.getElementById('keyboardSec');
+
+function keyboardSecShow() {
+    keyboardSection.style.display = 'block';
+}
