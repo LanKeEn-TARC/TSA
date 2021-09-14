@@ -307,11 +307,21 @@ nav ul li ul li a:hover{
         border-collapse:collapse;
       }
       
-      #soModal img{
+      #soModal div img{
+        display:block;
         clear: left;
         position: relative;
+        margin: auto;
         opacity:1;
         filter: blur(0px);
+      }
+
+      #introModal div{
+        border:2px solid black;
+        margin: auto;
+        font-size:17px;
+        text-align:center;
+        padding:30px;
       }
 
       footer{
