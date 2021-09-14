@@ -312,9 +312,9 @@ hr.separatorLine {
   border-radius: 1em;
 }
 
-.item-container.hover {
+/* .item-container.hover {
   animation: colorChange 5s infinite;
-}
+} */
 
 .item-container img {
   width: 100%;
@@ -346,7 +346,16 @@ hr.separatorLine {
     transform: rotate(45deg) translateY(-5px);
 }
 
-@keyframes colorChange {
+.item-questions a {
+  color: wheat;
+  font-size: 1.4em;
+}
+
+.item-questions a:hover {
+  color: skyblue;
+}
+
+/* @keyframes colorChange {
   0% {
     box-shadow: 0 0 4px blue,
                 0 0 8px blue,
@@ -434,7 +443,7 @@ hr.separatorLine {
                 0 0 32px pink,
                 0 0 64px pink;
   }
-}
+} */
 
 
 .animActive {

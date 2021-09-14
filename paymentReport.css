@@ -6,14 +6,26 @@ table{
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-    width: 80%;
+    width: 70%;
     height: auto;
+    align-items: center;
+    justify-content: center;
 } 
 
 table tr td{
     border: 1px solid black;
 }
 
+table th{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+}
 /* for printing */
 @media print {
     .footer,
@@ -25,17 +37,29 @@ table tr td{
     }
 }
 
-*{
+/* *{
     margin: 0;
     padding: 0;
+} */
+.rateText{
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 .rate {
+    display: block;
+    position: relative;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
     top: 50%;
-    left: 50%;
-    height: 46px;
-    padding: 0 10px;
+    left: -6%;
+    height: 40px;
+    /* padding: 50px 0 50px; */
 }
 .rate:not(:checked) > input {
     position:relative;
