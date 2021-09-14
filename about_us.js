@@ -3,27 +3,26 @@ var modal =  document.getElementsByClassName('button');
 var btn = document.getElementsByClassName("myBtn");
 var span = document.getElementsByClassName("close");
 
-btn[0].onclick = function() {
+function locationB() {
   modal[0].style.display = "block";
 }
-
-btn[1].onclick = function() {
+function promisesB() {
   modal[1].style.display = "block";
 }
 
-btn[2].onclick = function() {
+function  tncB(){
   modal[2].style.display = "block";
 }
 
-btn[3].onclick = function() {
+function introB(){
   modal[3].style.display = "block";
 }
 
-btn[4].onclick = function() {
+function productB(){
   modal[4].style.display = "block";
 }
 
-btn[5].onclick = function() {
+function socialB() {
   modal[5].style.display = "block";
 }
 
@@ -50,24 +49,5 @@ span[5].onclick = function() {
   modal[5].style.display = "none";
 }
 
-window.onclick = function(event) {
-  if (event.target == modal[0]) {
-    modal[0].style.display = "none";
-  }
-  if (event.target == modal[1]) {
-      modal[1].style.display = "none";
-  }  
-  if (event.target == modal[2]) {
-    modal[2].style.display = "none";
-  }
-  if (event.target == modal[3]) {
-    modal[3].style.display = "none";
-  }  
-  if (event.target == modal[4]) {
-    modal[4].style.display = "none";
-  }  
-  if (event.target == modal[5]) {
-    modal[5].style.display = "none";
-  }  
-}
+
 

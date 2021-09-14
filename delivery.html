@@ -65,14 +65,17 @@
                Saved Addresses
               </div>
               <div id="home1">
-  
+        
               </div>
-  
+              <div id="home2">
+        
+              </div>
               <div id="others">
                 <input type="radio" id="othersB" name="address" >
                 Other Address
               </div>
               <div id="others1">
+                <form action="">
                 <hr>
                 <label for="fname">Full Name: </label>
                 <input type="text" id="addressNameO"  placeholder="Full Name" required /><br><br>
@@ -87,18 +90,18 @@
                         <option value="">-- Select Area --</option>
                     </select><br><br>
                 <label for="state">Postal Code: </label>
-                <input type="text" id="addressPostal" placeholder="(XXXXX)" pattern="[0-9]{5}" required /><br><br>
+                <input type="text" id="addressPostalO" placeholder="(XXXXX)" pattern="[0-9]{5}" required /><br><br>
                 <label for="address">Address: </label><br>
-                <textarea id="addressDetailsO" name="addressDetails" cols=30" rows="2" placeholder="Unit number, House number, Building, Street name" required></textarea>
+                <textarea id="addressDetailsO" name="addressDetails" cols="30" rows="2" placeholder="Unit number, House number, Building, Street name" required></textarea>
                 <br>
                 <br>
                 <button onclick="storeAddress()">Save</button>
-                <input type="reset" value="Reset" id="cancelDelivery" />
+                <input  onclick="resetAddress()" type="reset" value="Reset" id="cancelDelivery" />
+              </form>
                 <br>
                 <br>
               </div>     
               </div>
-          
         
           <div class="row">
             <div class="col-lg-4 col-md-6"> 
@@ -108,11 +111,10 @@
                   <div class="rates"> <span class="prices">RM5</span> </div>
                 </div>
                 <ol>
-                  <li class="check">Online System</li>
-                  <li class="check">Free apps</li>
-                  <li class="check cross">full access</li>
-                  <li class="check">live preview</li>
-                  <li class="check cross">Support unlimited</li>
+                  <li class="check">Received within 10 days</li>
+                  <li class="check">Normal Packaging</li>
+                  <br><br>
+
                 </ol>
                 <div class="price-btn">  
                   <input type="radio"  id="basic" name="price" value="5" checked>
@@ -127,11 +129,10 @@
                   <div class="rates"> <span class="prices">RM10</span> </div>
                 </div>
                 <ol>
-                  <li class="check">Online System</li>
-                  <li class="check">Free apps</li>
-                  <li class="check cross">full access</li>
-                  <li class="check">live preview</li>
-                  <li class="check cross">Support unlimited</li>
+                  <li class="check">Received within 5 days</li>
+                  <li class="check">Normal Packaging</li>
+                  <br><br>
+
                 </ol>
                 <div class="price-btn">  
                   <input type="radio" id="standard" name="price" value="10">
@@ -146,11 +147,10 @@
                   <div class="rates"> <span class="prices">RM15</span> </div>
                 </div>
                 <ol>
-                  <li class="check">Online System</li>
-                  <li class="check">Free apps</li>
-                  <li class="check cross">full access</li>
-                  <li class="check">live preview</li>
-                  <li class="check cross">Support unlimited</li>
+                  <li class="check">Received within 3 days</li>
+                  <li class="check">Extra Protection Packaging</li>
+                  <li class="check cross">Delivery Insurance Included</li>
+
                 </ol>
                 <div class="price-btn">  
                   <input type="radio"  id="premium" name="price" value="15">

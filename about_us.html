@@ -10,52 +10,83 @@
 
 </head>
 <body>
-    <header id="stick_nav">
-        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
-        <nav>
-            <ul>
-                <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
-                <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
-                <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="keyboard.html"> Keyboard</a></li>
-                        <li><a href="console.html">Console</a></li>
-                        <li><a href="mouse.html">Mouse</a></li>
-                        <li><a href="controllers.html">Controllers</a></li>
-                        <li><a href="accessories.html">Accessories</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
-            </ul>
-           
-        </nav>
-        <a href="profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
-    </header>
-    <br>
-    <br>
-    <br>
-    <br>
+        <header id="stick_nav">
+            <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
+                    <li><a href="about_us.html"><span></span><span></span><span></span><span></span>About Us</a></li>
+                    <li class="dropdown"><a href="#"><span></span><span></span><span></span><span></span>Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="keyboard.html"> Keyboard</a></li>
+                            <li><a href="console.html">Console</a></li>
+                            <li><a href="mouse.html">Mouse</a></li>
+                            <li><a href="controllers.html">Controllers</a></li>
+                            <li><a href="accessories.html">Accessories</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html"><span></span><span></span><span></span><span></span>FAQ</a></li>
+                    <li><a href="promotion.html"><span></span><span></span><span></span><span></span>Promotion</a></li>
+                    <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+                </ul>
+               
+            </nav>
+            <a href="Elly/Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
+        </header>
+    
+        <br>
+        <br>
+        <br>
+        <br>
+  
     <div style="width: 1320px; height: 800px; margin: auto; display:block; ">
+    
         <div class="grid" id="locations" >
-            <button class="myBtn">Location</button>
+            <img src="Pictures/map.png" alt="" height= 150px width= 450px >
+            <div class="hoverclass">
+                <a class="myLink" href="#" onclick="locationB()">Location</a>
+            </div>
             <div id="loModal" class="button">
                 <div class="button-content">
-                  <span class="close">&times;</span>
-                  <p>find us at : ur mom's house</p>
+                    <span class="close">&times;</span>
+                    <address>Find us at TSA Office: <br>
+                        6, Jalan Sunway 5/5<br>
+                        Bandar Sunway Semenyih,<br>
+                        43500 Semenyih,<br>
+                        Selangor 
+                    </address>
+                    <br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4440558120423!2d101.84011691470418!3d2.9741943978338856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTgnMjcuMSJOIDEwMcKwNTAnMzIuMyJF!5e0!3m2!1sen!2smy!4v1631599642807!5m2!1sen!2smy" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
         <div class="grid" id="promises" >
-            <button class="myBtn">Our Promises</button>
+            <img src="Pictures/Screenshot (1747).png" alt="" height="150px"  width="850px">
+            <div class="hoverclass">
+                <a class="myLink" href="#" onclick="promisesB()">Our Promises</a>
+            </div>
             <div id="proModal" class="button">
                 <div class="button-content">
                   <span class="close">&times;</span>
-                  <p>we promise to open and test everything u bought</p>
+                  <div id="promises_S">
+                    <div class="promiseC">
+                        
+                    </div>
+                    <div  class="promiseC">
+
+                    </div>
+                    <div  class="promiseC">
+
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
         <div class="grid" id="tnC" >
-            <button class="myBtn" >Terms and Conditions</button>
+            <img src="Pictures/aboutus_tnc.jpeg" alt="" height="350px"  width="550px">
+            <div class="hoverclass">
+                <a class="myLink" href="#" onclick="tncB()">Terms and Conditions</a>
+            </div>
             <div id="tncModal" class="button">
                 <div class="button-content">
                   <span class="close">&times;</span>
@@ -64,41 +95,147 @@
             </div>
         </div>
         <div class="grid" id="introduction">
-            <button class="myBtn" >Introduction</button>
+            <img src="Pictures/aboutus_intro.gif" alt="" height="210px"  width="300px">
+            <div class="hoverclass">
+                <a class="myLink" href="#" onclick="introB()">Introduction</a>
+            </div>
             <div id="introModal" class="button">
                 <div class="button-content">
                   <span class="close">&times;</span>
-                  <p>We are a group of ppl that love to play as a solo and also ace the game. Just be a TSA like us.</p>
+                  <br>
+                  <br>
+                  <div> We are a group of people that love to play as a solo in a team play but also acing the game. <br> /////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ <br> We understand that a set of proper gaming gadgets can help to to improve gamming experience, so we arhere to serve our customer the best gaming gadgets in town. <br> /////////////////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ <br> Just be a TSA like us and win all your games with pride. <br>
+                    <br>
+                    <i>Our Logo: </i>
+                    <img src="Pictures/nav_logo.jpeg" alt="" height="300px" weight="300px">
+
+                </div>
                 </div>
             </div>
         </div>
         <div class="grid" id="products" >
-            <button class="myBtn" >Our Products</button>
+            <img src="Pictures/aboutus_products.jpg" alt=""  height=550px width= 447px >
+            <div class="hoverclass">
+                <a class="myLink" href="#" onclick="productB()">Products</a>
+            </div>
             <div id="prodModal" class="button">
                 <div class="button-content">
                   <span class="close">&times;</span>
-                  <p>Our products are guaranteed to be the best, confirm better than ur gf.</p>
+                  <table>
+                      <tr rowspan="2">
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Keyboard is
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Consoles is
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Mouse
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Controllers
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Accessories
+                        </td>
+                      </tr>
+                  </table>
                 </div>
             </div>
         </div>
         <div class="grid"id="social" >
-            <button class="myBtn" >Socials</button>
+            <img src="Pictures/aboutus_socialM.jpg" alt="" height= 198px width= 852px >
+            <div class="hoverclass">
+                <a class="myLink" href="#" onclick="socialB()">Socials</a>
+            </div>
             <div id="soModal" class="button">
                 <div class="button-content">
                   <span class="close">&times;</span>
-                  <p>Come stalk us bitches ;></p>
+                  <div>
+                      <i style="margin-left: 20px;">Come stalk us at:</i>
+                      <div style=" display:block; width:50%; margin: auto">
+                        &nbsp;
+                        <img src="Pictures/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="Pictures/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="Pictures/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      </div>
+                  </div>
                 </div>
             </div>
         </div>
     </div>
-    
     <footer>
-      <div>
+        <div id="footerSeparate">
+            <div id ="footersec1">
+                <div id="footer1">
+                    <img src="Pictures/nav_logo.jpeg" alt="facebookIcon" height="100px" weight="100px" >
+                </div>
+                <div id="footer2">
+                    <h4>Products</h4>
+                    <a href="keyboard.html">Keyboard</a><br><br>
+                    <a href="console.html">Consoles</a><br><br>
+                    <a href="mouse.html">Mouse</a><br><br>
+                    <a href="controllers.html">Controllers</a><br><br>
+                    <a href="accessories.html">Accessories</a><br><br>
+                </div>
+            
+                <div id="footer3">
+                    <h4>Supports</h4>
+                    <a href="about_us.html">About Us</a><br><br>
+                    <a href="#">Contact Us</a><br><br>
+                    <a href="faq.html">FAQ</a><br><br>
+                    <a href="#.html">Live Chat</a><br>
+                    <br><br><br>
+                </div>
 
-      </div>
+               
+                <div id="footer4">
+                   <h4>Follow our socials</h4>
+                   <img src="Pictures/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Pictures/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <img src="Pictures/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            
+                <div id="footer5">
+                    <h4>Verified By</h4>
+                    <img src="Pictures/tsa_foundation.jpeg" alt="facebookIcon" height="100px" weight="150px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                </div>
+            </div>
+        
+        <br>
+        <div id ="footersec3">
+            <i> @All copyrights reserved under TSA</i>
+        </div>
+        
+        
     </footer>
 
 </body>
 <script src="about_us.js"></script>
+
 
 </html>

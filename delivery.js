@@ -25,19 +25,57 @@ const shippingDetails = [
     }
 
 function dispAddress(){
+
     if (document.getElementById('homeB').checked) {
         document.getElementById('home1').style.display = 'block';
         document.getElementById('others1').style.display = 'none';
     }
-    if (document.getElementById('othersB').checked) {
+    else if (document.getElementById('othersB').checked) {
         document.getElementById('others1').style.display = 'block';
+        document.getElementById('home2').style.display = 'none';
         document.getElementById('home1').style.display = 'none';
     }
-    let html = '';
+}
+dispAddress()
+
+let html = '';
+let address1 = JSON.parse(localStorage.getItem('addressDetail'));
+for(let i = 0; i < address1.length; i++) {
+    let address1 = JSON.parse(localStorage.getItem('addressDetail'))[i];
+    chooseAddress(address1,i);
+}
+
+function chooseAddress(address1, no){
+console.log(address1)
+   html += 
+    `
+        <div>
+        <br>
+        <button id="${no}">Button</button>
+        Address ${no+1}
+        <hr>
+        </div>
+        `
     
-    let address = JSON.parse(localStorage.getItem('addressDetail'))[0];
+    document.querySelector('#home1').innerHTML  = html;
+}
+for(let no = 0 ; no < address1.length; no ++){
+    document.getElementById(no).onclick=function()
+
+    {
+        console.log('c')
+            let address = JSON.parse(localStorage.getItem('addressDetail'))[no];
+            document.getElementById('home2').style.display = 'block';
+            console.log(address)
+            getAddress(address);
+    }
+}
+
+function getAddress(address){
+
     console.log(address);
-        html += 
+    let html = '';
+    html += 
         `
         <br>
         <div>
@@ -49,9 +87,31 @@ function dispAddress(){
             Address: ${address.ad_detail}<br><br>
         </div>
         `
-        document.querySelector('#home1').innerHTML = html;
+      
+        document.querySelector('#home2').innerHTML = html;
+
+        let shippingAddress = {
+            name:address.ad_name,
+            phone:address.ad_phone,
+            state:address.ad_state,
+            area:address.ad_area,
+            postal:address.ad_postal,
+            details:address.ad_detail
+        };
+
+        localStorage.setItem('comfirmAddress', JSON.stringify(shippingAddress))
+
+        let finalAddress = {
+            final_name:address.ad_name,
+            final_phone:address.ad_phone,
+            final_state:address.ad_state,
+            final_area:address.ad_area,
+            final_postal:address.ad_postal,
+            final_details:address.ad_detail
+        };
+
+        localStorage.setItem('finalAddress', JSON.stringify(finalAddress))
 }
-dispAddress()
 
 function storeAddress(){
 
@@ -66,11 +126,11 @@ function storeAddress(){
             alert("Fields cannot be empty!");
             return false;
         }
-        else if(phone.validity.patternMismatch){
+        else if(  addressPhone.validity.patternMismatch){
             alert("Invalid phone number format!");
             return false;
         }
-        else if(postal.validity.patternMismatch){
+        else if(addressPostal.validity.patternMismatch){
             alert("Invalid postal code format!");
             return false;
         }
@@ -85,10 +145,27 @@ function storeAddress(){
             };
 
             console.log(fullAddress0);
-            localStorage.setItem('addressDetailsOrder',fullAddress0);
+            localStorage.setItem('addressDetailsOrder', JSON.stringify(fullAddress0))
+
+            let finalAddress = {
+                final_name: addressName.value,
+                final_phone: addressPhone.value,
+                final_state: addressState.value,
+                final_area: addressArea.value,
+                final_postal: addressPostal.value,
+                final_details: addressDetails.value
+            };
+            console.log(finalAddress);
+            localStorage.setItem('finalAddress', JSON.stringify(finalAddress))
             console.log('Address is sucessfully added!');
+            alert("Address added!");
         };
     };
+
+function resetAddress(){
+    localStorage.setItem('addressDetailsOrder', JSON.stringify(0))
+    alert("Details reset!");
+}
 
 function dispOrder(){
 
@@ -123,42 +200,6 @@ function dispOrder(){
    document.querySelector('.order-table').innerHTML = html;
 }
 dispOrder()
-
-//displaying the delivery in payment report page
-function reportDelivery(){
-    let reportDeliveryHtml = '';
-    let deliveryReportFee = JSON.parse(localStorage.getItem('fees'))
-
-    reportDeliveryHtml += `
-    <tr>
-        <td>Delivery: RM</td> 
-        <td>${deliveryReportFee.price}</td>
-    </tr>
-    `
-}
-reportDelivery();
-
-function deliveryDetails(){
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
