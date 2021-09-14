@@ -40,30 +40,39 @@ dispAddress()
 
 let html = '';
 let address1 = JSON.parse(localStorage.getItem('addressDetail'));
-address1.forEach(chooseAddress);
-    console.log(address1);
+for(let i = 0; i < address1.length; i++) {
+    let address1 = JSON.parse(localStorage.getItem('addressDetail'))[i];
+    chooseAddress(address1,i);
+}
+
 function chooseAddress(address1, no){
+console.log(address1)
    html += 
     `
         <div>
         <br>
-        <button id="${address1.ad_name}">Button</button>
+        <button id="${no}">Button</button>
         Address ${no+1}
         <hr>
         </div>
         `
-        document.querySelector('#home1').innerHTML = html;
+    
+    document.querySelector('#home1').innerHTML  = html;
+}
+for(let no = 0 ; no < address1.length; no ++){
+    document.getElementById(no).onclick=function()
 
-            document.getElementById(address1.ad_name).onclick=function()
-            {
-                console.log('c')
-                    let address = JSON.parse(localStorage.getItem('addressDetail'))[address1.ad_name];
-                    document.getElementById('home2').style.display = 'block';
-                    getAddress(address);
-                }
+    {
+        console.log('c')
+        console.log(address1.ad_name);
+            let address = JSON.parse(localStorage.getItem('addressDetail'))[no];
+            document.getElementById('home2').style.display = 'block';
+            getAddress(address);
+    }
+}
 
-        }
 
+    
 
 function getAddress(address){
     var addressName = document.querySelector("#addressName"),
