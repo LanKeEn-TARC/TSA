@@ -33,11 +33,16 @@
         </nav>
         <a href="Elly\Profile.html" id='non-printable'><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
+    <audio id="audio" src="yes-yes-yes-yes-yes.mp3" autoplay="true" ></audio>
+    <a onload="playSound();"> Play</a>
 
     <table class="report-table" id="printable">
-        <th class="report-table-customerDetails">
-
+        <th>
+            Thanks For Shopping In TSA
         </th>
+        <tr class="report-table-customerDetails">
+
+        </tr>
         <tr>
             <td>Product</td>
             <td>Quantity</td>
@@ -48,7 +53,7 @@
 
         </tbody>
         <tr class="report-table-delivery">
-            
+        
         </tr>
         <tr>
             <div id='non-printable'>
@@ -56,8 +61,17 @@
             </div>
         </tr>
     </table>
-    <div id='non-printable'>
-        <button onClick="window.print()">Print this page</button>
+    <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" onclick="rate()"/>
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" onclick="rate()"/>
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" onclick="rate()"/>
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" onclick="rate()"/>
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" onclick="rate()"/>
+        <label for="star1" title="text">1 star</label>
     </div>
 </body>
 <footer  id='non-printable'>
