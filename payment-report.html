@@ -10,7 +10,7 @@
 </head>
 <body>
     <header id="stick_nav"  id='non-printable'>
-        <a href="homepage.html"><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
+        <a href="homepage.html" id='non-printable'><img src="Pictures/nav_logo.jpeg" alt="navigation logo" width="65px" height="65px"></a>
         <nav id='non-printable'>
             <ul>
                 <li><a href="homepage.html"><span></span><span></span><span></span><span></span>Home</a></li>
@@ -31,7 +31,7 @@
             </ul>
 
         </nav>
-        <a href="Elly\Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
+        <a href="Elly\Profile.html" id='non-printable'><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
 
     <table class="report-table" id="printable">
@@ -42,12 +42,18 @@
             <td>Product</td>
             <td>Quantity</td>
             <td>Price</td>
+            <td>Total Price</td>
         </tr> 
         <tbody class="report-table-product">
 
         </tbody>
         <tr class="report-table-delivery">
             
+        </tr>
+        <tr>
+            <div id='non-printable'>
+                <button onClick="window.print()">Print this page</button>
+            </div>
         </tr>
     </table>
     <div id='non-printable'>

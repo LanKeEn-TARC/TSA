@@ -1,12 +1,20 @@
-/* //@import url(homepage.css); */
+@import url(homepage.css); 
 
-/* table{
-    padding-top: 7%;
+table{
+    margin-top: 9%;
+    /* padding-top: 8%; */
     margin-left: auto;
     margin-right: auto;
     background-color: white;
-} */
+    width: 80%;
+    height: auto;
+} 
 
+table tr td{
+    border: 1px solid black;
+}
+
+/* for printing */
 @media print {
     .footer,
     #non-printable {
