@@ -100,6 +100,17 @@ function getAddress(address){
         };
 
         localStorage.setItem('comfirmAddress', JSON.stringify(shippingAddress))
+
+        let finalAddress = {
+            final_name:address.ad_name,
+            final_phone:address.ad_phone,
+            final_state:address.ad_state,
+            final_area:address.ad_area,
+            final_postal:address.ad_postal,
+            final_details:address.ad_detail
+        };
+
+        localStorage.setItem('finalAddress', JSON.stringify(finalAddress))
 }
 
 function storeAddress(){
@@ -135,6 +146,17 @@ function storeAddress(){
 
             console.log(fullAddress0);
             localStorage.setItem('addressDetailsOrder', JSON.stringify(fullAddress0))
+
+            let finalAddress = {
+                final_name: addressName.value,
+                final_phone: addressPhone.value,
+                final_state: addressState.value,
+                final_area: addressArea.value,
+                final_postal: addressPostal.value,
+                final_details: addressDetails.value
+            };
+            console.log(finalAddress);
+            localStorage.setItem('finalAddress', JSON.stringify(finalAddress))
             console.log('Address is sucessfully added!');
             alert("Address added!");
         };
