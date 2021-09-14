@@ -30,14 +30,11 @@ let productReportGet = JSON.parse(localStorage.getItem("productInCart"));
 
 document.querySelector('.report-table-product').innerHTML = productReport;
 
-// let finalAddress = {
-//     final_name:address.ad_name,
-//     final_phone:address.ad_phone,
-//     final_state:address.ad_state,
-//     final_area:address.ad_area,
-//     final_postal:address.ad_postal,
-//     final_details:address.ad_detail
-// };
+document.getElementsByClassName(".rate").onclick = function() {rate()};
+function rate(){
+    console.log('C')
+    alert('Thanks For Reviewing Our Services');
+}
 
 let customerReport = "";
 let customerDetailsGet = JSON.parse(localStorage.getItem("finalAddress"));
@@ -54,3 +51,7 @@ let customerDetailsGet = JSON.parse(localStorage.getItem("finalAddress"));
 
 document.querySelector('.report-table-customerDetails').innerHTML = customerReport;
 
+function playSound() {
+    var sound = document.getElementById("audio");
+    sound.play();
+  }
