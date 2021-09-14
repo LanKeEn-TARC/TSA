@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
+    <link rel="stylesheet" href="delivery.css">
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: white;">PAYMENT</h1>
+    </header>
+
+    <div class='checkout'>
+      <div class='checkout_container'>
+          <div class='order-info'>
+            <div class='order-info-content'>
+              <h2>Order Summary</h2>
+              <div class='line'></div>
+              
+              <table class='order-table' style="overflow: auto;">
+               <!--<tbody>
+                  <tr>
+                    <td>
+                      <span class='thin'>Monobento</span>
+                      <br>Double Lunchbox<br> 
+                    </td>
+                    <td>
+                      <div class='price'>$25.95</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class='thin small'> Color: Pink, Size: Medium</span>
+                    </td>
+                  </tr>
+                </tbody>-->
+
+                <!--<tfoot style="margin: auto;">
+                  <tr>
+                    <td>Delivery</td> 
+                    <td>$0.00</td>
+                  </tr>
+                  <tr>
+                    <td> VAT 19%</td>
+                    <td>$68.75</td>
+                </tr>
+                  <tr>
+                    <td>TOTAL</td>
+                    <td>$435.55</td>
+                  </tr>
+                </tfoot>-->
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div style="position: absolute; display: block; left: 35%;">
+          <div id = "details1">
+            <h3 style="font-size:28px">Payment Method</h3>
+           
+              <div id="choose">
+                  <!-- change id type name -->
+               <input type="radio" id="homeCardButton" name="paymentMethod">
+                Saved Credit / Debit Cards
+              </div>
+              <div id="home1Card">
+        
+              </div>
+              <div id="home2Card">
+        
+              </div>
+              <div id="others">
+                <input type="radio" id="othersCardButton" name="paymentMethod">
+                Other Credit / Debit Card
+              </div>
+              <div id="othersCardForm">
+                <form action="">
+                <hr>
+                <!-- change label name and id -->
+                <label for="fname">Name on card: </label>
+                <input type="text" id="cardName0"  placeholder="Name of the credit/debit card" required /><br><br>
+                <label for="pNumber">Card Number: </label>
+                <input type="text" id="cardNumber0" placeholder="Card Number(4/5xxx xxxx xxxx xxxx)" pattern="[4|5]{1}[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}" required /><br><br>
+                <label for="state">Expiry Dated: </label>
+                <input type="text" id="cardDate0" placeholder="Expiry Date(MM/YY)" pattern="[0]{1}[1-9]{1}/[0-9]{2}|[1]{1}[0-2]{1}/[0-9]{2}" required><br><br>
+                <label for="">CVV: </label>
+                <input type="text" id="cardCvv0" placeholder="CVV (XXX)" pattern="[0-9]{3}" required> <br><br>
+                
+                <button onclick="storeCard()">Save</button>
+                <input  onclick="resetCard()" type="reset" value="Reset" id="cancelDelivery" />
+              </form>
+                <br>
+                <br>
+              </div> 
+              <input type="radio" id="homeBankButton" name="paymentMethod">
+               Saved bank accounts
+               <div id="home1Bank">
+        
+              </div>
+              <div id="home2Bank">
+        
+              </div>
+              <div id="others2">
+                <input type="radio" id="othersBankButton" name="paymentMethod">
+                Other bank account
+              </div>
+              <div id="othersBankForm">
+                <form action="">
+                <hr>
+                <!-- change label name and id -->
+                <label for="fname">Name on card: </label>
+                <input type="text" id="cardName0"  placeholder="Name of the credit/debit card" required /><br><br>
+                <label for="pNumber">Card Number: </label>
+                <input type="text" id="cardNumber0" placeholder="Card Number(4/5xxx xxxx xxxx xxxx)" pattern="[4|5]{1}[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}" required /><br><br>
+                <label for="state">Expiry Dated: </label>
+                <input type="text" id="cardDate0" placeholder="Expiry Date(MM/YY)" pattern="[0]{1}[1-9]{1}/[0-9]{2}|[1]{1}[0-2]{1}/[0-9]{2}" required><br><br>
+                <label for="">CVV: </label>
+                <input type="text" id="cardCvv0" placeholder="CVV (XXX)" pattern="[0-9]{3}" required> <br><br>
+                
+                <button onclick="storeCard()">Save</button>
+                <input  onclick="resetCard()" type="reset" value="Reset" id="cancelDelivery" />
+              </form>
+                <br>
+                <br>
+              </div> 
+              <input type="radio" id="ewallet" name="paymentMethod">
+                E-wallet
+            </div>    
+          </div>
+        </div>
+          
+        </div>
+       
+
+    </div>
+
+
+    </div>
+
+    </body>
+    <script src="payment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="Elly/Java-Script-Functions/State_and_Area.js"></script>

@@ -51,7 +51,7 @@ console.log(address1)
     `
         <div>
         <br>
-        <button id="${no}">Button</button>
+        <button id="${no}">Choose</button>
         Address ${no+1}
         <hr>
         </div>
@@ -59,6 +59,7 @@ console.log(address1)
     
     document.querySelector('#home1').innerHTML  = html;
 }
+
 for(let no = 0 ; no < address1.length; no ++){
     document.getElementById(no).onclick=function()
 
@@ -72,7 +73,6 @@ for(let no = 0 ; no < address1.length; no ++){
 }
 
 function getAddress(address){
-
     console.log(address);
     let html = '';
     html += 
