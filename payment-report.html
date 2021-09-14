@@ -33,8 +33,9 @@
         </nav>
         <a href="Elly\Profile.html" id='non-printable'><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
-    <audio id="audio" src="yes-yes-yes-yes-yes.mp3" autoplay="true" ></audio>
-    <a onload="playSound();"> Play</a>
+    <!-- <audio autoplay id="audio" onload="audio()">
+        <source src="ww_beedle_thankyou.mp3" type="audio/mpeg">
+    </audio> -->
 
     <table class="report-table" id="printable">
         <th>
@@ -52,15 +53,31 @@
         <tbody class="report-table-product">
 
         </tbody>
+        <tr>
+            <td rowspan="2"colspan="2">
+                Delivery Type
+            </td>
+        </tr>
         <tr class="report-table-delivery">
-        
+            
         </tr>
         <tr>
             <div id='non-printable'>
                 <button onClick="window.print()">Print this page</button>
             </div>
         </tr>
+
+        <tr rowspan="2">
+            <td colspan="3">
+                Total:
+            </td>
+            <td class="cartTotal">
+
+            </td>
+        </tr>
     </table>
+
+    <p class="rateText">Please Rate Our Services</p>
     <div class="rate">
         <input type="radio" id="star5" name="rate" value="5" onclick="rate()"/>
         <label for="star5" title="text">5 stars</label>
@@ -73,6 +90,7 @@
         <input type="radio" id="star1" name="rate" value="1" onclick="rate()"/>
         <label for="star1" title="text">1 star</label>
     </div>
+ <br>
 </body>
 <footer  id='non-printable'>
     <div id="footerSeparate">

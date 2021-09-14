@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const LoginForm = document.querySelector("#logIn");
     const SignupForm = document.querySelector("#signUp");
-    const UsernameInput = document.querySelector(".signupUsername");
-    const EmailInput = document.querySelector(".signupEmail");
-    const PasswordInput = document.querySelector(".password");
-    const ConfirmPassInput = document.querySelector(".confirmPassword");
-    const ForgetPassEmail = document.querySelector(".forget_pass-input");
+    const UsernameInput = document.querySelector('.signupUsername');
+    const EmailInput = document.querySelector('.signupEmail');
+    const PasswordInput = document.querySelector('.password');
+    const ConfirmPassInput = document.querySelector('.confirmPassword');
+    const ForgetPassEmail = document.querySelector('.forget_pass-input');
 
     //Switch from Login page to Signup page
     document.querySelector("#linkSignup").addEventListener("click", e => {
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Validation of information in signup page and save into local storage
     document.querySelector('.signup-button').onclick = function(){
 
-        const password = PasswordInput.value,
+        var password = PasswordInput.value,
         confirmPassword = ConfirmPassInput.value,
         username = UsernameInput.value,
         email = EmailInput.value;
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Signup sucessfully!");
             return true;
         }
-    }
+    };
 
     //Validation of username and password in login page
     document.querySelector('.login-button').onclick = function(){
@@ -77,12 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 //Link to home page
                 window.location.href="";
             }
-    }
+    };
 
     //Forget password
     document.querySelector('.forget_pass-button').onclick = function(){
 
-        const forgetEmail = ForgetPassEmail.value;
+        var forgetEmail = ForgetPassEmail.value;
 
             if(forgetEmail == localStorage.su_email){
                 alert("Dear " + localStorage.su_username + ", your password is " + localStorage.su_password);
@@ -94,3 +94,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
     }
 });
+

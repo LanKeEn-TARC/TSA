@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background: url(./Pictures/faqHardwareBg.jpg) center fixed;
+  background-size: cover;
+  color: white;
+}
+
+header{
+  display: flex;
+  padding:0px;
+  height: 80px;
+}
+
+header img{
+  padding: 10px;
+}
+
+#stick_nav{
+  top: 0;
+  margin: auto;
+  width: 100%;
+  background:#040B10;
+  position: fixed;
+  z-index: 1;
+}
+
+#profilePic{
+  padding-right: 40px;
+  padding-top: 20px;
+}
+
+nav {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 10px ;
+}
+
+nav ul{
+    display: flex;
+    margin: auto;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: auto;
+    display: block;
+    padding: 5px;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+nav ul li a{
+  position: relative;
+  display:inline-block;
+  padding: 10px 10px;
+  color: #2196f3;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+
+nav ul li a span{
+  position: absolute;
+  display: block;
+}
+nav ul li a span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background:linear-gradient(270deg, transparent, #2196f3);
+}
+
+nav ul li a:hover span:nth-child(1){
+  left:100%;
+  transition:0.5s;
+}
+
+nav ul li a span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background:linear-gradient(270deg, transparent, #2196f3);
+}
+
+nav ul li a:hover span:nth-child(3){
+  right:100%;
+  transition:0.5s;
+}
+
+nav ul li ul li a:hover{
+  width:100;
+  background:linear-gradient(270deg, transparent, #0d2231)
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  text-align: inherit;
+  font-size: inherit;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #2196f3;
+  padding: 2px 0 2px 0;
+  z-index: 1;;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@keyframes glow {
+    0%{box-shadow: 0 0 20px #2196f3;}
+    50%{box-shadow: 0 0 1px #2196f3;}
+    100%{box-shadow: 0 0 20px #2196f3;}
+  }
+
+/*main content*/
+.faqQuesHeader {
+    height: 40vh;
+    width: 99vw;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: block;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.55)),
+    url(./Pictures/faqHheader.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faqQuesHeader h1 {
+    text-align: center;
+    font-size: 3em;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    line-height: 1.65em;
+    text-shadow: 0 0 10px #00b3ff,
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 160px #00b3ff;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    width: 70%;
+    margin: auto;
+}
+
+.item {
+    animation: borderColor 5s infinite ease-in-out;
+    cursor: pointer;
+    background: #040B10;
+}
+
+@keyframes borderColor {
+    0% {
+        border: 4px solid blue;
+    }
+    10% {
+        border: 4px solid #8e44ad;
+
+    }
+    20% {
+        border: 4px solid #F08080;
+
+    }
+    30% {
+        border: 4px solid #1abc9c;
+
+    }
+    40% {
+        border: 4px solid blue;
+
+    }
+    50% {
+        border: 4px solid #34495e;
+
+    }
+    60% {
+        border: 4px solid blue;
+
+    }
+    70% {
+        border: 4px solid #2980b9;
+
+    }
+    80% {
+        border: 4px solid #f1c40f;
+
+    }
+    90% {
+        border: 4px solid #2980b9;
+
+    }
+    100% {
+        border: 4px solid pink;
+
+    }
+
+}
+
+.item:nth-last-of-type(1) {
+    grid-column: 1/ -1;
+}
+
+.item img {
+    display: table;
+    width: 30%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hQues-container {
+    text-align: center;
+    width: 60%;
+    line-height: 2em;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.expand {
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    background: #FF6347;
+    color: white;
+}
+
+.expand:hover {
+  background: #ec8876;
+  color: wheat;
+}
+
+.buttonH1::after {
+    position: absolute;
+    right: 10em;
+    content: "\002B";
+    font-size: 1em;
+}
+
+.question {
+    font-style: italic;
+    margin: auto;
+    background: #505050;
+    display: none;
+}
+
+.question a {
+    color: wheat;
+}
+
+.question a:hover {
+    color: skyblue;
+}
+
+.quesList, .answer {
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.answer {
+    font-size: 0.8em;
+    font-style: normal;
+}
+
+
+  /*Footer*/
+footer{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    background-color: #040B10;
+    padding: 5px;
+  }
+  
+footer a{
+letter-spacing:1px;
+color:rgb(255, 255, 255);
+text-decoration: none;
+}
+
+footer a:hover{
+text-decoration: underline;
+}
+
+footer #footerSeparate{
+margin: auto;
+display: flex;
+}
+#footersec1{
+padding:0px;
+width: 100%;
+margin: auto;
+font-size: 15px;
+line-height: 15px;
+display: flex;
+font-family: 'Roboto';
+}
+
+
+#footer1{
+padding: 5px;
+margin: auto;
+padding-right: 20px;
+}
+
+#footer2{
+padding: 5px;
+margin: auto;
+
+padding-right: 20px;
+}
+
+#footer3{
+padding: 5px;
+margin: auto;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+#footer4{
+padding: 5px;
+margin: auto;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+#footer5{
+padding: 5px;
+margin: auto;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+#footersec3{
+font-size:12px;
+color: white;
+}

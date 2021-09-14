@@ -7,7 +7,7 @@ let deliveryTypeFeeReport = "";
 deliveryTypeFeeReport += `
 
     <td>${deliveryType.name}</td>
-    <td>${deliveryType.price}</td>
+    <td>RM ${deliveryType.price}</td>
 
 `
 document.querySelector('.report-table-delivery').innerHTML = deliveryTypeFeeReport;
@@ -23,7 +23,7 @@ let productReportGet = JSON.parse(localStorage.getItem("productInCart"));
             <td class="product-name">${item.name}</td>
             <td class="product-quantity">${item.quantity}</td>
             <td class="product-price">${item.price}</td>
-            <td class="product-totalPrice">${item.totalPrice}</td>
+            <td class="product-totalPrice">RM ${item.totalPrice}</td>
         </tr>
         `
     })
@@ -32,7 +32,6 @@ document.querySelector('.report-table-product').innerHTML = productReport;
 
 document.getElementsByClassName(".rate").onclick = function() {rate()};
 function rate(){
-    console.log('C')
     alert('Thanks For Reviewing Our Services');
 }
 
@@ -51,7 +50,9 @@ let customerDetailsGet = JSON.parse(localStorage.getItem("finalAddress"));
 
 document.querySelector('.report-table-customerDetails').innerHTML = customerReport;
 
-function playSound() {
-    var sound = document.getElementById("audio");
-    sound.play();
-  }
+let cartTotalPrice="";
+let totalPriceGet = JSON.parse(localStorage.getItem("finalCartTotal"));
+    cartTotalPrice += `
+    <td>RM ${totalPriceGet.total + deliveryType.price}</td>
+    `
+ document.querySelector('.cartTotal').innerHTML = cartTotalPrice;

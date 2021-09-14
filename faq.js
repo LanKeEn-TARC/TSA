@@ -47,10 +47,16 @@ for (var i = 0; i < accordion.length; i++) {
     this.classList.toggle('.item-questionsActive');
 
     var showQues = this.nextElementSibling;
+    var arrowIcon = document.querySelector('arrowIcon');
+
     if (showQues.style.display === 'block') {
       showQues.style.display = 'none';
+      arrowIcon.style.transform = 'rotate(45deg) translateY(-5px)';
+
     } else {
       showQues.style.display = 'block';
+      arrowIcon.style.transform = 'rotate(225deg) translateY(-5px)';
+
     }
  });
 }
