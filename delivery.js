@@ -64,23 +64,15 @@ for(let no = 0 ; no < address1.length; no ++){
 
     {
         console.log('c')
-        console.log(address1.ad_name);
             let address = JSON.parse(localStorage.getItem('addressDetail'))[no];
             document.getElementById('home2').style.display = 'block';
+            console.log(address)
             getAddress(address);
     }
 }
 
-
-    
-
 function getAddress(address){
-    var addressName = document.querySelector("#addressName"),
-        addressPhone = document.querySelector("#addressPhone"),
-        addressState = document.querySelector("#state"),
-        addressArea = document.querySelector("#area"),
-        addressPostal = document.querySelector("#addressPostal"),
-        addressDetails = document.querySelector("#addressDetails");
+
     console.log(address);
     let html = '';
     html += 
@@ -99,13 +91,14 @@ function getAddress(address){
         document.querySelector('#home2').innerHTML = html;
 
         let shippingAddress = {
-            ad_name: addressName,
-                ad_phone: addressPhone,
-                ad_state: addressState,
-                ad_area: addressArea,
-                ad_postal: addressPostal,
-                ad_detail: addressDetails
+            name:address.ad_name,
+            phone:address.ad_phone,
+            state:address.ad_state,
+            area:address.ad_area,
+            postal:address.ad_postal,
+            details:address.ad_detail
         };
+
         localStorage.setItem('comfirmAddress', JSON.stringify(shippingAddress))
 }
 
