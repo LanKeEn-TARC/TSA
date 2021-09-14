@@ -338,6 +338,11 @@ hr.separatorLine {
   display: none;
 }
 
+.item-questions ul {
+  display: table;
+  margin: 0 auto;
+}
+
 .arrowIcon {
     border: solid white;
     border-width: 0 3px 3px 0;

@@ -278,7 +278,6 @@ nav ul li ul li a:hover{
       opacity:1;
       }
 
-
       #promises_S{
         display:flex;
         padding: 10px;
@@ -344,6 +343,15 @@ nav ul li ul li a:hover{
         padding:25px;
         padding-bottom: 19px;
       }
+
+      .social_1  span{
+       position: relative;
+       display: none;
+      }
+
+      .social_1 span  img:hover {
+        display: block;
+    }
 
       footer{
         text-align: center;
