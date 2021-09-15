@@ -9,48 +9,69 @@ function dispCard(){
     if (document.getElementById('homeCardButton').checked) {
         console.log('a')
         document.getElementById('home1Card').style.display = 'block';
-        document.getElementById('othersCardForm').style.display = 'none';
-        document.getElementById('home1Bank').style.display = 'none';
-        document.getElementById('othersBankForm').style.display = 'none';
-        //qr none
-    }
-    else if (document.getElementById('othersCardButton').checked) {
-        console.log('b')
-        document.getElementById('othersCardForm').style.display = 'block';
-        document.getElementById('home1Card').style.display = 'none';
         document.getElementById('home2Card').style.display = 'none';
+        document.getElementById('othersCardForm').style.display = 'none';
         document.getElementById('home1Bank').style.display = 'none';
         document.getElementById('home2Bank').style.display = 'none';
         document.getElementById('othersBankForm').style.display = 'none';
-        //qr none
+        document.getElementById('PaymentContainer').style.display = 'none';
+        document.getElementById('EvidenceInput').style.display = 'none';
+    }
+    else if (document.getElementById('othersCardButton').checked) {
+        console.log('b')
+        document.getElementById('home1Card').style.display = 'none';
+        document.getElementById('home2Card').style.display = 'none';
+        document.getElementById('othersCardForm').style.display = 'block';
+        document.getElementById('home1Bank').style.display = 'none';
+        document.getElementById('home2Bank').style.display = 'none';
+        document.getElementById('othersBankForm').style.display = 'none';
+        document.getElementById('PaymentContainer').style.display = 'none';
+        document.getElementById('EvidenceInput').style.display = 'none';
     }
     else if(document.getElementById('homeBankButton').checked) {
         console.log('c')
         document.getElementById('home1Card').style.display = 'none';
+        document.getElementById('home2Card').style.display = 'none';
         document.getElementById('othersCardForm').style.display = 'none';
         document.getElementById('home1Bank').style.display = 'block';
+        document.getElementById('home2Bank').style.display = 'none';
         document.getElementById('othersBankForm').style.display = 'none';
-        //qr none
+        document.getElementById('PaymentContainer').style.display = 'none';
+        document.getElementById('EvidenceInput').style.display = 'none';
     }
     else if(document.getElementById('othersBankButton').checked) {
         console.log('d')
-        document.getElementById('othersCardForm').style.display = 'none';
         document.getElementById('home1Card').style.display = 'none';
         document.getElementById('home2Card').style.display = 'none';
+        document.getElementById('othersCardForm').style.display = 'none';
         document.getElementById('home1Bank').style.display = 'none';
         document.getElementById('home2Bank').style.display = 'none';
         document.getElementById('othersBankForm').style.display = 'block';
-        //qr none
+        document.getElementById('PaymentContainer').style.display = 'none';
+        document.getElementById('EvidenceInput').style.display = 'none';
 
     }
     else if(document.getElementById('ewallet').checked){
         console.log('e')
-        document.getElementById('othersCardForm').style.display = 'none';
         document.getElementById('home1Card').style.display = 'none';
         document.getElementById('home2Card').style.display = 'none';
+        document.getElementById('othersCardForm').style.display = 'none';
         document.getElementById('home1Bank').style.display = 'none';
         document.getElementById('home2Bank').style.display = 'none';
         document.getElementById('othersBankForm').style.display = 'none';
+        document.getElementById('PaymentContainer').style.display = 'block';
+        document.getElementById('EvidenceInput').style.display = 'block';
+    }
+    else{
+        console.log('f')
+        document.getElementById('home1Card').style.display = 'none';
+        document.getElementById('home2Card').style.display = 'none';
+        document.getElementById('othersCardForm').style.display = 'none';
+        document.getElementById('home1Bank').style.display = 'none';
+        document.getElementById('home2Bank').style.display = 'none';
+        document.getElementById('othersBankForm').style.display = 'none';
+        document.getElementById('PaymentContainer').style.display = 'none';
+        document.getElementById('EvidenceInput').style.display = 'none';
     }
 }
 dispCard()
@@ -70,7 +91,7 @@ console.log(cdCard1)
     `
         <div>
             <br>
-            <button id="${no}">Choose</button>
+            <button id="card${no}">Choose</button>
             Card ${no+1} Details
             <hr>
         </div>
@@ -80,7 +101,7 @@ console.log(cdCard1)
 
 //Caiwen
 for(let no = 0 ; no < cdCard1.length; no ++){
-    document.getElementById(no).onclick=function()
+    document.getElementById("card"+no).onclick=function()
     {
         console.log('c')
             let cdCard = JSON.parse(localStorage.getItem('details'))[no];
@@ -109,15 +130,17 @@ function getCard(cdCard){
         let cardDetails = {
             name:cdCard.name,
             number:cdCard.number,
-            date:cdCard.date
+            date:cdCard.date,
+            cvv:cdCard.cvv
         };
 
         localStorage.setItem('comfirmCard', JSON.stringify(cardDetails))
 
         let finalCardDetails = {
-            final_name:cdCard.name,
-            final_number:cdCard.number,
-            final_date:cdCard.date
+            finalName:cdCard.name,
+            finalNumber:cdCard.number,
+            finalDate:cdCard.date,
+            finalCvv:cdCard.cvv
         };
 
         localStorage.setItem('finalCard', JSON.stringify(finalCardDetails))
@@ -155,13 +178,13 @@ function storeCard(){
             };
 
             console.log(fullCard0);
-            localStorage.setItem('paymentDetails', JSON.stringify(fullCard0))
+            localStorage.setItem('paymentCard', JSON.stringify(fullCard0))
 
             let finalCard = {
-                final_Card_Name0: cardName.value,
-                final_Card_Number0: cardNumber.value,
-                final_Card_Date0: cardDate.value,
-                final_Card_Cvv0: cardCvv.value,
+                finalName: cardName.value,
+                finalNumber: cardNumber.value,
+                finalDate: cardDate.value,
+                finalCvv: cardCvv.value,
             };
 
             console.log(finalCard);
@@ -172,7 +195,7 @@ function storeCard(){
     };
 
 function resetCard(){
-    localStorage.setItem('addressDetailsOrder', JSON.stringify(0))
+    localStorage.setItem('paymentCard', JSON.stringify(0))
     alert("Details reset!");
 }
 //End card
@@ -194,7 +217,7 @@ function chooseBank(bank1, no){
     `
         <div>
             <br>
-            <button id="${no}">Choose</button>
+            <button id="bank${no}">Choose</button>
             Bank ${no+1} Details
             <hr>
         </div>
@@ -204,11 +227,11 @@ function chooseBank(bank1, no){
 
 //Caiwen
 for(let no = 0 ; no < bank1.length; no ++){
-    document.getElementById(no).onclick=function()
+    document.getElementById("bank"+no).onclick=function()
     {
         console.log('c')
             let bank = JSON.parse(localStorage.getItem('accounts'))[no];
-            document.getElementById('home2Card').style.display = 'block';
+            document.getElementById('home2Bank').style.display = 'block';
             console.log(bank)
             getBank(bank);
     }
@@ -221,7 +244,7 @@ function getBank(bank){
         `
         <br>
         <div>
-            Name of the bank accont: ${bank.a_name} <br><br>
+            Bank account holder: ${bank.a_name} <br><br>
             Bank account no: ${bank.a_number} <br><br>
             Bank name: ${bank.a_bank} <br><br>
         </div>
@@ -246,10 +269,126 @@ function getBank(bank){
 }
 //fix button id maybe / sleep
 //Caiwen breakpoint
+function storeBank(){
+    var bankHolder = document.querySelector("#bankHolder0"),
+    bankNumber = document.querySelector("#bankNumber0"),
+    bankName = document.querySelector("#bankName0");
+
+    if(bankHolder.value == "" || bankNumber.value == "" || bankName.value == "" ){
+        alert("Fields cannot be empty!");
+        return false;
+    }
+    else{
+        let fullBank0 = {
+            bank_Name0: bankHolder.value,
+            bank_Account0: bankNumber.value,
+            bank_bankName0: bankName.value,
+        };
+
+        console.log(fullBank0);
+        localStorage.setItem('paymentBank', JSON.stringify(fullBank0))
+
+        let finalBank = {
+            finalbank_Name0: bankHolder.value,
+            finalbank_Account0: bankNumber.value,
+            finalbank_bankName0: bankName.value,
+        };
+
+        console.log(finalBank);
+        localStorage.setItem('finalBank', JSON.stringify(finalBank))
+        console.log('Bank is sucessfully added!');
+        alert("Bank added!");
+    };
+};
+
+function resetBank(){
+    localStorage.setItem('paymentBank', JSON.stringify(0))
+    alert("Details reset!");
+}
 //End Bank
 
+//Qr
+
+let qrHtml = '';
+function displayQr(){
+    console.log("Qr print out")
+    qrHtml =
+        `
+    <div id="paymentBox">
+        <h1>Below are PaymentMethod. Qr can be click.</h1>
+    <div class="PaymentMethod">
+        <img class="paymentType"src="images/tng_logo.png"  alt="Touch 'N Go logo">
+    <div class="paymentDetails">
+        <a href="images/fullqr_tng.jpeg" target="_top"><img class="paymentQr" src="images/qr_tng.jpeg" alt="Qr Code for payment"></a>
+        <h1>Account ID</h1>
+        <p><br>011-2822-7757</p>
+    </div>
+    </div>
+    <div class="PaymentMethod">
+        <img class="paymentType"src="images/duitnow.png"  alt="Duitnow logo">
+        <div class="paymentDetails">
+        <a href="images/fullqr_duitnow.jpeg" target="_top"><img class="paymentQr" src="images/qr_dn.jpeg" alt="Qr Code for payment"></a>
+        <h1>Account ID</h1>
+        <p><br>011-2822-7757</p>
+    </div>
+    </div>
+    <div class="PaymentMethod">
+        <img class="paymentType"src="images/wechat_logo.png"  alt="Wechat logo">
+        
+        <div class="paymentDetails">
+            <a href="images/fullqr_wechat.jpeg" target="_top"><img class="paymentQr" src="images/qr_wechat.jpeg" alt="Qr Code for payment"></a>
+            <h1>Account ID</h1>
+            <p><br>011-2822-7757</p>
+        </div>
+    </div> 
+        `
+
+    document.querySelector('#PaymentContainer').innerHTML  = qrHtml;
+}
+displayQr()
+
+let qrFormHtml = '';
+function displayQrForm(){
+    console.log('Qr form print out')
+    qrFormHtml =
+    `
+    <input type="file" name="evidence" id="qrEvidence"><br><br>
+    <button onclick="storeQr()">Save</button>
+    <input  onclick="resetQr()" type="reset" value="Reset" id="cancelDelivery" />
+    `
+    document.querySelector('#EvidenceInput').innerHTML  = qrFormHtml;
+
+} 
+displayQrForm()
 
 
+function storeQr(){
+    var qrPic = document.querySelector("#qrEvidence");
+    
+    if(qrPic.value == ""){
+        alert("Remember upload evidence!");
+        return false;
+    }
+    else{
+        let fullQr0 = {
+            qr_Pic0: qrPic.value,
+        };
 
+        console.log(fullQr0);
+        localStorage.setItem('paymentQr', JSON.stringify(fullQr0))
 
+        let finalQr = {
+            finalqr_Pic0: qrPic.value
+        };
 
+       console.log(finalQr);
+        localStorage.setItem('finalQr', JSON.stringify(finalQr))
+        console.log('Qr picture is sucessfully added!');
+        alert("picture already added!");
+    };
+};
+
+function resetQr(){
+    localStorage.setItem('paymentQr', JSON.stringify(0))
+    alert("Details reset!");
+}
