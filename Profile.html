@@ -94,6 +94,7 @@
                             <td></td>
                             <td>
                                 <input type="submit" value="Save" id="saveProfile" />
+                                <input type="button" value="Logout" id="logOut" class="logOut"/>
                             </td>
                         </tr>
                     </table>
@@ -118,7 +119,7 @@
                 <div id="footer3">
                     <h4>Supports</h4>
                     <a href="about_us.html">About Us</a><br><br>
-                    <a href="#">Contact Us</a><br><br>
+                    <a href="Contact_Us.html">Contact Us</a><br><br>
                     <a href="faq.html">FAQ</a><br><br>
                     <a href="#.html">Live Chat</a><br>
                     <br><br><br>
@@ -169,6 +170,15 @@
                 }
             }  
         };
+
+        //Logout function
+        document.getElementById("logOut").onclick = function(){
+            localStorage.removeItem("su_username");
+            localStorage.removeItem("su_email");
+            localStorage.removeItem("su_password");
+            alert("Log out successfully!");
+            window.location.href="Login_and_Signup.html";
+        }
 
         if(localStorage.su_email == null && localStorage.su_username == null){
             window.location.href="Login_and_Signup.html";

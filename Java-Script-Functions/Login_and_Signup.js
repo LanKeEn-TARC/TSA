@@ -59,8 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     //Validation of username and password in login page
-    document.querySelector('.login-button').onclick = function(){
-
+    document.querySelector('.login-button').onclick = function(event){
+        
+        event.preventDefault();
         var loginEmail = document.querySelector('.loginEmail').value,
         loginPassword = document.querySelector('.loginPassword').value;
 
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
             else if(loginEmail == localStorage.su_email && loginPassword == localStorage.su_password){
                 alert("Login sucessfully!");
                 //Link to home page
-                window.location.href="";
+                window.location.href="http://localhost:5501/homepage.html";
             }
     };
 
