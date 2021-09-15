@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
 @import url(homepage.css);
 
 html{
   scroll-behavior: smooth;
 }
-/* body */
-body{
-  background-image: url(pictures/product1.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-attachment: fixed;
-}
 
+#description{
+  font-family: 'Titillium Web', sans-serif;
+  /* font-weight: bold; */
+  color: #e0eef7 ;
+}
+#product-title{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+}
 /* searchbox */
 #searchBox {
   margin: auto;
@@ -27,6 +30,8 @@ body{
   color: white;
 }
 summary p {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
   margin-top: 10px;
   margin-right: 100px;
   display: block;
@@ -36,6 +41,8 @@ summary p {
 }
 
 #searchList {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
   width: inherit;
   position: fixed;
   list-style-type: none;
@@ -68,11 +75,14 @@ summary p {
 }
 
 #searchList li a:hover:not(.header) {
-  background-color: blue;
+  background-color: white;
+  color: #040B10;
 }
 
 /* product */
-
+table{
+  margin-bottom: 5%;
+}
 table,tr,th{
   top: 20px;
   color: #dfe7f2;
@@ -120,10 +130,6 @@ table,tr,th{
   filter: blur(50px);
 }
 
-#description{
-  color: #586c91;
-}
-
 #product-title{
   padding-top: 7%;
 }
@@ -152,9 +158,11 @@ table,tr,th{
   height: 35%;
   margin-left: auto;
   margin-right: auto;
+  left: 50px;
 }
 
 th{
+  
   padding-top: 5%;
   text-align: center;
   font-size: 40px;
@@ -163,10 +171,49 @@ th{
 
 }
 
+table tr td{
+  padding-bottom: 15px;
+}
+
+.keyboard1-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.keyboard2-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.keyboard3-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.Mouse-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.addToCart{
+  font-family: 'Titillium Web', sans-serif;
+}
+.headphone-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.chair-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.product-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.controller1-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.controller2-color{
+  font-family: 'Titillium Web', sans-serif;
+}
+.controller3-color{
+  font-family: 'Titillium Web', sans-serif;
+}
 /* right column */
 
 .product-description h1 {
-  font-weight: 300;
+  color:#73b2db;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
   font-size: 40px;
   color: #a4b0bb;
   letter-spacing: -2px;
@@ -219,9 +266,10 @@ input[type='radio']:checked:after {
 }
  
 .product-price span {
+  font-family: 'Titillium Web', sans-serif;
   font-size: 26px;
   font-weight: 300;
-  color: #43474D;
+  color: #b7bac0;
   margin-right: 20px;
 }
  
@@ -243,32 +291,295 @@ input[type='radio']:checked:after {
   background-color: #323457;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+/* Cable Configuration */
+#cable-choose-keyboard1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 
+#cable-choose-keyboard1 button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+#cable-choose-keyboard1 button:hover,
+#cable-choose-keyboard1 button:active,
+#cable-choose-keyboard1 button:focus {
+  background-color: wheat;
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+#cable-choose-keyboard1 span{
+  font-family: 'Titillium Web', sans-serif;
+}
+#cable-choose-keyboard2 span{
+  font-family: 'Titillium Web', sans-serif;
+}
+#cable-choose-keyboard3 span{
+  font-family: 'Titillium Web', sans-serif;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+#cable-choose-keyboard1 a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
 }
+#cable-choose-keyboard1 a:before {
+  /* content: &amp;quot;?&amp;quot;; */
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+/* switch Configuration */
+#keyboard1-switch {
+  margin-bottom: 20px;
+}
+ 
+#keyboard1-switch span{
+  font-family: 'Titillium Web', sans-serif;
+}
+#keyboard2-switch span{
+  font-family: 'Titillium Web', sans-serif;
+}
+#keyboard3-switch span{
+  font-family: 'Titillium Web', sans-serif;
+}
+#keyboard1-switch button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+#keyboard1-switch button:hover,
+#keyboard1-switch button:active,
+#keyboard1-switch button:focus {
+  background-color: wheat;
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+#keyboard1-switch a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+#keyboard1-switch a:before {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+
+/* Cable Configuration */
+#cable-choose-keyboard2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 
+#cable-choose-keyboard2 button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+#cable-choose-keyboard2 button:hover,
+#cable-choose-keyboard2 button:active,
+#cable-choose-keyboard2 button:focus {
+  background-color: wheat;
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+ 
+#cable-choose-keyboard2 a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+#cable-choose-keyboard2 a:before {
+  /* content: &amp;quot;?&amp;quot;; */
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+/* switch Configuration */
+#keyboard2-switch {
+  margin-bottom: 20px;
+}
+ 
+#keyboard2-switch button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+#keyboard2-switch button:hover,
+#keyboard2-switch button:active,
+#keyboard2-switch button:focus {
+  background-color: wheat;
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+#keyboard2-switch a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+#keyboard2-switch a:before {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+/* Cable Configuration */
+#cable-choose-keyboard3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+ 
+#cable-choose-keyboard3 button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+#cable-choose-keyboard3 button:hover,
+#cable-choose-keyboard3 button:active,
+#cable-choose-keyboard3 button:focus {
+  background-color: wheat;
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+ 
+#cable-choose-keyboard3 a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+#cable-choose-keyboard3 a:before {
+  /* content: &amp;quot;?&amp;quot;; */
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
+/* switch Configuration */
+#keyboard3-switch {
+  margin-bottom: 20px;
+}
+ 
+#keyboard3-switch button {
+  border: 2px solid #E1E8EE;
+  border-radius: 6px;
+  padding: 13px 20px;
+  font-size: 14px;
+  color: #5E6977;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+ 
+#keyboard3-switch button:hover,
+#keyboard3-switch button:active,
+#keyboard3-switch button:focus {
+  background-color: wheat;
+  border: 2px solid #86939E;
+  outline: none;
+}
+ 
+#keyboard3-switch a {
+  color: #358ED7;
+  text-decoration: none;
+  font-size: 12px;
+  position: relative;
+  margin: 10px 0;
+  display: inline-block;
+}
+#keyboard3-switch a:before {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 2px solid rgba(53, 142, 215, 0.5);
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  opacity: 0.5;
+  margin-right: 5px;
+}
+
