@@ -94,6 +94,7 @@
                             <td></td>
                             <td>
                                 <input type="submit" value="Save" id="saveProfile" />
+                                <input type="button" value="Logout" id="logOut" class="logOut"/>
                             </td>
                         </tr>
                     </table>
@@ -174,6 +175,15 @@
                 }
             }  
         };
+
+        //Logout function
+        document.getElementById("logOut").onclick = function(){
+            localStorage.removeItem("su_username");
+            localStorage.removeItem("su_email");
+            localStorage.removeItem("su_password");
+            alert("Log out successfully!");
+            window.location.href="Login_and_Signup.html";
+        }
 
         if(localStorage.su_email == null && localStorage.su_username == null){
             window.location.href="Login_and_Signup.html";

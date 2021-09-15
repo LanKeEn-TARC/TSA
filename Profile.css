@@ -151,6 +151,22 @@ input[type='submit']:hover{
     background-color: rgba(33, 150, 243, 0.9);
 }
 
+input.logOut{
+    height: 30px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: .9em;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+}
+
+input.logOut:hover{
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
 button{
     height: 30px;
     width: 50px;
