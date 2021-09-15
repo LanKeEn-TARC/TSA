@@ -1,8 +1,10 @@
 @import url(homepage.css); 
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300&display=swap');
 
 table{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bolder;
     margin-top: 9%;
-    /* padding-top: 8%; */
     margin-left: auto;
     margin-right: auto;
     background-color: white;
@@ -10,22 +12,22 @@ table{
     height: auto;
     align-items: center;
     justify-content: center;
+    color: white;
 } 
 
 table tr td{
-    border: 1px solid black;
+    text-align: center;
+    /* border: 1px solid white; */
 }
 
-table th{
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+/* table tr td .report-table-product{
+    border: 1px solid white;
+} */
+#report-title{
     text-align: center;
+    font-size: 30px;
 }
+
 /* for printing */
 @media print {
     .footer,
@@ -34,13 +36,27 @@ table th{
     }
     #printable {
         display: block;
+        width: 85%;
+        color: black;
     }
-}
 
-/* *{
-    margin: 0;
-    padding: 0;
-} */
+}
+#deliverType{
+    text-align: end;
+}
+#total{
+    text-align: end;
+}
+.product-pic{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.product-pic img{
+    left: 50px;
+    width: 100px;
+    height: 100px;
+}
 .rateText{
     padding-top: 50px;
     color: white;
@@ -91,3 +107,40 @@ table th{
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+
+/* table border */
+.report-table {
+    position: relative;
+    background: linear-gradient(0deg, #000, #040B10);
+  }
+  
+  .report-table:before, .report-table:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: rainbowAnimation 20s linear infinite;
+  }
+  
+  @keyframes rainbowAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .report-table:after {
+    filter: blur(50px);
+  }

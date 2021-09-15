@@ -24,10 +24,9 @@
                         <li><a href="accessories.html">Accessories</a></li>
                     </ul>
                 </li>
-                <li><a href="cart.html"><span></span><span></span><span></span><span></span>Cart</a></li>
                 <li><a href="faq.html"><span></span><span></span><span></span><span></span>FAQ</a></li>
                 <li><a href="promotion.html"><span></span><span></span><span></span><span></span>Promotion</a></li>
-                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+                <li><a href="cart.html"><span></span><span></span><span></span><span></span>Cart</a></li>
             </ul>
 
         </nav>
@@ -38,13 +37,16 @@
     </audio> -->
 
     <table class="report-table" id="printable">
-        <th>
-            Thanks For Shopping In TSA
-        </th>
+        <tr>
+            <td colspan="6" id="report-title">
+                Thanks For Shopping In TSA
+            </td>
+        </tr>
         <tr class="report-table-customerDetails">
 
         </tr>
-        <tr>
+        <tr style="border-top: 1px solid white;">
+            <td>Product Pictures</td>
             <td>Product</td>
             <td>Quantity</td>
             <td>Price</td>
@@ -54,31 +56,29 @@
 
         </tbody>
         <tr>
-            <td rowspan="2"colspan="2">
-                Delivery Type
+            <td rowspan="2"colspan="3" id="deliverType">
+                Delivery Type:
             </td>
         </tr>
         <tr class="report-table-delivery">
             
         </tr>
-        <tr>
-            <div id='non-printable'>
-                <button onClick="window.print()">Print this page</button>
-            </div>
-        </tr>
 
         <tr rowspan="2">
-            <td colspan="3">
+            <td colspan="3" id="total">
                 Total:
             </td>
+            <td></td>
             <td class="cartTotal">
 
             </td>
         </tr>
     </table>
-
-    <p class="rateText">Please Rate Our Services</p>
-    <div class="rate">
+    <div id='non-printable'>
+        <button onClick="window.print()">Print this page</button>
+    </div>
+    <p class="rateText" id='non-printable'>Please Rate Our Services</p>
+    <div class="rate" id='non-printable'>
         <input type="radio" id="star5" name="rate" value="5" onclick="rate()"/>
         <label for="star5" title="text">5 stars</label>
         <input type="radio" id="star4" name="rate" value="4" onclick="rate()"/>
@@ -118,11 +118,11 @@
 
            
             <div id="footer4">
-               <h4>Follow our socials</h4>
-               <img src="Pictures/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <img src="Pictures/instagram_icon.png" alt="facebookIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <img src="Pictures/twitter_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
+                <h4>Follow our socials</h4>
+                <img src="Pictures/facebook_icon.png" alt="facebookIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="Pictures/instagram_icon.png" alt="instaIcon"height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="Pictures/twitter_icon.png" alt="twitterIcon" height="50px" weight="50px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             </div>
         
             <div id="footer5">
                 <h4>Verified By</h4>

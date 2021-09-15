@@ -26,7 +26,7 @@
                 </li>
                 <li><a href="faq.html"><span></span><span></span><span></span><span></span>FAQ</a></li>
                 <li><a href="promotion.html"><span></span><span></span><span></span><span></span>Promotion</a></li>
-                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+                <li><a href="cart.html"><span></span><span></span><span></span><span></span>Cart</a></li>
             </ul>
   
         </nav>
@@ -42,31 +42,31 @@
         <div class="grid-container">
 
             <div class="item">
-                <a href="#consoleHead"><img src="./Pictures/consoleIcon.png" alt="console"></a>
+                <a href="#consoleHead" id="consoleHeadLink" onclick="consoleSecShow()"><img src="./Pictures/consoleIcon.png" alt="console"></a>
             </div>
 
 
             <div class="item">
-                <a href="#mouseHead"><img src="./Pictures/mouseIcon.png" alt="mouse"></a>
+                <a href="#mouseHead" id="mouseHeadLink" onclick="mouseSecShow()"><img src="./Pictures/mouseIcon.png" alt="mouse"></a>
             </div>
 
             <div class="item">
-                <a href="#headsetHead"><img src="./Pictures/headsetIcon.png" alt="headset"></a>
+                <a href="#headsetHead" id="headsetHeadLink" onclick="headsetSecShow()"><img src="./Pictures/headsetIcon.png" alt="headset"></a>
             </div>
          
             <div class="item">
-                <a href="#controllerHead"><img src="./Pictures/controllerIcon.png" alt="controller"></a>
+                <a href="#controllerHead" id="controllerHeadLink" onclick="controllerSecShow()"><img src="./Pictures/controllerIcon.png" alt="controller"></a>
             </div>      
 
             <div class="item">
-                <a href="#keyboardHead"><img src="./Pictures/keyboardIcon.png" alt="keyboard"></a>
+                <a href="#keyboardHead" id="keyboardHeadLink" onclick="keyboardSecShow()"><img src="./Pictures/keyboardIcon.png" alt="keyboard"></a>
             </div>
 
         </div>
 
         <div class="hQues-container">
             <button class="expand" id="consoleHead"><h1 class="buttonH1">Console</h1></button>
-            <div class="question">
+            <div class="question" id="consoleSec">
                 <ol class="quesList">
                     <li>When was PS5 released?</li>
                     <ul class="answer">
@@ -95,7 +95,7 @@
             </div>
 
             <button class="expand" id="mouseHead"><h1 class="buttonH1">Mouse</h1></button>
-            <div class="question">
+            <div class="question" id="mouseSec">
                 <ol class="quesList">
                     <li>What are the tips to know before buying a mouse?</li>
                     <ul class="answer">
@@ -118,7 +118,7 @@
             </div>
 
             <button class="expand" id="headsetHead"><h1 class="buttonH1">Headset</h1></button>
-            <div class="question">
+            <div class="question" id="headsetSec">
                 <ol class="quesList">
                     <li>What are the tips to know before buying headset?</li>
                     <ul class="answer">
@@ -143,7 +143,7 @@
             </div>
 
             <button class="expand" id="controllerHead"><h1 class="buttonH1">Controller</h1></button>
-            <div class="question">
+            <div class="question" id="controllerSec">
                 <ol class="quesList">
                     <li>What are the things to consider before buying controller?</li>
                     <ul class="answer">
@@ -167,7 +167,7 @@
             </div>
 
             <button class="expand" id="keyboardHead"><h1 class="buttonH1">Keyboard</h1></button>
-            <div class="question">
+            <div class="question" id="keyboardSec">
                 <ol class="quesList">
                     <li>What are the considerations should be taken before buying a keyboard?</li>
                     <ul class="answer">
@@ -202,6 +202,8 @@
             </div>
 
         </div>
+
+        <br/> <br/><br/><br/>
 
     </main>
 

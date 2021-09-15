@@ -6,7 +6,8 @@
 }
 
 body{
-  background: #040B10;
+  background: url(./Pictures/faqHardwareBg.jpg) center fixed;
+  background-size: cover;
   color: white;
 }
 
@@ -136,9 +137,10 @@ nav ul li ul li a:hover{
 /*main content*/
 .faqQuesHeader {
     height: 40vh;
-    width: 95%;
+    width: 99vw;
+    margin-top: 3em;
+    margin-bottom: 3em;
     display: block;
-    margin: 1.3em;
     background: 
     linear-gradient(rgba(0, 0, 0, 0.55),
     rgba(0, 0, 0, 0.55)),
@@ -176,6 +178,7 @@ nav ul li ul li a:hover{
 .item {
     animation: borderColor 5s infinite ease-in-out;
     cursor: pointer;
+    background: #040B10;
 }
 
 @keyframes borderColor {
@@ -251,6 +254,11 @@ nav ul li ul li a:hover{
     cursor: pointer;
     background: #FF6347;
     color: white;
+}
+
+.expand:hover {
+  background: #ec8876;
+  color: wheat;
 }
 
 .buttonH1::after {
