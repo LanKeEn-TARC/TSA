@@ -38,13 +38,16 @@
     </audio> -->
 
     <table class="report-table" id="printable">
-        <th>
-            Thanks For Shopping In TSA
-        </th>
+        <tr>
+            <td colspan="6" id="report-title">
+                Thanks For Shopping In TSA
+            </td>
+        </tr>
         <tr class="report-table-customerDetails">
 
         </tr>
         <tr>
+            <td>Product Pictures</td>
             <td>Product</td>
             <td>Quantity</td>
             <td>Price</td>
@@ -54,31 +57,29 @@
 
         </tbody>
         <tr>
-            <td rowspan="2"colspan="2">
-                Delivery Type
+            <td rowspan="2"colspan="3" id="deliverType">
+                Delivery Type:
             </td>
         </tr>
         <tr class="report-table-delivery">
             
         </tr>
-        <tr>
-            <div id='non-printable'>
-                <button onClick="window.print()">Print this page</button>
-            </div>
-        </tr>
 
         <tr rowspan="2">
-            <td colspan="3">
+            <td colspan="3" id="total">
                 Total:
             </td>
+            <td></td>
             <td class="cartTotal">
 
             </td>
         </tr>
     </table>
-
-    <p class="rateText">Please Rate Our Services</p>
-    <div class="rate">
+    <div id='non-printable'>
+        <button onClick="window.print()">Print this page</button>
+    </div>
+    <p class="rateText" id='non-printable'>Please Rate Our Services</p>
+    <div class="rate" id='non-printable'>
         <input type="radio" id="star5" name="rate" value="5" onclick="rate()"/>
         <label for="star5" title="text">5 stars</label>
         <input type="radio" id="star4" name="rate" value="4" onclick="rate()"/>

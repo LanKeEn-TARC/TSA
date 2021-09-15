@@ -20,6 +20,7 @@ let productReportGet = JSON.parse(localStorage.getItem("productInCart"));
         console.log(item.price)
         productReport += `
         <tr>
+            <td class="product-pic"><img src="${item.pic}" alt="${item.pic}"></td>
             <td class="product-name">${item.name}</td>
             <td class="product-quantity">${item.quantity}</td>
             <td class="product-price">${item.price}</td>
@@ -39,12 +40,12 @@ let customerReport = "";
 let customerDetailsGet = JSON.parse(localStorage.getItem("finalAddress"));
      customerReport += `
      <ul>
-        <li>${customerDetailsGet.final_name}</li><br>
-        <li>${customerDetailsGet.final_phone}</li><br>
-        <li>${customerDetailsGet.final_details}</li><br>
-        <li>${customerDetailsGet.final_postal}</li><br>
-        <li>${customerDetailsGet.final_area}</li><br>
-        <li>${customerDetailsGet.final_state}</li><br>
+        <li>Name: ${customerDetailsGet.final_name}</li><br>
+        <li>Phone: ${customerDetailsGet.final_phone}</li><br>
+        <li>Address: ${customerDetailsGet.final_details}</li><br>
+        <li>Postal Code:${customerDetailsGet.final_postal}</li><br>
+        <li>Area: ${customerDetailsGet.final_area}</li><br>
+        <li>State: ${customerDetailsGet.final_state}</li><br>
     </ul>
      `
 
