@@ -3,7 +3,13 @@
   font-family:Tech;
   src: url(Pictures/fonts/TarrgetAcademyItalic-qzmx.otf);
 }
-
+@font-face {
+  font-family:Neon;
+  src: url(Pictures/fonts/neon.regular.ttf);
+}
+html{
+  scroll-behavior: smooth;
+}
 /*sticky navbar, grid, slideshows, vidoes*/
 body{
   background: #040B10;
@@ -369,67 +375,126 @@ nav a{
 }
 
 #product1{
+  background-image: url(Pictures/black-black-background-stripes-wallpaper-preview.jpg);
   position: absolute;
   background-color:white;
-  width:320px;
+  width:310px;
   height: 400px;
   clip-path: polygon(0 1%, 100% 0%, 70% 100%, 0% 100%);
 }
 
 #product2{
+  background-image: url(Pictures/black-black-background-stripes-wallpaper-preview.jpg);
   position: absolute;
-  left:260px;
-  background-color:white;
-  width:384px;
+  left:240px;
+  width:394px;
   height: 400px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 #product3{
+  background-image: url(Pictures/black-black-background-stripes-wallpaper-preview.jpg);
   position: absolute;
-  left:570px;
-  background-color:white;
-  width:384px;
+  left:550px;
+  width:394px;
   height: 400px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 #product4{ 
+  background-image: url(Pictures/black-black-background-stripes-wallpaper-preview.jpg);
   position: absolute;
-  background-color:white;
-  left: 880px;
-  width:384px;
+  left: 860px;
+  width:394px;
   height: 400px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 #product5{
+  background-image: url(Pictures/black-black-background-stripes-wallpaper-preview.jpg);
   position: absolute;
   background-color:white;
-  left: 1190px;
-  width:310px;
+  left: 1170px;
+  width:320px;
   height: 400px;
   clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
+#neonFlick1{
+  font-family: 'Neon';
+  font-size: 35px;
+  margin-right: 10%;
+  margin-top: 63%;
+  text-align: center;
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+#neonFlick5{
+  font-family: 'Neon';
+  font-size: 35px;
+  margin-left: 15%;
+  margin-top: 62%;
+  text-align: center;
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+.neonFlick{
+  font-family: 'Neon';
+  font-size: 35px;
+  margin-top: 50%;
+  text-align: center;
+  animation: flicker 1.5s infinite alternate;
+  color: #fff;
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+
+      text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #2f00ff,
+        0 0 82px #2f00ff,
+        0 0 92px #2f00ff,
+        0 0 102px #2f00ff,
+        0 0 151px #2f00ff;
+    }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+
+
 #product1:hover{
-  transform: scale(1.1);
+  z-index: 1;
+  transform: scale(1.2);
 }
 
 #product2:hover{
-  transform: scale(1.1);
+  z-index: 1;
+  transform: scale(1.2);
 }
 
 #product3:hover{
-  transform: scale(1.1);
+  z-index: 1;
+  transform: scale(1.2);
 }
 
 #product4:hover{ 
-  transform: scale(1.1);
+  z-index: 1; 
+  transform: scale(1.2);
 }
 
 #product5:hover{
-  transform: scale(1.1);
+  z-index: 1;
+  transform: scale(1.2);
 }
 
 
