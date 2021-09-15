@@ -344,12 +344,63 @@ nav ul li ul li a:hover{
         padding-bottom: 19px;
       }
 
-      .social_1  span{
-       position: relative;
-       display: none;
+      #social_hover div{
+        margin: auto;
+        position:relative;
       }
 
-      .social_1 span  img:hover {
+      #social_hover span{
+        font-weight: bold;
+        opacity: 0;
+        left: 0px;
+        font-family:'Roboto';
+        color: rgb(3, 110, 3);
+        font-size:15px;
+        position: absolute;
+       display: none;
+       animation: slide 0.5s forwards;
+      }
+
+      @keyframes slide {
+        100% { left: 95px;  opacity: 1; }
+    }
+
+      #social_1{
+        width:75px;
+        height:75px;
+        background-image: url(Pictures/facebook_icon.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #social_1:hover span   {
+        top: 30px;
+        display: block;
+    }
+
+      #social_2{
+        width:75px;
+        height:75px;
+        background-image: url(Pictures/instagram_icon.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #social_2:hover span   {
+        top: 30px;
+        display: block;
+    }
+
+      #social_3{
+        width:75px;
+        height:75px;
+        background-image: url(Pictures/twitter_icon.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #social_3:hover span   {
+        top: 30px;
         display: block;
     }
 
