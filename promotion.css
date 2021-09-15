@@ -271,7 +271,7 @@ nav ul li ul li a:hover{
 }
 
 div.slideshow-container {
-  left:500px;
+  left:250px;
   top: 900px;
   z-index: 1;
   height: 450px;
@@ -291,8 +291,8 @@ div.linkProduct {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  right:500px;
-  bottom: 70px;
+  right:230px;
+  bottom: 50px;
   width: 100%;
   text-align: center;
 }
