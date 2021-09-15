@@ -308,7 +308,6 @@ function resetBank(){
 //End Bank
 
 //Qr
-
 let qrHtml = '';
 function displayQr(){
     console.log("Qr print out")
@@ -392,3 +391,4 @@ function resetQr(){
     localStorage.setItem('paymentQr', JSON.stringify(0))
     alert("Details reset!");
 }
+//End Qr
