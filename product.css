@@ -161,6 +161,15 @@ table,tr,th{
   left: 50px;
 }
 
+.product-promo p{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: large;
+}
+.product-price p{
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 26px;
+  color: #b7bac0; 
+}
 th{
   
   padding-top: 5%;
@@ -213,7 +222,6 @@ table tr td{
 .product-description h1 {
   color:#73b2db;
   font-family: 'Titillium Web', sans-serif;
-  font-weight: bold;
   font-size: 40px;
   color: #a4b0bb;
   letter-spacing: -2px;
