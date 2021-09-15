@@ -5,7 +5,6 @@ body{
     background: #040B10;
 }
 
-/* Navigation */
 header{
   display: flex;
   padding:0px;
@@ -22,7 +21,7 @@ header img{
   width: 100%;
   background:#040B10;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
 }
 
 #profilePic{
@@ -122,43 +121,19 @@ nav ul li ul li a:hover{
   display: block;
 }
 
-hr{
-    width: 1000px;
-    margin: 10px 0px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 5px solid #cc0f0f;
-    color: black;
-    border-radius: 5px;
-    box-shadow: 0 0 5px red;
-    padding: 0;
-    animation: glow 1s ease-in-out infinite;
-    -webkit-animation: glow 1s ease-in-out infinite;
-}
-
-hr::before {
-    content: '';
-    position: absolute;
-    border: 2px solid #222;
-    width: 900px;
-    margin: -2px 50px;
-    border-radius: 2px;
-    box-shadow: 0 0 3px black;
-    animation: glowMinr 1s ease-in-out;
-    -webkit-animation: glowMinor 0.5s ease-in-out infinite 
-  }
 
 @keyframes glow {
     0%{box-shadow: 0 0 20px #2196f3;}
     50%{box-shadow: 0 0 1px #2196f3;}
     100%{box-shadow: 0 0 20px #2196f3;}
-  }
+}
+
   div#promotion_1{
     display: flex;
     margin-left: 250px;
     height: 500px;
     width: 300px;
-    background-color: rgb(143, 6, 6);
+    background-color: rgb(70, 6, 143);
   }
 
   div#promotion_1con{
@@ -182,7 +157,7 @@ hr::before {
     margin: auto;
     height: 200px;
     width: 150px;
-    background-color: rgb(34, 53, 105);
+    background-color: rgb(102, 126, 192);
   }
 
   div#promotion_2con{
@@ -199,6 +174,7 @@ hr::before {
     left: 0;
     z-index: 1;
     padding: 10px;
+    box-shadow: 10px 10px 10px #c921f3;
     background-color: white;
     float: left;
   }
@@ -218,6 +194,7 @@ hr::before {
     z-index: 1;
     float: right;
     padding: 10px;
+    box-shadow: 10px 10px 10px #9c06c2;
     background-color: white;
   }
 
@@ -245,8 +222,10 @@ hr::before {
   }
 
   div#promo_banner{
+    background-image: url(Pictures/greenFlame.png);
+    background-size: cover;
     margin: auto;
-    height: 70px;
+    height: 60px;
     width: 70%;
     background-color: yellowgreen;
   }
@@ -256,6 +235,7 @@ hr::before {
 }
 
 div.slideshow-container {
+  left:500px;
   top: 900px;
   z-index: 1;
   height: 450px;
@@ -264,7 +244,7 @@ div.slideshow-container {
 }
 
 .slideshow-container > img {
-  
+  top:100px;
   margin: auto;
   height: 400px;
   width: 400px;
@@ -275,19 +255,10 @@ div.linkProduct {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  right:500px;
+  bottom: 70px;
   width: 100%;
   text-align: center;
-}
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
 }
 
 .active {
@@ -386,5 +357,76 @@ div.card:hover, .card:focus{
   border: 1px dashed black;
   border-radius: 5px;
   width:fit-content;
+}
+
+footer{
+  text-align: center;
+  color:rgb(255, 255, 255);
+  background-color: #040B10;
+  padding: 5px;
+}
+
+footer a{
+  letter-spacing:1px;
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer #footerSeparate{
+  margin: auto;
+  display: flex;
+}
+#footersec1{
+  padding:0px;
+  width: 100%;
+  margin: auto;
+  font-size: 15px;
+  line-height: 15px;
+  display: flex;
+  font-family: 'Roboto';
+}
+
+
+#footer1{
+  padding: 5px;
+  margin: auto;
+  padding-right: 20px;
+}
+
+#footer2{
+  padding: 5px;
+ margin: auto;
+
+  padding-right: 20px;
+}
+
+#footer3{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer4{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer5{
+  padding: 5px;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footersec3{
+  font-size:12px;
+  color: white;
 }
 
