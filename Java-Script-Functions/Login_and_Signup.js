@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ForgetPassEmail = document.querySelector('.forget_pass-input');
     var proHistory = JSON.parse(localStorage.getItem('profileAccounts'));
     var ProfileAcc = proHistory || [];
+    let allAcc = JSON.parse(localStorage.getItem('profileAccounts'));
 
     //Switch from Login page to Signup page
     document.querySelector("#linkSignup").addEventListener("click", e => {
@@ -23,13 +24,22 @@ document.addEventListener("DOMContentLoaded", () => {
         LoginForm.classList.remove("form-hidden");
     });
 
-    //Validation of information in signup page and save into local storage
-    document.querySelector('.signup-button').onclick = function(){
+    async function findEmail(email){
+        var user = await allAcc.find(items => email == items.acc_email)
+        if(user){
+            return user.acc_email;
+        }
+    }
 
+    //Validation of information in signup page and save into local storage
+    document.querySelector('.signup-button').onclick = async function(event){
+
+        event.preventDefault
         var password = PasswordInput.value,
         confirmPassword = ConfirmPassInput.value,
         username = UsernameInput.value,
         email = EmailInput.value;
+        const compareEmail = await findEmail(email);
 
         if(username.length >=15){
             alert("Username should be less than 15 characters!");
@@ -39,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Username should be more than 5 characters!");
             return false;
         }
-        if(email == localStorage.su_email){
+        if(email == compareEmail){
             alert("This email has been used!");
             return false;
         }
@@ -74,16 +84,14 @@ document.addEventListener("DOMContentLoaded", () => {
         var loginEmail = document.querySelector('.loginEmail').value,
         loginPassword = document.querySelector('.loginPassword').value;
 
-        let allAcc = JSON.parse(localStorage.getItem('profileAccounts'));
         var user = await allAcc.find(items => loginEmail == items.acc_email && loginPassword == items.acc_pass)
-        console.log(user);
         if(user){
             alert("Login Successfully!");
             localStorage.su_email = user.acc_email;
             localStorage.su_username = user.acc_name;
             localStorage.su_password = user.acc_pass;
             console.log(localStorage.su_email + localStorage.su_username + localStorage.su_password);
-            window.location.href = "http://Localhost:5501/Profile.html";
+            window.location.href = "http://127.0.0.1:5501/Profile.html";
         }
         else{
             alert("Invalid credential");
@@ -95,7 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.preventDefault();
         var forgetEmail = ForgetPassEmail.value;
-        let allAcc = JSON.parse(localStorage.getItem('profileAccounts'));
 
         var user = await allAcc.find(items => forgetEmail == items.acc_email)
         console.log(user);
