@@ -47,7 +47,9 @@ table tr td{
     }
 
 }
-
+.report-paymentType{
+  text-align: left;
+}
 #deliverType{
     text-align: end;
 }
