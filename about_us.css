@@ -35,6 +35,10 @@ header img{
   z-index: 2;
 }
 
+#prodModal table{
+  text-align: center;
+}
+
 #profilePic{
   padding-right: 5px;
   padding-top: 20px;
