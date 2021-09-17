@@ -12,7 +12,11 @@
 </head>
 <body>
     <header>
-        <h1 style="text-align: center; color: white;">PAYMENT</h1>
+      <nav>
+        <a href="payment.html"><img src="Pictures/back.png" alt="back" width="50px" height="50px" id="backB" ></a>
+        <h1 style="display:flex; color: white;">DELIVERY PAYMENT</h1>
+        <a href="payment-report.html"><img src="Pictures/image.png" alt="back" width="50px" height="50px" id="goB" ></a>
+      </nav>
     </header>
 
     <div class='checkout'>
@@ -30,27 +34,20 @@
                     <th class="headertotal">Total</th>
                   </tr>
                 </thead>
-               <tbody class="order-item"  >
+               <tbody class="order-item">
                   <!-- <tr class="cart">
                     <td class="item-name">mouse</td>
                     <td class="item-quantity">5</td>
                     <td class="item-totalprice"> RM200</td>
                   </tr> -->
                 </tbody>
-                <tfoot style="margin: auto;">
-                  <!-- <tr>
-                    <td>Delivery</td> 
-                    <td>$0.00</td>
-                  </tr>
-                  <tr>
-                    <td> VAT 19%</td>
-                    <td>$68.75</td>
-                </tr>
-                  <tr>
-                    <td>TOTAL</td>
-                    <td>$435.55</td> -->
-                  </tr>
-                </tfoot>
+                  <tfoot class="grandtotal" style="margin: auto;">
+                    <tr class="grandtotalcontainer">
+                      <td>TOTAL:</td>
+                      <td style="text-align: end;">RM</td>
+                      <td id="Grandtotalvalue"></td>
+                    </tr>
+                  </tfoot>
               </table>
             </div>
           </div>
