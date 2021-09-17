@@ -129,89 +129,13 @@ nav h1{
 }
 
 
-.table-list {
-	text-align: center;
-	transition: all 0.4s ease 0s;
-	background: #fff;
-	border-radius: 5px;
-	position: relative;
-	overflow: hidden;
-  margin: 10px;
-  width: 300px;
-}
-
-.top-price-inner {
-	position: relative;
-	text-align: center;
-	padding: 0px;
-	background: #F5F8FB;
-	margin-bottom: 80px;
-	z-index: 1;
-	transition: all 0.4s ease 0s;
-}
-.top-price-inner::after {
-	height: 20px;
-	width: 100%;
-	position: absolute;
-	content: "";
-	z-index: -1;
-	left: 0;
-	bottom: -60px;
-	transition: all 0.4s ease 0s;
-}
-
-.top-price-inner h4 {
-	color: #444;
-	font-size: 24px;
-	font-weight: 700;
-	text-transform: capitalize;
-	margin-bottom: 30px;
-	letter-spacing: 1px;
-}
-
-.prices {
-	font-size: 40px;
-	font-weight: 600;
-	color: #666;
-	padding-right: 10px; 
-}
-.table-list:hover {
-	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-	transition: all 0.4s ease 0s;
-}
-.table-list:hover .top-price-inner {
-	background: #F5F8FB;
-	background: #cc0f0f;
-	transition: all 0.4s ease 0s;
-}
-.table-list:hover .top-price-inner::after {
-	border-top: 100px solid #1067DB;
-	border-left: 50px solid transparent;
-	transition: all 0.4s ease 0s;
-}
-.table-list:hover .top-price-inner h4, .table-list:hover .prices {
-	color: #fff;
-}
-.table-list ol li {
-	color: #888e94;
-	padding: 8px 0px;
-	position: relative;
-	text-align: center;
-	font-weight: 400;
-}
-
-.price-btn {
-	padding-bottom: 30px;
-}
-
-.table-list ol {
-	list-style: outside none none;
-	margin-top: 5px;
-  padding: 0;
-}
-
 /*Caiwen table*/
-
+/* .order-table{
+  /* border: black solid 1px; */
+  /* border-collapse: collapse; */
+  /* background-color: blue; 
+  
+} */
 
 .order-table thead th{
   border-collapse: separate;
@@ -225,10 +149,18 @@ nav h1{
   padding-bottom: 10px;
 }
 
-
-.order-items {
+/* A row of the cart items */
+/* .order-items tr td{
+  /* text-align: center; */
+  /* padding-left: 20px;
+  padding-right: 20px; */
+/* } */ 
+.order-item{
+  margin-bottom: 50px;
+}
+.cart td {
   text-align: center;
-
+  font-size: 1.05em;
 }
 
 .headername{
@@ -252,6 +184,14 @@ nav h1{
 .item-totalprice {
   text-align: end;
 }
+
+
+.grandtotalcontainer td{
+  padding-top:50px ;
+  font-weight: bold;
+  font-size: 2em;
+}
+
 
 /*Qr*/
 #PaymentContainer{

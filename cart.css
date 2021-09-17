@@ -2,16 +2,6 @@ body {
     background: #040B10;
 }
 
-#profilePic{
-    padding-right: 5px;
-    padding-top: 20px;
-  }
-  
-  #navCart{
-    padding-right: 25px;
-    padding-top: 20px;
-  }
-
 /*Marquee*/
 marquee {
     width:100%;
@@ -106,7 +96,6 @@ marquee > h1{
     font-size: 20pt;
     font-family: 'Times New Roman', Times, serif;
     line-height: 2.5;
-
 }
 
 .cart .remove button{
@@ -145,7 +134,6 @@ marquee > h1{
     
 }
 button[class*=Button] {
-    
     width: 30px;
     height: 30px;
     background-color: #E1E8EE;
