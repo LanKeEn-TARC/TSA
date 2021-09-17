@@ -1,3 +1,23 @@
+//Display items from local storage
+function displayCartItem() {
+    let recycleView = '';
+    let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
+    cartProduct && cartProduct.forEach((item) => {
+        recycleView += 
+        `
+      <tr class="cart">
+        <td class="item-name">${item.name}</td>
+        <td class="item-quantity">${item.quantity}</td>
+        <td class="item-totalprice">RM${item.totalPrice}</td>
+      </tr>
+        `;
+    });
+    document.querySelector('.order-item').innerHTML = recycleView;
+}
+displayCartItem()
+
+
+
 //Get the radio button nasme
 var ele= document.getElementsByName("paymentMethod")
     for(var i = 0; i <ele.length; i++) {
@@ -391,3 +411,4 @@ function resetQr(){
     alert("Details reset!");
 }
 //End Qr
+
