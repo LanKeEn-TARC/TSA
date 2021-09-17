@@ -3,21 +3,17 @@
 body{
   background: #040B10;
 }
-nav {
+nav{
   display: flex;
   text-align: center;
-  width: 100%;
+  width:80%;
   margin: auto;
   padding: 10px ;
 }
-
 nav h1{
-  padding-left: 100px;
+  margin:auto;
 }
-
-
 #backB{
-
   padding-right: 5px;
   padding-top: 10px;
 }
@@ -215,12 +211,7 @@ nav h1{
 }
 
 /*Caiwen table*/
-.order-table{
-  /* border: black solid 1px; */
-  /* border-collapse: collapse; */
-  /* background-color: blue; */
-  
-}
+
 
 .order-table thead th{
   border-collapse: separate;
@@ -234,15 +225,10 @@ nav h1{
   padding-bottom: 10px;
 }
 
-/* A row of the cart items */
-.order-items tr td{
-  /* text-align: center; */
-  /* padding-left: 20px;
-  padding-right: 20px; */
-}
+
 .order-items {
   text-align: center;
-  /* font-size: ; */
+
 }
 
 .headername{
