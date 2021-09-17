@@ -1,3 +1,23 @@
+Brief instructions for implementing and running our website:
+1. When you first use our website, start with the login and signup html and start with register section
+2. Recommended to run our website followed by the sequence of login, homepage, profile, product, cart, payment, delivery and finally report
+3. All information that added in payment section such as other card, other bank and other address will not be saved as these information are designed to use one time only
+
+Command that triggered the live chat bot:
+1. good morning
+2. where is the store located?
+3. where is the store located
+4. how can i contact you?
+5. how can i contact you
+6. never gonna give you up
+7. location
+8. product
+9. products
+10. price range
+11. price
+12. hi
+13. sup
+
 Login and Signup Page
 Signup Email: localStorage.su_email
 Signup Password: localStorage.su_password
