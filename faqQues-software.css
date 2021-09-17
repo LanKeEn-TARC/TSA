@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
 @font-face {
   font-family:Tech;
@@ -258,16 +260,78 @@ header{
 }
 
 .item:nth-last-of-type(1) img {
-    width: 40%;
+    width: 30vw;
 }
 
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(./Pictures/softwareBg2.jpg) center fixed;
+}
 
+section h2 {
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+section .cards {
+    display: flex;
+    margin: 1em;
+    height: 80vh;
+}
 
+section .cards .textCards {
+    background: rgb(45, 97, 194);
+    margin: 2em;
+    padding: 1.5em;
+    font-size: 1em;
+    width: calc(100% / 3);
+}
 
+.textCards:hover {
+    transform: scale(1.2);
+}
 
+.textCards img {
+    width: 70%;
+}
 
-      /*Footer*/
+.textCards a {
+    color: wheat;
+}
+
+.textCards a:hover {
+    color: rgb(206, 188, 154);
+}
+
+.pic-section {
+    margin: 3em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pic-flexContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pic-section img {
+    width: 80%;
+}
+
+#slogan {
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: rgb(223, 213, 213);
+    text-shadow: 7px 7px blue;
+}
+
+/*Footer*/
 footer{
     text-align: center;
     color:rgb(255, 255, 255);
