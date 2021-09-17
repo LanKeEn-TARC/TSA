@@ -50,3 +50,22 @@ Address Area: localStorage.addressDetail.ad_area
 Address Postal Code: localStorage.addressDetail.ad_postal
 Address Detail: localStorage.addressDetail.ad_detail
 
+cart
+product pictures: localstorage.productInCart.pic
+product name: localstorage.productInCart.name
+product price: localstorage.productInCart.price
+product quantity: localstorage.productInCart.quantity
+product total price: product price: localstorage.productInCart.totalPrice
+product cart total: localstorage.finalCartTotal.total
+
+
+payment
+QR payment: localsotrage.paymentQr.qr_pic0
+bank account name: localstorage.confirmBank.name
+bank account number: localstorage.confirmBank.account
+bank name: localstorage.confirmBank.bankName
+payment way: localstorage.finalCard.finalName
+credit card owner name: localsotrage.confirmCard.name
+credit card cvv: localsotrage.confirmCard.cvv
+credit card date: localsotrage.confirmCard.date
+credit card number: localsotrage.confirmCard.number
