@@ -1,18 +1,11 @@
-* {
-    color: white;
+.chatBar-collapsible {
+    position: fixed;
+    bottom: 0;
+    right: 5em;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-body {
-    background: #040B10;
-}
-
-.chatBar-collapsible {
-    position: fixed;
-    bottom: 0%;
-    right: 5em;
+    z-index: 2;
 }
 
 .collapsible {
@@ -61,7 +54,7 @@ body {
 .chatBar-inputBlock {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 93%;
     align-items: center;
     background: rgb(202, 200, 200);
     border-radius: 10px 10px 0 0;
@@ -84,8 +77,8 @@ body {
 
 .inputBox {
     color: black;
-    width: 17vw;
-    height: 5vh;
+    width: 15vw;
+    height: 2vh;
     padding: 6%;
     border-radius: 1em;
     outline: none;

@@ -7,6 +7,10 @@
     <title>Lelong Lelong~</title>
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
     <link rel="stylesheet" href="promotion.css">
+    <link rel="stylesheet" href="liveChat.css">
+    <!--get icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="product.js"></script>
 </head>
 <body>
@@ -143,6 +147,54 @@
             </div>
         </div>
     </div>
+          <!--Chat Bar-->
+          <div class="chatBar-collapsible"> <!--covers the whole chat bar-->
+            <button id="chat-btn" class="collapsible">
+                Live Chat
+                <!--Get from external css icon-->
+                <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+            </button>
+    
+            <div class="content">
+              <div class="chatBlock-container">
+    
+                    <!--Message Container-->
+                  <div class="outer-container">
+                        <!--including the chat and input bar-->
+                        <div class="chat-container">
+    
+                        <!--the height will keep extending as messages are sent-->
+                            <div class="chatbox">
+                                <!--will show time-->
+                                <h5 id="chat-timeStamp"></h5>
+                                <p id="botStartMsg" class="botText"></p>
+                            </div>
+    
+                            <!--input bar-->
+                            <div class="chatBar-inputBlock">
+                                
+                                <div id="userInput">
+                                    <input type="text" id="textInput" class="inputBox" placeholder="Enter your message here..."/>
+                                    <p></p>
+                                </div>
+    
+                                <!--heart button and send button-->
+                                <div class="chatBar-icons">
+                                    <i class="fa fa-fw fa-heart" style="color: crimson;" onclick="heartBtn()"></i>
+                                    <i style="color: #333;" class="fa fa-fw fa-send" onclick="sendBtn(event)"></i>
+                                </div>
+                            </div>
+    
+                            <div id="chatBar-btm">
+                                <p></p>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+          </div>
+          </div>
+    
     <footer>
         <div id="footerSeparate">
             <div id ="footersec1">
@@ -190,5 +242,10 @@
         
     </footer>
     <script src="promotion.js"></script>
+    <!--link to jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="liveChat.js"></script>
+    <script src="chatResponse.js"></script>
+
 </body>
 </html>
