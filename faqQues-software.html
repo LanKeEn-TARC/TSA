@@ -30,8 +30,8 @@
             </ul>
            
         </nav>
-        <a href="Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic" padding-right="5px"></a>
-        <a href="cart.html"><img src="Pictures/nav_cart1.png" alt="navigation cart" width="35px" height="35px" class="profilePic" id="navCart"></a>
+        <a href="Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic" ></a>
+        <a href="cart.html"><img src="Pictures/nav_cart1.png" alt="navigation cart" width="35px" height="35px" id="navCart"></a>
     </header>
     
     <main>
@@ -51,20 +51,76 @@
             </div>
 
             <div class="item">
-                <a href="#software" id="softwareHeadLink" onclick="headsetSecShow()"><img src="./Pictures/softwareIcon.png" alt="software"></a>
+                <a href="#software" id="softwareHeadLink" onclick="headsetSecShow()"><img src="./Pictures/softwareIcon2.gif" alt="software"></a>
             </div> 
 
         </div>
 
-        <div class="software-flexContainer">
-            <div class="userManual">
-                <h2>User Manual</h2>
-                <div class="itemDetails">
-                    
+        <section>
+            <div class="software-flexContainer">
+                <div class="cards">
+                    <div class="textCards" id="userManual">
+                        <h2 class="title">User Manual</h2>
+                        <img src="./Pictures/userManualIcon.jpg" alt="user manual picture">
+                        <h3>How can I use my software for the products?</h3>
+                        <br/>
+                        <p><em>We have a user manual to guide the users!!</em></p>
+                        <p>Download Link: <a href="userManual.txt" download>User Manual</a></p>
+                    </div>
+
+                    <div class="textCards" id="driver">
+                        <h2 class="title">Software Drivers</h2>
+                        <img src="./Pictures/driverIcon.png" alt="user manual picture">
+                        <br>
+                        <br>
+                        <br>
+                        <h3>Why is my hardware is not working?</h3>
+                        <br/>
+                        <p><em>It may be your driver corrupter or not up to date. Please ensure they are updated to the latest version</em></p> <br>
+                        <p>Download Link for Keyboard: <br> 
+                            <a href="https://www.driverscape.com/download/usb-gaming-keyboard-pro">CLICK here to find your keyboard drivers</a></p>
+                            <br>
+                        <p>Download Link for Mouse: <br>
+                            <a href="https://www.driverscape.com/download/usb-gaming-mouse">CLICK here to find your mouse drivers</a>
+                        </p>
+                    </div>
+    
+                    <div class="textCards">
+                        <h2 class="title" id="software">Software</h2>
+                        <img src="./Pictures/softwareIcon2.gif" alt="user manual picture">
+                        <h3>How to customize my settings? (RGB, lighting)</h3>
+                        <br>
+                        <p><em>We have our own software to do configuration and customizations for the products!</em></p>
+
+                        <br>
+                        
+                        <p>Download Link: <br>
+                            <a href="customSoftware.txt" download="">Customization Software</a>
+                        </p>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <br>
+        <br>
+        <br>
+
+        <h1 id="slogan">Vibe Your Game With TSA</h1>
+
+        <div class="pic-section">
+            <div class="pic-flexContainer">
+                <div class="cards">
+                    <a href="keyboard.html"><img src="./Pictures/faqSkeyboard.png" alt="keyboard"></a>
+                </div>
+                <div class="cards">
+                    <a href="mouse.html"><img src="./Pictures/faqSmouse.jpg" alt="mouse"></a>
                 </div>
             </div>
         </div>
 
+        <br>
+        <br>
+        <br>
 
     </main>
     
