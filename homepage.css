@@ -555,6 +555,7 @@ nav a{
   background-image: url(Pictures/circuit.jpeg);
 }
 
+
 .items {
   position: relative;
   top: 50%;
@@ -580,7 +581,7 @@ nav a{
   width: 390px;
   height: 600px;
   object-fit: cover;
-
+  background-color: white;
 }
 
 .item.active {
