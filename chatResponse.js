@@ -12,7 +12,6 @@ function botResponse(input) {
         "products",
         "price range",
         "price",
-        "&#10084;",
         "hi",
         "sup"
     ];
@@ -30,7 +29,6 @@ function botResponse(input) {
        "We are selling keyboards, consoles, mouse, controllers and other gaming accessories ~ Feel free to check them out ~",
        "We TSA has the BEST products with SUPER GOOD price. Definitely worth a penny~",
        "We TSA has the BEST products with SUPER GOOD price. Definitely worth a penny~",
-       "&#10084;",
        "Hey there",
        "Yooo"
     ];
@@ -43,5 +41,5 @@ function botResponse(input) {
             return replyList[i];
         } 
     }
-    return "I don't get what you mean. You may consider to contact our customer service at ";
+    return "I don't get what you mean. You may consider to contact our customer service at tsagaming0917@gmail.com or call us at 03-87235967(7253)";
 }
