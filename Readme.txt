@@ -69,3 +69,27 @@ credit card owner name: localsotrage.confirmCard.name
 credit card cvv: localsotrage.confirmCard.cvv
 credit card date: localsotrage.confirmCard.date
 credit card number: localsotrage.confirmCard.number
+
+shipping address
+address name: localstorage.confirmAddress.name
+address area: localstorage.confirmAddress.area
+address details: localstorage.confirmAddress.details
+address phone: localstorage.confirmAddress.phone
+address postal: localstorage.confirmAddress.postal
+address state: localstorage.confirmAddress.state
+
+store the address
+store name: localstorage.finalAddress.final_name
+store details: localstorage.finalAddress.final_details
+store area: localstorage.finalAddress.final_area
+store phone: localstorage.finalAddress.final_phone
+store postal: localstorage.finalAddress.final_postal
+store state: localstorage.finalAddress.final_state
+
+other address
+other name: localstorage.addressDetailsOrder.ad_name0
+other area: localstorage.addressDetailsOrder.ad_area0
+other detail: localstorage.addressDetailsOrder.ad_detail0
+other phone: localstorage.addressDetailsOrder.ad_phone0
+other postal: localstorage.addressDetailsOrder.ad_postal0
+other state: localstorage.addressDetailsOrder.ad_state0
