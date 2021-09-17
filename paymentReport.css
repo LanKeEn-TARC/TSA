@@ -47,6 +47,22 @@ table tr td{
         width: 85%;
         color: black;
     }
+    /* #printable img {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        overflow:visible;
+        position: static;
+      } */
+      table,
+      table tr td{
+        page-break-before: avoid;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+      }
+      
+      #printable tr td{
+        page-break-inside: avoid;
+      }
 
 }
 .report-paymentType{
