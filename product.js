@@ -12,7 +12,7 @@ function changeSrcKeyboard1() {
 //keyboard2
 function changeSrcKeyboard2() {
   if (document.getElementById("black-keyboard2").checked) {
-  document.getElementById("keyboard2-pic").src = "uncut-pic/razerblackwidowEliteBlack.png";
+  document.getElementById("keyboard2-pic").src = "uncut-pic/razerblackwidowEliteBlack-1.png";
   } 
   else if (document.getElementById("pink-keyboard2").checked) { 
       document.getElementById("keyboard2-pic").src = "uncut-pic/blackwidoweliteQuartz.png";
@@ -25,7 +25,7 @@ function changeSrcKeyboard3() {
   document.getElementById("keyboard3-pic").src = "uncut-pic/razer-huntman-black.png";
   } 
   else if (document.getElementById("pink-keyboard3").checked) { 
-      document.getElementById("keyboard3-pic").src = "uncut-pic/razer-hunter-pink.png";
+      document.getElementById("keyboard3-pic").src = "uncut-pic/razer-hunter-pink-1.png";
   }
 }
 
@@ -95,7 +95,7 @@ function changeSrcController3() {
   document.getElementById("controller3-pic").src = "uncut-pic/xbox-black.png";
   } 
   else if (document.getElementById("white-controller3").checked) { 
-      document.getElementById("controller3-pic").src = "uncut-pic/xbox-white.png";
+      document.getElementById("controller3-pic").src = "uncut-pic/xbox-white-1.png";
   }
 }
 

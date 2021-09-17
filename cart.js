@@ -150,7 +150,7 @@ displayCartItem();
 function cartTotalPrice(){
     let total = 0;
     let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
-    cartProduct.forEach(item =>{
+    cartProduct&&cartProduct.forEach(item =>{
         total += item.totalPrice;
     })
     console.log('Your cart total price is ' + total);

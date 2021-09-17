@@ -1,0 +1,123 @@
+.chatBar-collapsible {
+    position: fixed;
+    bottom: 0;
+    right: 5em;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    z-index: 2;
+}
+
+.collapsible {
+    background: rgb(26, 139, 184);
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 1em;
+    text-align: left;
+    border-radius: 1em 1em 0 0;
+    border: solid 1px whitesmoke;
+    width: 25vw;
+    font-weight: bold;
+}
+
+.content {
+    background: rgb(245, 233, 233);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.chatBlock-container {
+    max-width: 100%;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    overflow: auto;
+}
+
+.outer-container {
+    min-height: 65vh;
+    position: relative;
+    bottom: 0%;
+}
+
+.chat-container {
+    max-height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    scroll-behavior: smooth;
+}
+
+.chatBar-inputBlock {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    align-items: center;
+    background: rgb(202, 200, 200);
+    border-radius: 10px 10px 0 0;
+    padding: 0.8em;
+    float: left;
+}
+
+.chatBar-icons {
+    display: flex;
+    justify-content: space-evenly;
+    float: right;
+    width: 25%;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#userInput {
+    width: 100%;
+}
+
+.inputBox {
+    color: black;
+    width: 15vw;
+    height: 2vh;
+    padding: 6%;
+    border-radius: 1em;
+    outline: none;
+    float: left;
+}
+
+/*message sent by user*/
+/*class generated in js*/
+.userText {
+    font-size: 1em;
+    text-align: right;
+    clear: both;
+}
+
+.userText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: #00b4d8;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    margin-right: 0.7em;
+    margin-bottom: 0.5em;
+    color: black;
+}
+
+.botText {
+    color: white;
+    font-size: 1em;
+    text-align: left;
+}
+
+.botText span {
+    line-height: 1.5em;
+    display: inline-block;
+    background: purple;
+    padding: 0.5em;
+    border-radius: 8px;
+    max-width: 80%;
+    margin-left: 0.7em;
+    margin-bottom: 0.5em;
+}
