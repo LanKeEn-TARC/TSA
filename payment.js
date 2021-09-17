@@ -15,7 +15,21 @@ function displayCartItem() {
     document.querySelector('.order-item').innerHTML = recycleView;
 }
 displayCartItem()
+function cartTotalPrice(){
+    let total = 0;
+    let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
+    cartProduct&&cartProduct.forEach(item =>{
+        total += item.totalPrice;
+    })
+    console.log('Your cart total price is ' + total);
 
+    let totalCartPrice = {
+        total: total
+    }
+    localStorage.setItem('finalCartTotal', JSON.stringify(totalCartPrice));
+    document.querySelector('.grandtotal .grandtotalcontainer #Grandtotalvalue').textContent = total
+}
+cartTotalPrice()
 
 
 //Get the radio button nasme
