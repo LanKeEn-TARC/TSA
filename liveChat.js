@@ -40,8 +40,14 @@ function getTime() {
 
 //let the bot send an initialized message
 function firstMsg () {
-    var msg = 'How can I help you?';
+    var msg = 'Hey ~ How can I help you?';
+    var msg2 = 'You can ask me regarding payment, cart etc!';
     document.getElementById('botStartMsg').innerHTML = '<p class="botText"><span>' + msg + '</span></p>';
+
+    var botStart2 = '<p class="botText"><span>' + msg2 + '</span></p>';
+    $(".chatbox").append(botStart2);
+
+
 
     //to display time
     var time = getTime();
