@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link rel="shortcut icon" type="image/jpeg" href="Image/Favicon1.jpeg">
-    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
     <header>
@@ -59,7 +59,13 @@
 
         <div style="position: absolute; display: block; left: 35%;">
           <div id = "details1">
-            <h3 style="font-size:28px">Payment Method</h3>
+            <h3 style="font-size:28px">
+              Payment Method &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+              &nbsp;&nbsp;
+
+              </h3>
            
               <div id="choose">
                   <!-- change id type name -->
@@ -111,24 +117,76 @@
                 <form action="">
                 <hr>
                 <!-- change label name and id -->
-                <label for="fname">Name on card: </label>
-                <input type="text" id="cardName0"  placeholder="Name of the credit/debit card" required /><br><br>
-                <label for="pNumber">Card Number: </label>
-                <input type="text" id="cardNumber0" placeholder="Card Number(4/5xxx xxxx xxxx xxxx)" pattern="[4|5]{1}[0-9]{3} [0-9]{4} [0-9]{4} [0-9]{4}" required /><br><br>
-                <label for="state">Expiry Dated: </label>
-                <input type="text" id="cardDate0" placeholder="Expiry Date(MM/YY)" pattern="[0]{1}[1-9]{1}/[0-9]{2}|[1]{1}[0-2]{1}/[0-9]{2}" required><br><br>
-                <label for="">CVV: </label>
-                <input type="text" id="cardCvv0" placeholder="CVV (XXX)" pattern="[0-9]{3}" required> <br><br>
-                
-                <button onclick="storeCard()">Save</button>
-                <input  onclick="resetCard()" type="reset" value="Reset" id="cancelDelivery" />
+                <label for="fname">Bank account holder: </label>
+                <input type="text" id="bankHolder0"  placeholder="Full name in the bank account(i.e.Caiwen)" required /><br><br>
+                <label for="pNumber">Account Number: </label>
+                <input type="text" id="bankNumber0"  placeholder="Account No." required ><br><br>
+                <label for="state">Bank Name: </label> 
+                <input type="text" id="bankName0" placeholder="Bank name" list="banks">
+                <datalist id="banks">
+                  <option value="ALLIANCE BANK MALAYSIA BERHAD"></option>
+                  <option value="AMBANK BHD"></option>
+                  <option value="BANK ISLAM MALAYSIA BERHAD"></option>
+                  <option value="CIMB BANK BHD"></option>
+                  <option value="CITIBANK BHD"></option>
+                  <option value="HONG LEONG BANK BHD"></option>
+                  <option value="MALAYAN BANKING BHD(MAYBANK)"></option>
+                  <option value="PUBLIC BANK BHD"></option>
+                  <option value="RHB BANK BHD"></option>
+              </datalist>
+              <br>
+              <br>
+                <button onclick="storeBank()">Save</button>
+                <input  onclick="resetBank()" type="reset" value="Reset" id="cancelDelivery" />
               </form>
                 <br>
                 <br>
               </div> 
               <input type="radio" id="ewallet" name="paymentMethod">
                 E-wallet
-            </div>    
+                <br>
+               <div id="EvidenceInput">
+                <!-- <input type="file" name="evidence" id="qrEvidence"><br><br>
+                <button onclick="storeQr()">Save</button>
+                <input  onclick="resetQr()" type="reset" value="Reset" id="cancelDelivery" /> -->
+               </div> 
+                
+            </div>
+            <div id="PaymentContainer">
+            <!-- <div id="paymentBox">
+                  <h1>Below are PaymentMethod. Qr can be click.</h1>
+             
+              
+              <div class="PaymentMethod">
+                      <img class="paymentType"src="images/tng_logo.png"  alt="Touch 'N Go logo">
+                      
+                  <div class="paymentDetails">
+                      <a href="images\fullqr_tng.jpeg" target="_top"><img class="paymentQr" src="images/qr_tng.jpeg" alt="Qr Code for payment"></a>
+                      <h1>Account ID</h1>
+                      <p><br>011-2822-7757</p>
+                  </div>
+              </div>
+              <div class="PaymentMethod">
+                  <img class="paymentType"src="images/duitnow.png"  alt="Duitnow logo">
+                  <div class="paymentDetails">
+                      <a href="images\fullqr_duitnow.jpeg" target="_top"><img class="paymentQr" src="images/qr_dn.jpeg" alt="Qr Code for payment"></a>
+                     <h1>Account ID</h1>
+                      <p><br>011-2822-7757</p>
+                      
+                     
+                  </div>
+              </div>
+              <div class="PaymentMethod">
+                  <img class="paymentType"src="images/wechat_logo.png"  alt="Wechat logo">
+                  
+                  <div class="paymentDetails">
+                      <a href="images\fullqr_wechat.jpeg" target="_top"><img class="paymentQr" src="images/qr_wechat.jpeg" alt="Qr Code for payment"></a>
+                      <h1>Account ID</h1>
+                      <p><br>011-2822-7757</p>
+                  </div>
+              </div> -->
+          </div>
+          </div>
           </div>
         </div>
           
