@@ -80,10 +80,13 @@ dispCard()
 //Card
 let cardHtml = '';
 let cdCard1 = JSON.parse(localStorage.getItem('details'));
+if(cdCard1 !== null){
     for(let i = 0; i < cdCard1.length; i++) {
         let cdCard1 = JSON.parse(localStorage.getItem('details'))[i];
         chooseCdCard(cdCard1,i);
     }
+}
+
 
 function chooseCdCard(cdCard1, no){
 //debug
@@ -101,16 +104,19 @@ console.log(cdCard1)
 }
 
 //Caiwen
-for(let no = 0 ; no < cdCard1.length; no ++){
-    document.getElementById("card"+no).onclick=function()
-    {
-        console.log('c')
-            let cdCard = JSON.parse(localStorage.getItem('details'))[no];
-            document.getElementById('home2Card').style.display = 'block';
-            console.log(cdCard)
-            getCard(cdCard);
+if(cdCard1 !== null){
+    for(let no = 0 ; no < cdCard1.length; no ++){
+        document.getElementById("card"+no).onclick=function()
+        {
+            console.log('c')
+                let cdCard = JSON.parse(localStorage.getItem('details'))[no];
+                document.getElementById('home2Card').style.display = 'block';
+                console.log(cdCard)
+                getCard(cdCard);
+        }
     }
 }
+
 
 function getCard(cdCard){
     console.log(cdCard);
@@ -198,9 +204,11 @@ function resetCard(){
 //Bank
 let bankHtml = '';
 let bank1 = JSON.parse(localStorage.getItem('accounts'));
-for(let i = 0; i < bank1.length; i++) {
-    let bank1 = JSON.parse(localStorage.getItem('accounts'))[i];
-    chooseBank(bank1,i);
+if(bank1 !== null){
+    for(let i = 0; i < bank1.length; i++) {
+        let bank1 = JSON.parse(localStorage.getItem('accounts'))[i];
+        chooseBank(bank1,i);
+    }
 }
 
 function chooseBank(bank1, no){
@@ -220,6 +228,7 @@ function chooseBank(bank1, no){
 }
 
 //Caiwen
+if(bank1 !== null){
 for(let no = 0 ; no < bank1.length; no ++){
     document.getElementById("bank"+no).onclick=function()
     {
@@ -229,6 +238,7 @@ for(let no = 0 ; no < bank1.length; no ++){
             console.log(bank)
             getBank(bank);
     }
+}
 }
 
 function getBank(bank){
