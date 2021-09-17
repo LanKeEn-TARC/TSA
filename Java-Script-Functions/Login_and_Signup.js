@@ -25,16 +25,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function findEmail(email){
-        var user = await allAcc.find(items => email == items.acc_email)
+        var user = await allAcc && allAcc.find(items => email == items.acc_email)
         if(user){
             return user.acc_email;
         }
     }
 
     //Validation of information in signup page and save into local storage
-    document.querySelector('.signup-button').onclick = async function(event){
+    document.querySelector('.signup-button').onclick = async function(){
 
-        event.preventDefault
         var password = PasswordInput.value,
         confirmPassword = ConfirmPassInput.value,
         username = UsernameInput.value,
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.su_username = user.acc_name;
             localStorage.su_password = user.acc_pass;
             console.log(localStorage.su_email + localStorage.su_username + localStorage.su_password);
-            window.location.href = "http://127.0.0.1:5501/Profile.html";
+            window.location.href = "http://localhost:5501/Profile.html";
         }
         else{
             alert("Invalid credential");
