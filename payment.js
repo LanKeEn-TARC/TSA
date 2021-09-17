@@ -14,6 +14,7 @@ function displayCartItem() {
     });
     document.querySelector('.order-item').innerHTML = recycleView;
 }
+
 displayCartItem()
 function cartTotalPrice(){
     let total = 0;
