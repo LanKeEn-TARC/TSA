@@ -41,5 +41,5 @@ function botResponse(input) {
             return replyList[i];
         } 
     }
-    return "I don't get what you mean. You may consider to contact our customer service at ";
+    return "I don't get what you mean. You may consider to contact our customer service at tsagaming0917@gmail.com or call us at 03-87235967(7253)";
 }
