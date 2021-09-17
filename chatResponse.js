@@ -12,7 +12,9 @@ function botResponse(input) {
         "products",
         "price range",
         "price",
-        "&#10084;"
+        "&#10084;",
+        "hi",
+        "sup"
     ];
 
     const replyList =
@@ -28,7 +30,9 @@ function botResponse(input) {
        "We are selling keyboards, consoles, mouse, controllers and other gaming accessories ~ Feel free to check them out ~",
        "We TSA has the BEST products with SUPER GOOD price. Definitely worth a penny~",
        "We TSA has the BEST products with SUPER GOOD price. Definitely worth a penny~",
-       "&#10084;"
+       "&#10084;",
+       "Hey there",
+       "Yooo"
     ];
 
     input.toLowerCase();
