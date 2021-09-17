@@ -5,7 +5,15 @@
 html{
   scroll-behavior: smooth;
 }
+#profilePic{
+  padding-right: 5px;
+  padding-top: 20px;
+}
 
+#navCart{
+  padding-right: 25px;
+  padding-top: 20px;
+}
 #description{
   font-family: 'Titillium Web', sans-serif;
   /* font-weight: bold; */
