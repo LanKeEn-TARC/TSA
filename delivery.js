@@ -198,31 +198,23 @@ function dispOrder(){
             let gTotal = shippingFee.price + item.totalPrice;
         html += `
       
-        <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                  </tr>
-        </thead>
-        <tbody>
+        <tr class="cart">
         <td class="item-name">${item.name}</td>
         <td class="item-quantity">${item.quantity}</td>
         <td class="item-totalprice">RM${item.totalPrice}</td>
-        </tbody>
-        
-        <tfoot style="margin: auto;">
-         
-                <td class="item-name">Delivery   : RM${shippingFee.price}</td> 
-                <td class="item-totalprice">Grand Total: RM${gTotal}</td>
-
-        </tfoot>
+        <tr>
+        <tr>
+      
+      
                 `    
                 localStorage.setItem('finalAddress', JSON.stringify(gTotal))
+                document.querySelector('#Grandtotalvalue').textContent =  gTotal
+                
+
             });
-    
-   document.querySelector('.order-table').innerHTML = html;
+            document.querySelector('#SHIPPING').textContent = shippingFee.price
+   document.querySelector('.order-item').innerHTML = html;
+
 }
 dispOrder()
-
 
