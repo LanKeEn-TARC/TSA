@@ -7,6 +7,11 @@
   font-family:Neon;
   src: url(Pictures/fonts/neon.regular.ttf);
 }
+
+@font-face {
+  font-family:Title;
+  src: url(Pictures/fonts/MotionPersonalUseBold-2O0od.ttf);
+}
 html{
   scroll-behavior: smooth;
 }
@@ -73,7 +78,6 @@ nav ul li a{
   transition: 0.2s;
 }
 
-
 nav ul li a span{
   position: absolute;
   display: block;
@@ -139,22 +143,49 @@ nav ul li ul li a:hover{
   }
 
 #start_wrapper{
-    background-position: center;
-    background-attachment: fixed;
-    background-image: url(Pictures/MOSHED-2021-7-17-20-31-20.gif);
+  position: fixed;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 50rem;
     background-size: contain;
     position: relative;
     display: inline-block;
-    background-repeat: no-repeat;
+
 }
 
-.main_wrapper{
+#start_wrapper p {
+  font-family: 'Roboto';
+  color: #fff;
+  position: absolute;
+  left: 630px;
+  top:530px;
+}
+
+#main_wrapper{
     border-radius: 30px 30px 0px 0px;
     background-color:rgb(41, 40, 40);
+}
+
+#main_wrapper p{
+  padding:20px;
+}
+
+p#title1 {
+  font-style: italic;
+  font-size: 120px;
+  font-family: 'Title';
+  color: #fff;
+  position: absolute;
+}
+
+p#title2 {
+  right: 15px;
+  top: 950px;
+  font-style: italic;
+  font-size: 120px;
+  font-family: 'Title';
+  color: #fff;
+  position: absolute;
 }
 
 video#vid {
@@ -164,28 +195,30 @@ video#vid {
 }
 
 #small_intropic{
+  background-color: #fff;
   position: relative;
   display: flex;
   width: 100%;
-  height: 300px;
+  height: 150px;
 }
 
 #small_intropic1{
+  background-color: rgb(0, 0, 0);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 55% 50%);
   margin: auto;
   width: 1200px;
   display: block;
-  height: 300px;
-  clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0 99%, 0 0);
-  background:#2196f3;
+  height: 150px;
 }
 
 #small_intropic2{
+  left: 700px;
+  background-color: rgb(0, 0, 10);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 55% 50%);
   margin: auto;
   width: 1200px;
   display: block;
-  height: 300px;
-  clip-path: polygon(0 0, 25% 50%, 0 100%, 99% 100%, 99% 0);
-  background:white;
+  height: 150px;
 }
 
 #autoWidth{
@@ -228,7 +261,6 @@ nav a{
   grid-auto-flow: column;
   margin: auto;
   box-sizing: border-box;
-
 }
 
 #prev,
@@ -371,7 +403,7 @@ nav a{
   position: relative;
   height: 400px;
   padding: 10px;
-  background-color: rgb(66, 58, 65);
+  background-color: rgb(51, 51, 51);
 }
 
 #product1{
@@ -420,7 +452,7 @@ nav a{
   clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
 }
 
-#neonFlick1{
+#neonFlick1 {
   font-family: 'Neon';
   font-size: 35px;
   margin-right: 10%;
@@ -430,7 +462,7 @@ nav a{
   color: #fff;
 }
 
-#neonFlick5{
+#neonFlick5 {
   font-family: 'Neon';
   font-size: 35px;
   margin-left: 15%;
@@ -440,7 +472,7 @@ nav a{
   color: #fff;
 }
 
-.neonFlick{
+.neonFlick {
   font-family: 'Neon';
   font-size: 35px;
   margin-top: 50%;
@@ -662,6 +694,10 @@ nav a{
     height: 300px;
     perspective: 1000px;
   }
+
+  #intro_card p {
+    padding: 0;
+  }
   
  #intro_card_inner {
     position: relative;
@@ -686,7 +722,9 @@ nav a{
   }
   
   #intro_card_front {
-    background-color: rgb(255, 254, 254);
+    background-image: url(Pictures/19_2_2021_11_30_30_PM.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: black;
   }
   

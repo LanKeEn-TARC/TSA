@@ -24,14 +24,13 @@
                         <li><a href="accessories.html">Accessories</a></li>
                     </ul>
                 </li>
-                <li><a href="cart.html"><span></span><span></span><span></span><span></span>Cart</a></li>
                 <li><a href="faq.html"><span></span><span></span><span></span><span></span>FAQ</a></li>
                 <li><a href="promotion.html"><span></span><span></span><span></span><span></span>Promotion</a></li>
-                <li><a href="#"><span></span><span></span><span></span><span></span>Cart</a></li>
+                <li><a href="cart.html"><span></span><span></span><span></span><span></span>Cart</a></li>
             </ul>
 
         </nav>
-        <a href="Elly\Profile.html" id='non-printable'><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
+        <a href="Profile.html"><img src="Pictures/profilepic.png" alt="navigation profile pic" width="35px" height="35px" id="profilePic"></a>
     </header>
     <!-- <audio autoplay id="audio" onload="audio()">
         <source src="ww_beedle_thankyou.mp3" type="audio/mpeg">
@@ -40,13 +39,16 @@
     <table class="report-table" id="printable">
         <tr>
             <td colspan="6" id="report-title">
-                Thanks For Shopping In TSA
+                Invoice
             </td>
         </tr>
         <tr class="report-table-customerDetails">
 
         </tr>
-        <tr style="border-top: 1px solid white;">
+        <tr class="report-paymentType">
+
+        </tr>
+        <tr>
             <td>Product Pictures</td>
             <td>Product</td>
             <td>Quantity</td>
@@ -64,7 +66,6 @@
         <tr class="report-table-delivery">
             
         </tr>
-
         <tr rowspan="2">
             <td colspan="3" id="total">
                 Total:
@@ -75,8 +76,8 @@
             </td>
         </tr>
     </table>
-    <div id='non-printable'>
-        <button onClick="window.print()">Print this page</button>
+    <div id='non-printable' class="cybr-btn">
+        <button onClick="window.print()" class="bouncy">Print Invoice</button>
     </div>
     <p class="rateText" id='non-printable'>Please Rate Our Services</p>
     <div class="rate" id='non-printable'>

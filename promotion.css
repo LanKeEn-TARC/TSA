@@ -129,15 +129,16 @@ nav ul li ul li a:hover{
 }
 
   div#promotion_1{
+    margin-left: 300px;
     display: flex;
-    margin-left: 250px;
     height: 500px;
-    width: 300px;
-    background-color: rgb(70, 6, 143);
   }
 
   div#promotion_1con{
+    left:200px;
+    width: 350px;
     display: inline-block;
+    background-color: rgb(70, 6, 143);
   }
 
   p#header_promo{
@@ -146,12 +147,47 @@ nav ul li ul li a:hover{
     color: white;
     font-size: 80px;
   }
-  
+
   div#promotion_1sub{
-    width: 1000px;
+    position: relative;
+    z-index: -2;
+    display:block;
+    width: 900px;
     height: 500px;
   }
 
+  #promotion_1sub img{
+    position: absolute; 
+  }
+
+  img#promo1{
+    right:360px;
+    z-index: 1;
+  
+  }
+  img#promo2{
+    left:250px;
+    z-index: -1;
+
+  }
+  img#promo3{
+    top:150px;
+    left:450px;
+    z-index: 2;
+  
+  }
+  img#promo4{
+    top:300px;
+    left:50px;
+    z-index: 3;
+  
+  }
+  img#promo5{
+    top:300px;
+    left: 400px;
+    z-index: 4;
+   
+  }
   div#promotion_2{
     text-align: center;
     margin: auto;
@@ -165,7 +201,7 @@ nav ul li ul li a:hover{
     position: absolute; 
     top:600px;
   }
-
+  
 #promotion_2con1 {
   display: block;
   }
@@ -235,7 +271,7 @@ nav ul li ul li a:hover{
 }
 
 div.slideshow-container {
-  left:500px;
+  left:250px;
   top: 900px;
   z-index: 1;
   height: 450px;
@@ -255,8 +291,8 @@ div.linkProduct {
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  right:500px;
-  bottom: 70px;
+  right:230px;
+  bottom: 50px;
   width: 100%;
   text-align: center;
 }
@@ -280,6 +316,18 @@ div.linkProduct {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.linkProduct a{
+  font-style: italic;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color: #000000;
+  border-radius: 5px;
+  color:white;
+  font-size:25px;
+  padding: 5px;
+ text-decoration: none;
+ box-shadow: 4px -4px teal;
 }
 
   div#tnc{
@@ -326,7 +374,7 @@ span.card__infoicon{
 
 #info{
   top:-12px;
-  right: -310px;
+  right: -345px;
   position:absolute;
   width: 20px;
   height: 20px;

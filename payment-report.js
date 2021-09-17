@@ -57,3 +57,14 @@ let totalPriceGet = JSON.parse(localStorage.getItem("finalCartTotal"));
     <td>RM ${totalPriceGet.total + deliveryType.price}</td>
     `
  document.querySelector('.cartTotal').innerHTML = cartTotalPrice;
+
+let paymentType="";
+let finalPaymentType =  JSON.parse(localStorage.getItem("finalCard"));
+    paymentType += `
+    <ul>
+    <li>Payment Type: ${finalPaymentType.finalName}</li>
+    </ul>
+    <br><br>
+    `
+    
+document.querySelector('.report-paymentType').innerHTML = paymentType;

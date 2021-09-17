@@ -16,6 +16,7 @@ function dispCard(){
         document.getElementById('othersBankForm').style.display = 'none';
         document.getElementById('PaymentContainer').style.display = 'none';
         document.getElementById('EvidenceInput').style.display = 'none';
+        
     }
     else if (document.getElementById('othersCardButton').checked) {
         console.log('b')
@@ -136,14 +137,11 @@ function getCard(cdCard){
 
         localStorage.setItem('comfirmCard', JSON.stringify(cardDetails))
 
-        let finalCardDetails = {
-            finalName:cdCard.name,
-            finalNumber:cdCard.number,
-            finalDate:cdCard.date,
-            finalCvv:cdCard.cvv
+        let finalCard = {
+            finalName:"Credit Card",
         };
 
-        localStorage.setItem('finalCard', JSON.stringify(finalCardDetails))
+        localStorage.setItem('finalCard', JSON.stringify(finalCard))
 }
 
 //Caiwen breakpoint
@@ -181,13 +179,9 @@ function storeCard(){
             localStorage.setItem('paymentCard', JSON.stringify(fullCard0))
 
             let finalCard = {
-                finalName: cardName.value,
-                finalNumber: cardNumber.value,
-                finalDate: cardDate.value,
-                finalCvv: cardCvv.value,
+                finalName:"Credit Card",
             };
-
-            console.log(finalCard);
+    
             localStorage.setItem('finalCard', JSON.stringify(finalCard))
             console.log('Card is sucessfully added!');
             alert("Card added!");
@@ -259,13 +253,11 @@ function getBank(bank){
 
         localStorage.setItem('comfirmBank', JSON.stringify(bankDetails))
 
-        let finalBankDetails = {
-            final_name:bank.a_name,
-            final_account:bank.a_number,
-            final_bankName:bank.a_bank
+        let finalCard = {
+            finalName:"Bank Account",
         };
 
-        localStorage.setItem('finalBank', JSON.stringify(finalBankDetails))
+        localStorage.setItem('finalCard', JSON.stringify(finalCard))
 }
 //fix button id maybe / sleep
 //Caiwen breakpoint
@@ -288,14 +280,12 @@ function storeBank(){
         console.log(fullBank0);
         localStorage.setItem('paymentBank', JSON.stringify(fullBank0))
 
-        let finalBank = {
-            finalbank_Name0: bankHolder.value,
-            finalbank_Account0: bankNumber.value,
-            finalbank_bankName0: bankName.value,
+        let finalCard = {
+            finalName:"Bank Account",
         };
 
-        console.log(finalBank);
-        localStorage.setItem('finalBank', JSON.stringify(finalBank))
+        localStorage.setItem('finalCard', JSON.stringify(finalCard))
+
         console.log('Bank is sucessfully added!');
         alert("Bank added!");
     };
@@ -376,12 +366,11 @@ function storeQr(){
         console.log(fullQr0);
         localStorage.setItem('paymentQr', JSON.stringify(fullQr0))
 
-        let finalQr = {
-            finalqr_Pic0: qrPic.value
+        let finalCard = {
+            finalName:"E-Wallet",
         };
 
-       console.log(finalQr);
-        localStorage.setItem('finalQr', JSON.stringify(finalQr))
+        localStorage.setItem('finalCard', JSON.stringify(finalCard))
         console.log('Qr picture is sucessfully added!');
         alert("picture already added!");
     };
