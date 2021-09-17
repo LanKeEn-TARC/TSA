@@ -38,9 +38,13 @@ header img{
   position: fixed;
   z-index: 1;
 }
-
 #profilePic{
-  padding-right: 40px; 
+  padding-right: 5px;
+  padding-top: 20px;
+}
+
+#navCart{
+  padding-right: 25px;
   padding-top: 20px;
 }
 
