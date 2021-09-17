@@ -41,7 +41,7 @@ table tr td{
         display: none !important;
     }
     #printable {
-        overflow-y:visible;
+        overflow:visible;
         position: static;
         display: block;
         width: 85%;
@@ -64,8 +64,8 @@ table tr td{
 }
 .product-pic img{
     left: 50px;
-    width: 100px;
-    height:150px;
+    width: 125px;
+    height:100%x;
 }
 .rateText{
     color: white;
