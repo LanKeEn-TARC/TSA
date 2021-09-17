@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.su_username = user.acc_name;
             localStorage.su_password = user.acc_pass;
             console.log(localStorage.su_email + localStorage.su_username + localStorage.su_password);
-            window.location.href = "http://localhost:5501/Profile.html";
+            window.location.href = "http://localhost:5501/homepage.html";
         }
         else{
             alert("Invalid credential");
