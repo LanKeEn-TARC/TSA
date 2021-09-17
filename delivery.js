@@ -40,9 +40,11 @@ dispAddress()
 
 let html = '';
 let address1 = JSON.parse(localStorage.getItem('addressDetail'));
+if(address1 !== null){
 for(let i = 0; i < address1.length; i++) {
     let address1 = JSON.parse(localStorage.getItem('addressDetail'))[i];
     chooseAddress(address1,i);
+}
 }
 
 function chooseAddress(address1, no){
@@ -59,7 +61,7 @@ console.log(address1)
     
     document.querySelector('#home1').innerHTML  = html;
 }
-
+if(address1 !== null){{}
 for(let no = 0 ; no < address1.length; no ++){
     document.getElementById(no).onclick=function()
 
@@ -70,6 +72,7 @@ for(let no = 0 ; no < address1.length; no ++){
             console.log(address)
             getAddress(address);
     }
+}
 }
 
 function getAddress(address){
@@ -167,6 +170,8 @@ function resetAddress(){
     alert("Details reset!");
 }
 
+
+
 function dispOrder(){
 
     let html = '';
@@ -186,21 +191,38 @@ function dispOrder(){
          
         }
         
-
         let shippingFee = JSON.parse(localStorage.getItem('fees'))
+        let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
+        cartProduct && cartProduct.forEach((item) => {
+            console.log(cartProduct.totalPrice)
+            let gTotal = shippingFee.price + item.totalPrice;
         html += `
+      
+        <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                  </tr>
+        </thead>
+        <tbody>
+        <td class="item-name">${item.name}</td>
+        <td class="item-quantity">${item.quantity}</td>
+        <td class="item-totalprice">RM${item.totalPrice}</td>
+        </tbody>
+        
         <tfoot style="margin: auto;">
-        <tr>
-          <td>Delivery: RM</td> 
-          <td>${shippingFee.price}</td>
-        </tr>
+         
+                <td class="item-name">Delivery   : RM${shippingFee.price}</td> 
+                <td class="item-totalprice">Grand Total: RM${gTotal}</td>
+
         </tfoot>
                 `    
+                localStorage.setItem('finalAddress', JSON.stringify(gTotal))
+            });
     
    document.querySelector('.order-table').innerHTML = html;
 }
 dispOrder()
-
-
 
 
