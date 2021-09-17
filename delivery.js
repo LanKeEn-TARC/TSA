@@ -173,6 +173,7 @@ function resetAddress(){
 
 
 function dispOrder(){
+   
 
     let html = '';
 
@@ -190,12 +191,12 @@ function dispOrder(){
             localStorage.setItem('fees', JSON.stringify(shippingDetails[3]))
          
         }
-        
+        let cartP= JSON.parse(localStorage.getItem('productInCart'))
         let shippingFee = JSON.parse(localStorage.getItem('fees'))
-        let cartProduct = JSON.parse(localStorage.getItem('productInCart'))
-        cartProduct && cartProduct.forEach((item) => {
-            console.log(cartProduct.totalPrice)
-            let gTotal = shippingFee.price + item.totalPrice;
+        let cartProduct = JSON.parse(localStorage.getItem('finalCartTotal'))
+        cartP&&cartP.forEach(item =>{
+            console.log(item.total)
+            let gTotal = shippingFee.price + cartProduct.total;
         html += `
       
         <tr class="cart">
@@ -207,11 +208,10 @@ function dispOrder(){
       
       
                 `    
-                localStorage.setItem('finalAddress', JSON.stringify(gTotal))
                 document.querySelector('#Grandtotalvalue').textContent =  gTotal
                 
-
-            });
+        
+    });
             document.querySelector('#SHIPPING').textContent = shippingFee.price
    document.querySelector('.order-item').innerHTML = html;
 
