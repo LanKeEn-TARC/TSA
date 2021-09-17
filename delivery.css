@@ -3,6 +3,26 @@
 body{
   background: #040B10;
 }
+
+ nav{
+  display: flex;
+  text-align: center;
+  width:80%;
+  margin: auto;
+  padding: 10px ;
+}
+
+
+#backB{
+  padding-right: 5px;
+  padding-top: 10px;
+}
+
+#goB{
+  padding-right: 25px;
+  padding-top: 10px;
+}
+
 .checkout{
   display: flex;
   justify-content: space-between;
