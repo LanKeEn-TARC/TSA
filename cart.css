@@ -2,6 +2,16 @@ body {
     background: #040B10;
 }
 
+#profilePic{
+    padding-right: 5px;
+    padding-top: 20px;
+  }
+  
+  #navCart{
+    padding-right: 25px;
+    padding-top: 20px;
+  }
+
 /*Marquee*/
 marquee {
     width:100%;

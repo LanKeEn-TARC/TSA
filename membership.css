@@ -10,6 +10,16 @@ h1{
 
 }
 
+#profilePic{
+    padding-right: 5px;
+    padding-top: 20px;
+  }
+  
+  #navCart{
+    padding-right: 25px;
+    padding-top: 20px;
+  }
+
 /*the card 3D turn arounds*/
 #sliderbox{
     display: flex;
