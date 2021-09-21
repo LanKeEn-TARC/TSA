@@ -18,6 +18,10 @@ Command that triggered the live chat bot:
 12. hi
 13. sup
 
+Email that received the fedback form
+email account: tsagaming0917@gmail.com
+password: tsa_0917
+
 Login and Signup Page
 Signup Email: localStorage.su_email
 Signup Password: localStorage.su_password
