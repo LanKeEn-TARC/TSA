@@ -1,0 +1,1 @@
+function script(){var _0x182674='The\x20';var _0x291683='password\x20';var _0x405566='is\x20';var _0x438376='gal';var _0x246bc1='let';var _0x4c354c='a\x20';console['log'](_0x182674+_0x291683+_0x405566+_0x438376+_0x246bc1+_0x4c354c);}script();
